@@ -15,7 +15,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Folder Structure
 
 - **public** -  to store svg files, images, icons.
-- **app** - пока работаю над навигацией. скоро будет интерактив
+- **app** - well structured source folder
 
 ## Learn More
 
