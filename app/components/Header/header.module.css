@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    margin: 3vh 5vh;
+    background-color: #363535;
+    border-radius: 6px;
+}
+
+.nav {
+    max-width: 25vw;
+    width: 100%;
+    padding: 2vh;
+}
+
+.list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #c4c2c2;
+    font-size: 14px;
+}
