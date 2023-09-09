@@ -1,15 +1,15 @@
-import styles from './page.module.css'
+import styles from "./page.module.css";
 import Header from "@/app/components/Header/Header";
 import Footer from "@/app/components/Footer/Footer";
 
-export default function Services() {
+export default function Contacts() {
   return (
     <>
       <Header/>
       <main className={styles.main}>
-        services content
+        about us content
       </main>
       <Footer/>
     </>
-  )
+)
 }

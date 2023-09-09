@@ -1,9 +1,15 @@
 import styles from "./page.module.css";
+import Header from "@/app/components/Header/Header";
+import Footer from "@/app/components/Footer/Footer";
 
 export default function Contacts() {
   return (
-    <main className={styles.main}>
-      contacts content
-    </main>
+    <>
+      <Header/>
+      <main className={styles.main}>
+        contacts content
+      </main>
+      <Footer/>
+    </>
   )
 }
