@@ -1,9 +1,14 @@
+'use client'
+
 import styles from './page.module.css'
-import React from "react";
+import React, {useState} from "react";
 import Link from "next/link";
 import BurgerBtn from "@/app/components/BurgerMenu/BurgerBtn";
+import BurgerContent from "@/app/components/BurgerMenu/BurgerContent";
 
 export default function Home() {
+  const [isMenuActive, setIsMenuActive] = useState(false);
+
   return (
     <main className={styles.main}>
       <ul>
@@ -17,7 +22,8 @@ export default function Home() {
           <Link href={'/contacts'}>contacts</Link>
         </li>
       </ul>
-      <BurgerBtn/>
+      <BurgerBtn activateMenuFunc={setIsMenuActive}/>
+      <BurgerContent isActive={isMenuActive} activateMenuFunc={setIsMenuActive}/>
     </main>
   )
 }

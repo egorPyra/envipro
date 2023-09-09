@@ -1,15 +1,13 @@
-import Image from "next/image";
 import style from './burger-menu.module.css';
 
-export default function BurgerBtn() {
+interface IBurgerBtn {
+  activateMenuFunc: (value: (((prevState: boolean) => boolean) | boolean)) => void;
+}
+
+export default function BurgerBtn({ activateMenuFunc }: IBurgerBtn) {
   return (
-    <button className={style.btn}>
-      <Image
-          src='/burgerBtn.svg'
-        alt="menu"
-        height={30}
-        width={30}
-      />
+    <button onClick={() => activateMenuFunc(true)} className={style.btn}>
+      <span className={style.line}/>
     </button>
   );
 }
