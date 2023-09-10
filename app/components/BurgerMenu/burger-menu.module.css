@@ -39,17 +39,17 @@
 .menuContent {
     position: absolute;
     top: 0;
-    right: -260px;
+    right: -320px;
     background-color: #000;
     color: #c4c2c2;
-    width: 250px;
-    height: 100vh;
+    width: 320px;
+    height: 100%;
     padding: 30px 42px;
     transition: transform 0.27s ease-in-out;
 }
 
 .menuActive {
-    transform: translateX(-260px);
+    transform: translateX(-320px);
 }
 
 .closeBtn {
@@ -97,17 +97,17 @@
 }
 
 .menuListTitle:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .menuListSubTitle {
-    margin-top: 8px;
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 10px;
     font-weight: normal;
 }
 
 .menuListSubTitle li:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
 .blur {

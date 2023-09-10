@@ -10,7 +10,7 @@ export default function Home() {
   const [isMenuActive, setIsMenuActive] = useState(false);
 
   return (
-    <main className={styles.main}>
+    <main className={styles.main} onClick={() => setIsMenuActive(false)}>
       <ul>
         <li>
           <Link href={'/about_us'}>about us</Link>

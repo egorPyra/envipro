@@ -6,7 +6,10 @@ interface IBurgerBtn {
 
 export default function BurgerBtn({ activateMenuFunc }: IBurgerBtn) {
   return (
-    <button onClick={() => activateMenuFunc(true)} className={style.btn}>
+    <button onClick={(event) => {
+      event.stopPropagation();
+      activateMenuFunc(true);
+    }} className={style.btn}>
       <span className={style.line}/>
     </button>
   );
