@@ -1,5 +1,7 @@
+'use client'
+
 import React from 'react';
-import styles from './page.module.css';
+import styles from "./page.module.css";
 
 const StartAnimationPage = () => {
   return (
@@ -8,7 +10,7 @@ const StartAnimationPage = () => {
         <img  src="./MAIN_ENVI.svg" alt="SVG Image" width="400" height="400"  />
       </div>
 
-      <button className='wow' style={{ marginTop: '10px' }}>Click Me</button>
+      <button className={styles.wow}>Click Me</button>
     </div>
   );
 };
