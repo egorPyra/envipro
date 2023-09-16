@@ -37,6 +37,7 @@
 }
 
 .menuContent {
+    position: absolute;
     background-color: #000;
     color: #c4c2c2;
     width: 320px;

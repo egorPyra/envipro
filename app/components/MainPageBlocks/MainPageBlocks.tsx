@@ -9,17 +9,21 @@ export default function MainPageBlocks() {
       </div>
 
       <div className={styles.sectionTwo}>
+        <div className={styles.sectionTwo_subBlock}>
           <div className={styles.earth}>earth</div>
           <div className={styles.ecoShadow}>eco(shadow)</div>
-          <div className={styles.engineer}>engineer costs</div>
-          <div className={styles.saveNature}>save nature</div>
+        </div>
+        <div className={styles.engineer}>engineer costs</div>
+        <div className={styles.saveNature}>save nature</div>
       </div>
 
       <div className={styles.sectionThree}>
-        <div>cat track</div>
-        <div>plasma</div>
-        <div>calculations</div>
-        <div>formula</div>
+        <div className={styles.cat}>cat track</div>
+        <div className={styles.plasma}>plasma</div>
+        <div>
+          <div className={styles.calc}>calculations</div>
+          <div className={styles.formula}>formula</div>
+        </div>
       </div>
     </>
   );
