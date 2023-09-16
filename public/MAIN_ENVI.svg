@@ -2,13 +2,6 @@
 <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 425.2 425.2" style="enable-background:new 0 0 425.2 425.2;" xml:space="preserve">
 <style type="text/css">
-	* {
-  
-  width: 600px;
-  margin:0;
-  padding:0;
-}
-
 .st0{
 		fill:#010202;
 	}
@@ -19,18 +12,18 @@
 	}
 .first, .second {
   opacity:0;
-  transform: translateX(50px); 
-    animation: fadeInAndTranslate 2s 2s forwards; 
+  transform: translateX(50px);
+    animation: fadeInAndTranslate 2s 2s forwards;
 }
 
 @keyframes fadeInAndTranslate {
     0% {
         opacity: 0;
-        transform: translateX(50px); 
+        transform: translateX(50px);
     }
     100% {
-        opacity: 1; 
-        transform: translateX(0); 
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -41,14 +34,14 @@
 		stroke-miterlimit:10;
     stroke-dasharray:800;
     stroke-dashoffset:800;
-    animation: one 8s 3.8s ease forwards; 
+    animation: one 8s 3.8s ease forwards;
 	}
 
  @keyframes one {
   100% {
     stroke-dashoffset: 0;
   }
-} 
+}
 	.st2-2{
 		fill:none;
 		stroke:#010202;
@@ -56,21 +49,21 @@
 		stroke-miterlimit:10;
 	  stroke-dasharray:500;
     stroke-dashoffset:500;
-    animation: two 4s 6s linear forwards; 
+    animation: two 4s 6s linear forwards;
 	}
 
  @keyframes two {
   100% {
     stroke-dashoffset: 0;
   }
-} 
+}
 .st1{
 		fill:none;
 		stroke:#010202;
 		stroke-miterlimit:10;
   stroke-dasharray:1000;
     stroke-dashoffset:1000;
-    animation: three 10s 8s linear forwards; 
+    animation: three 10s 8s linear forwards;
 	}
 
  @keyframes three {

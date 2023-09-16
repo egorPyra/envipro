@@ -9,7 +9,7 @@ interface IBurgerContent {
 export default function BurgerContent({ isActive, activateMenuFunc }: IBurgerContent) {
   return (
     <>
-      <div className={isActive ? styles.blur : styles.none}/>
+      <div className={isActive ? styles.blur : styles.none}></div>
       <div
         className={isActive ? `${styles.menuContent} ${styles.menuActive}` : `${styles.menuContent}`}
         onClick={(event) => event.stopPropagation()}
