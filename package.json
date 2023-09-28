@@ -20,6 +20,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "generate-react-cli": "^8.3.0"
+    "generate-react-cli": "^8.3.0",
+    "sass": "^1.68.0"
   }
 }
