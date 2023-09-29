@@ -4,19 +4,24 @@
 }
 
 .sectionOne {
-    margin-top: 27vh;
+    margin-top: 20vh;
 }
 .ecoRandom {
     width: 23vw;
-    height: 30vh;
+    height: 37vh;
     margin-bottom: 20vh;
     background-color: #e0dcce;
+    background-image: url("/ecoRandom.jpg");
+    background-position: center;
+    background-size: cover;
 }
 .ecology {
     margin-left: 10vw;
     width: 13vw;
     height: 25vh;
-    background-color: #c2b99b;
+    background-image: url("/ecology.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 .sectionTwo {
@@ -33,22 +38,57 @@
     width: 10vw;
     height: 15vh;
     background-color: #91adc9;
+    background-image: url("/earth.jpg");
+    background-position: center;
+    background-size: cover;
 }
 .ecoShadow {
     display: inline-block;
     width: 26vw;
-    height: 30vh;
+    height: 35vh;
     background-color: #9ba3ab;
+    background-image: url("/ecoShadow.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.sectionTwo__engineerSaveNature {
+    display: inline-block;
 }
 .engineer {
     width: 25vw;
-    height: 30vh;
+    height: 37vh;
     background-color: #b8cde3;
+    background-image: url("/engineer.jpg");
+    background-position: center;
+    background-size: cover;
 }
 .saveNature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
     width: 25vw;
     height: 25vh;
-    background-color: #edf2f7;
+    padding-left: 2vw;
+}
+.ppa {
+    position: relative;
+    display: inline-block;
+    width: 10vw;
+    height: 48vh;
+    margin: 0;
+}
+.ppa::before {
+    content: '';
+    position: absolute;
+    left: 1vw;
+    width: 14vw;
+    height: 60vh;
+    background-image: url("/ppa.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
 .sectionThree {
@@ -62,26 +102,32 @@
 .cat {
     position: relative;
     display: inline-block;
-    width: 8vw;
-    height: 15vh;
+    width: 11vw;
+    height: 20vh;
     background-color: #fccfd7;
     visibility: hidden;
 }
 .cat::before {
-    content: 'cat';
+    content: '';
     position: absolute;
-    top: 8vh;
-    width: 8vw;
-    height: 15vh;
+    top: 11vh;
+    width: 11vw;
+    height: 20vh;
     background-color: pink;
     visibility: visible;
     z-index: -1;
+    background-image: url("/cat.jpg");
+    background-position: center;
+    background-size: cover;
 }
 .plasma {
     display: inline-block;
-    width: 25vw;
+    width: 22vw;
     height: 30vh;
     background-color: #f7e1e5;
+    background-image: url("/plasma.jpg");
+    background-position: center;
+    background-size: cover;
 }
 .calcFormulaContainer {
     display: flex;
@@ -90,14 +136,20 @@
 .calc {
     display: inline-block;
     width: 17vw;
-    height: 60vh;
+    height: 57vh;
     margin-left: 5vw;
-    margin-top: 8vh;
+    margin-top: 11vh;
     background-color: #c9afb4;
+    background-image: url("/calc.jpg");
+    background-position: center;
+    background-size: cover;
 }
 .formula {
     display: inline-block;
     width: 20vw;
     height: 45vh;
     background-color: #ab9a9d;
+    background-image: url("/formula.jpg");
+    background-position: center;
+    background-size: cover;
 }
