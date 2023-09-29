@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg  version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-     viewBox="-100 -100 1025.2 625.2" style="enable-background:new 0 0 425.2 425.2; background:#000; opacity:0.8" xml:space="preserve">
+     viewBox="-100 -100 1025.2 625.2" style="enable-background:new 0 0 425.2 425.2; " xml:space="preserve">
   
-  <style>
-  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
-</style>
 <style type="text/css">
   
 .st0{
@@ -78,7 +75,7 @@
 }
   .small {
     font-family: 'Bebas Neue', 'Montserrat';
-    font-size: 10px;
+    font-size: 14px;
     fill:#fff;
   }
 </style>
