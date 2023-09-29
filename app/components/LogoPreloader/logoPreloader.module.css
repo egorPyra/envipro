@@ -5,10 +5,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    z-index: -1;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    opacity: 0.8;
 }
 
 @keyframes logoToCorner {
@@ -28,7 +30,9 @@
 }
 
 .logo {
-    width: 600px;
+    display: inline-block;
+    position: relative;
+    width: 250px;
     margin:0;
     padding:0;
     border-radius: 50%;
@@ -36,3 +40,4 @@
     animation-delay: 10s;
     animation-fill-mode: forwards;
 }
+

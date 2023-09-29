@@ -9,7 +9,6 @@ import MainPageBlocks from "@/app/components/MainPageBlocks/MainPageBlocks";
 
 export default function Home() {
   const [isMenuActive, setIsMenuActive] = useState(false);
-
   return (
     <main className={styles.main} onClick={() => setIsMenuActive(false)}>
       <LogoPreloader/>
