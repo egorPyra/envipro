@@ -11,7 +11,6 @@ export default function Services() {
       <main className={styles.main}>
         services content
       </main>
-      <Footer/>
     </>
   )
 }

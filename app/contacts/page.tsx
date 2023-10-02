@@ -11,7 +11,6 @@ export default function Contacts() {
       <main className={styles.main}>
         contacts content
       </main>
-      <Footer/>
     </>
   )
 }

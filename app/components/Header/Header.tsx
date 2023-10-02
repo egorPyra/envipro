@@ -7,10 +7,10 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <Image
-        src='/vercel.svg'
-        alt="logo"
+        src='/logo.svg'
+        alt="envipro"
         height={30}
-        width={90}
+        width={30}
       />
       <nav className={styles.nav}>
         <ul className={styles.list}>
