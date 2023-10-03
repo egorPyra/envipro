@@ -73,10 +73,31 @@
   }
 }
 
+@font-face {
+  font-family: 'Bebas Neue Regular';
+  src: local("Bebas Neue"),
+  url('./fonts/BebasNeueRegular.woff2') format('woff2'),
+  url('./fonts/BebasNeueRegular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bebas Neue Light';
+  src: local("Bebas Neue"),
+  url('./fonts/BebasNeueLight.woff2') format('woff2'),
+  url('./fonts/BebasNeueLight.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: "Bebas Neue Regular", sans-serif;
 }
 
 html,
