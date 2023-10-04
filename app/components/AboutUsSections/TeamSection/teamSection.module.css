@@ -1,0 +1,40 @@
+.title {
+    margin: 0 0 6px;
+    color: #c4c2c2;
+}
+.subTitle {
+    margin-bottom: 30px;
+    color: #c4c2c2;
+}
+
+.teamContainer {
+    padding-bottom: 40px;
+}
+.teamList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0;
+}
+.teamItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 20vw;
+    margin: 0 10px 25px 0;
+}
+.name {
+    text-align: center;
+    font-weight: bold;
+    color: #c4c2c2;
+}
+.role {
+    text-align: center;
+    color: #c4c2c2;
+}
+.teamImg {
+    max-height: 150px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}

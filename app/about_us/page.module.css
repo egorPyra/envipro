@@ -5,18 +5,8 @@
   /*temp*/
   background-color: #363535;
 }
-
-.history {
-  padding: 0;
-  margin: 0;
-  color: #c4c2c2;
-  line-height: 1.6rem;
-}
-.title {
-  margin: 0 0 6px;
-  color: #c4c2c2;
-}
-.subTitle {
-  margin-bottom: 30px;
-  color: #c4c2c2;
+.teamContainer {
+  margin-bottom: 20px;
+  background-color: #c4c2c2;
+  color: black;
 }

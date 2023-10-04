@@ -1,0 +1,18 @@
+.title {
+    margin: 0 0 6px;
+    color: #c4c2c2;
+}
+.subTitle {
+    margin-bottom: 30px;
+    color: #c4c2c2;
+}
+
+.historyContainer {
+    margin-bottom: 50px;
+}
+.historyText {
+    padding: 0;
+    margin: 0;
+    color: #c4c2c2;
+    line-height: 1.6rem;
+}
