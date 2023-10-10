@@ -1,0 +1,61 @@
+
+<svg width="1920" height="1080" viewBox="0 0 1920 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @keyframes wiggle {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(5px); }
+      50% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+      100% { transform: translateX(0); }
+    }
+    @keyframes wiggle1 {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+    @keyframes wiggle2 {
+      0% { transform: translateX(2px); }
+      25% { transform: translateX(8px); }
+      50% { transform: translateX(-10px); }
+      75% { transform: translateX(5px); }
+      100% { transform: translateX(0); }
+    }
+
+
+    .line {
+      animation: wiggle 8s infinite alternate;
+    }
+    .line1 {
+      animation: wiggle1 6s infinite alternate;
+    }
+    .line2 {
+      animation: wiggle2 10s infinite alternate;
+    }
+  </style>
+  <g clip-path="url(#clip0_34_74)">
+    <rect width="1920" height="1080" fill="#E8E8E8"/>
+    <path class="line" d="M141.5 -2.5L-36 474.5L137 1098" stroke="#D4D4D4" stroke-width="2"/>
+    <path class="line1" d="M218 1078L28 537L225 -3.5" stroke="#D4D4D4" stroke-width="2"/>
+    <path class="line2" d="M495 1082.5L206.5 910.5L64.5 537L303 0.5" stroke="#D4D4D4" stroke-width="2"/>
+    <path class="line" d="M618.5 0.5L340 213.5L363 367L138.5 449L157 694.5L222.5 717.5L574.5 1081" stroke="#D0D0D0" stroke-width="2"/>
+    <path class="line1" d="M631 0.5L394 367L306 672L656.5 1081" stroke="#D0D0D0" stroke-width="2"/>
+    <path class="line1" d="M661 2L418 374V694.5L574.5 957.5L762 1082.5" stroke="#D0D0D0" stroke-width="2"/>
+    <path class="line" d="M909.5 1083.5L635.5 900.5L506 689V411L656.5 148L862.5 -1" stroke="#C9C9C9" stroke-width="2"/>
+    <path class="line2" d="M903.5 152.5L1112.5 165L1277 274.5L1380.5 450.5V665L1283 838L1102.5 943H889.5L709.5 838L605.5 675V450.5L709.5 270.5L903.5 152.5Z" stroke="#C9C9C9" stroke-width="2"/>
+    <path class="line1" d="M753.5 308.5L908 222H1089.5L1251.5 308.5L1339.5 469V650.5L1251.5 807L1089.5 900.5H915L753.5 807L662.5 650.5V469L753.5 308.5Z" stroke="#C9C9C9" stroke-width="2"/>
+    <path class="line2" d="M1088.5 1078L1348 893.5L1483 672V411L1348 178L1071.5 -5" stroke="#C9C9C9" stroke-width="2"/>
+    <path class="line" d="M1244.5 1076.5L1426 963L1584 692V375.5L1426 110L1264.5 -2.5" stroke="#D0D0D0" stroke-width="2"/>
+    <path class="line" d="M1378 1078L1562.5 892L1582.5 774L1869 -2.5" stroke="#D4D4D4" stroke-width="2"/>
+    <path class="line1" d="M1913 -5L1680.5 655L1612 1079.5" stroke="#D4D4D4" stroke-width="2"/>
+    <path class="line2" d="M1750 1078L1920 578.5" stroke="#D4D4D4" stroke-width="2"/>
+    <path class="line2" d="M1650.5 1082.5L1842 571L1808 428L1921.5 145.5" stroke="#D4D4D4" stroke-width="2"/>
+    <path class="line" d="M1920 819.5L1839.5 1081" stroke="#D4D4D4" stroke-width="2"/>
+  </g>
+  <defs>
+    <clipPath id="clip0_34_74">
+      <rect width="1920" height="1080" fill="white"/>
+    </clipPath>
+  </defs>
+</svg>
