@@ -11,7 +11,7 @@ export default function Home() {
   const [isMenuActive, setIsMenuActive] = useState(false);
   return (
     <main className={styles.main} onClick={() => setIsMenuActive(false)}>
-      <LogoPreloader/>
+      {/*<LogoPreloader/>*/}
       <section className={styles.content}>
         <BurgerBtn activateMenuFunc={setIsMenuActive}/>
         <BurgerContent isActive={isMenuActive} activateMenuFunc={setIsMenuActive}/>
