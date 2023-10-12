@@ -78,6 +78,7 @@
     width: 10vw;
     height: 48vh;
     margin: 0;
+    z-index: -1;
 }
 .ppa::before {
     content: '';
