@@ -15,6 +15,21 @@
     background-position: center;
     background-size: cover;
 }
+.ecoRandom span {
+    display: none;
+}
+.ecoRandom:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f4f4f;
+    background-image: none;
+}
+.ecoRandom:hover span {
+    display: unset;
+    color: white;
+    font-size: 2rem;
+}
 .ecology {
     margin-left: 10vw;
     width: 13vw;
@@ -23,7 +38,21 @@
     background-position: center;
     background-size: cover;
 }
-
+.ecology span {
+    display: none;
+}
+.ecology:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f4f4f;
+    background-image: none;
+}
+.ecology:hover span {
+    display: unset;
+    color: white;
+    font-size: 1.5rem;
+}
 .sectionTwo {
     margin-top: 5vh;
     max-width: 35vw;
@@ -42,6 +71,22 @@
     background-position: center;
     background-size: cover;
 }
+.earth span {
+    display: none;
+}
+.earth:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f4f4f;
+    background-image: none;
+    text-align: center;
+}
+.earth:hover span {
+    display: unset;
+    color: white;
+    font-size: 1.5rem;
+}
 .ecoShadow {
     display: inline-block;
     width: 26vw;
@@ -50,6 +95,21 @@
     background-image: url("/ecoShadow.jpg");
     background-position: center;
     background-size: cover;
+}
+.ecoShadow span {
+    display: none;
+}
+.ecoShadow:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f4f4f;
+    background-image: none;
+}
+.ecoShadow:hover span {
+    display: unset;
+    color: white;
+    font-size: 2rem;
 }
 
 .sectionTwo__engineerSaveNature {
@@ -63,35 +123,75 @@
     background-position: center;
     background-size: cover;
 }
+.engineer span {
+    display: none;
+}
+.engineer:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f4f4f;
+    background-image: none;
+}
+.engineer:hover span {
+    display: unset;
+    color: white;
+    font-size: 2rem;
+}
 .saveNature {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     width: 25vw;
     height: 25vh;
     padding-left: 2vw;
 }
+.saveNature:hover {
+    font-weight: bold;
+}
+
+.sectionTwo_ppaEngineer {
+    display: flex;
+}
 .ppa {
     position: relative;
-    display: inline-block;
     width: 10vw;
-    height: 48vh;
+    height: 63vh;
     margin: 0;
-    z-index: -1;
 }
-.ppa::before {
-    content: '';
+.ppaUnder {
     position: absolute;
     left: 1vw;
+    top: 3vh;
     width: 14vw;
-    height: 60vh;
+    height: 57vh;
     background-image: url("/ppa.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
+    z-index: -1;
 }
-
+.ppaUnder span {
+    display: none;
+}
+.ppaAbove {
+    position: absolute;
+    left: 1vw;
+    top: 3vh;
+    width: 14vw;
+    height: 57vh;
+}
+.ppaAbove:hover + .ppaUnder span {
+    display: unset;
+    font-size: 1.4rem;
+}
+.ppaAbove:hover + .ppaUnder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+}
 .sectionThree {
     display: inline-block;
     margin-top: 5vh;
@@ -105,21 +205,37 @@
     display: inline-block;
     width: 11vw;
     height: 20vh;
-    background-color: #fccfd7;
-    visibility: hidden;
 }
-.cat::before {
-    content: '';
+.catAbove {
     position: absolute;
     top: 11vh;
     width: 11vw;
     height: 20vh;
-    background-color: pink;
+}
+.catUnder {
+    position: absolute;
+    top: 11vh;
+    width: 11vw;
+    height: 20vh;
     visibility: visible;
     z-index: -1;
     background-image: url("/cat.jpg");
     background-position: center;
     background-size: cover;
+}
+.catUnder span {
+    display: none;
+}
+.catAbove:hover + .catUnder span {
+    display: unset;
+    font-size: 1.4rem;
+    color: white;
+}
+.catAbove:hover + .catUnder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4f4f4f none;
 }
 .plasma {
     display: inline-block;
@@ -129,6 +245,21 @@
     background-image: url("/plasma.jpg");
     background-position: center;
     background-size: cover;
+}
+.plasma span {
+    display: none;
+}
+.plasma:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f4f4f;
+    background-image: none;
+}
+.plasma:hover span {
+    display: unset;
+    color: white;
+    font-size: 2rem;
 }
 .calcFormulaContainer {
     display: flex;
@@ -145,11 +276,51 @@
     background-position: center;
     background-size: cover;
 }
-.formula {
-    display: inline-block;
+.calc span {
+    display: none;
+}
+.calc:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f4f4f;
+    background-image: none;
+}
+.calc:hover span {
+    display: unset;
+    color: white;
+    font-size: 2rem;
+}
+.forest {
+    display: flex;
     width: 20vw;
-    height: 45vh;
+    height: 38vh;
     background-color: #ab9a9d;
+    background-image: url("/forest.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.forest span {
+    display: none;
+}
+.forest:hover {
+    align-items: center;
+    justify-content: center;
+    background-color: #4f4f4f;
+    background-image: none;
+}
+.forest:hover span {
+    display: unset;
+    color: white;
+    font-size: 2rem;
+}
+.formula {
+    margin-top: 3vh;
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: 5vh;
     background-image: url("/formula.jpg");
     background-position: center;
     background-size: cover;
