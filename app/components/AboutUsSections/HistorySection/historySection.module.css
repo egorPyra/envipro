@@ -1,6 +1,8 @@
 .title {
     margin: 0 0 6px;
     color: #c4c2c2;
+    font-size: 2.7rem;
+    font-weight: lighter;
 }
 .subTitle {
     margin-bottom: 30px;

@@ -40,15 +40,16 @@
     position: absolute;
     background-color: #000;
     color: #c4c2c2;
-    width: 320px;
+    width: 350px;
     height: 100%;
     padding: 30px 42px;
     transform: translateX(100vw);
     transition: transform 0.27s ease-in-out;
+    z-index: 1;
 }
 
 .menuActive {
-    transform: translateX(calc(100vw - 320px));
+    transform: translateX(calc(100vw - 350px));
 }
 
 .closeBtn {
@@ -93,6 +94,7 @@
 .menuListTitle {
     font-size: 18px;
     font-weight: bold;
+    color: #fff;
 }
 
 .menuListTitle:not(:last-child) {
@@ -100,13 +102,15 @@
 }
 
 .menuListSubTitle {
-    margin-top: 10px;
-    font-size: 10px;
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 1.2rem;
     font-weight: normal;
+    color: #c4c2c2;
 }
 
 .menuListSubTitle li:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .blur {
@@ -119,6 +123,7 @@
     transition: opacity 0.27s ease-in-out;
     opacity: 0.7;
     background-color: #fafafa;
+    z-index: 1;
 }
 .none {
     opacity: 0;

@@ -8,8 +8,8 @@ import TeamSection from "@/app/components/AboutUsSections/TeamSection/TeamSectio
 export default function Contacts() {
   return (
     <>
-      <Header/>
       <main className={styles.main}>
+        <Header/>
         <HistorySection/>
         <TeamSection/>
       </main>

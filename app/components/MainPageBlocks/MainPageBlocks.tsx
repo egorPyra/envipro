@@ -4,11 +4,15 @@ export default function MainPageBlocks() {
   return (
     <div className={styles.blocksContainer}>
       <div className={styles.sectionOne}>
-        <div className={styles.ecoRandom}>
+        <div className={styles.circleLogoContainer}>
+          <div className={styles.circleLogo}></div>
+        </div>
+        <div className={styles.ecoMonitoring}>
           <span>ЭКОЛОГИЧЕСКИЙ<br/> МОНИТОРИНГ</span>
         </div>
         <div className={styles.ecology}>
           <span>ЭКОЛОГИЧЕСКОЕ<br/> СОПРОВОЖДЕНИЕ<br/> ДЕЯТЕЛЬНОСТИ</span>
+          <div className={styles.ecologyCircle}></div>
         </div>
       </div>
 
@@ -18,7 +22,7 @@ export default function MainPageBlocks() {
             <span>НЕДРО<br/> ПОЛЬЗО<br/> ВАНИЕ</span>
           </div>
           <div className={styles.ecoShadow}>
-            <span>ПРОИЗВОДСТВЕННЫЙ<br/> ЭКОЛОГИЧЕСКИЙ<br/> КОНТРОЛЬ</span>
+            <span>ПРОИЗВОДСТВЕННЫЙ<br/> ЭКОЛОГИЧЕСКИЙ КОНТРОЛЬ</span>
           </div>
         </div>
         <div className={styles.sectionTwo_ppaEngineer}>
@@ -46,6 +50,7 @@ export default function MainPageBlocks() {
             </div>
           </div>
           <div className={styles.plasma}>
+            <div className={styles.plasmaCircle}></div>
             <span>ГЕОДЕЗИЯ И<br/> КАРТОГРАФИЯ</span>
           </div>
         </div>
@@ -55,6 +60,7 @@ export default function MainPageBlocks() {
           </div>
           <div>
             <div className={styles.forest}>
+              <div className={styles.foresCircle}></div>
               <span>ЛЕСОПОЛЬЗОВАНИЕ</span>
             </div>
             <div className={styles.formula}></div>
