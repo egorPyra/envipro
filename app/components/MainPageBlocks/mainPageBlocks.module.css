@@ -377,3 +377,8 @@
     background-position: center;
     background-size: cover;
 }
+
+
+/* :not(:hover) {
+    filter: brightness(50%);
+} */

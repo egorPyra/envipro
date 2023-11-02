@@ -128,3 +128,11 @@
 .none {
     opacity: 0;
 }
+
+.menuListSubTitle li {
+    transition: all 0.2s ease;
+}
+
+.menuListSubTitle li:hover {
+    font-size: 1.05rem;
+}
