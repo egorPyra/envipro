@@ -139,4 +139,5 @@
     padding-bottom: 2px;
     border-bottom: #c4c2c2 1px solid;
     border-top: #c4c2c2 1px solid;
+    transform: translateY(-3px);
 }
