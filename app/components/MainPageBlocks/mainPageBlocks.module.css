@@ -22,6 +22,7 @@
 }
 
 .ecoMonitoring {
+    position: relative;
     width: 23vw;
     height: 37vh;
     margin-bottom: 20vh;
@@ -54,6 +55,17 @@
     background-position: center;
     background-size: cover;
 }
+.ecology::before {
+    position: absolute;
+    content: '';
+    top: 65%;
+    left: -30%;
+    width: 4vh;
+    height: 4vh;
+    background-color: #000;
+    border-radius: 50%;
+    pointer-events: none;
+}
 .ecology span {
     display: none;
 }
@@ -68,7 +80,7 @@
     display: unset;
     text-align: center;
     color: #757575;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
 }
 .ecologyCircle {
     position: absolute;
@@ -91,6 +103,7 @@
     align-items: flex-end;
 }
 .earth {
+    position: relative;
     margin-left: 5vw;
     width: 10vw;
     height: 15vh;
@@ -113,9 +126,11 @@
 .earth:hover span {
     display: unset;
     color: white;
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
+    font-size: 2.3rem;
 }
 .ecoShadow {
+    position: relative;
     display: inline-block;
     width: 26vw;
     height: 35vh;
@@ -137,13 +152,14 @@
 .ecoShadow:hover span {
     display: unset;
     color: #2e2e2e;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
 }
 
 .sectionTwo__engineerSaveNature {
     display: inline-block;
 }
 .engineer {
+    position: relative;
     width: 25vw;
     height: 37vh;
     background-color: #b8cde3;
@@ -163,15 +179,15 @@
 }
 .engineer:hover span {
     display: unset;
-    color: #666565;
-    font-size: 2.3rem;
+    color: #fff;
+    font-size: 2.5rem;
     text-align: center;
 }
 .saveNature {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
+    font-size: 2.8rem;
     width: 25vw;
     height: 25vh;
     padding-left: 2vw;
@@ -186,12 +202,22 @@
     height: 63vh;
     margin: 0;
 }
+.ppa::before {
+    position: absolute;
+    content: '';
+    top: 53%;
+    left: 10%;
+    width: 4vh;
+    height: 4vh;
+    background-color: #000;
+    border-radius: 50%;
+}
 .ppaUnder {
     position: absolute;
     left: 1vw;
-    top: 3vh;
+    top: 13vh;
     width: 14vw;
-    height: 57vh;
+    height: 47vh;
     background-image: url("/ppa.jpg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -204,19 +230,20 @@
 .ppaAbove {
     position: absolute;
     left: 1vw;
-    top: 3vh;
+    top: 13vh;
     width: 14vw;
-    height: 57vh;
+    height: 47vh;
 }
 .ppaAbove:hover + .ppaUnder span {
     display: unset;
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 .ppaAbove:hover + .ppaUnder {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     background: none;
+    padding-right: 4px;
 }
 .sectionThree {
     display: inline-block;
@@ -274,7 +301,17 @@
     background-position: center;
     background-size: cover;
     text-align: center;
-    z-index: 0;
+}
+.plasma::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -17%;
+    width: 4vh;
+    height: 4vh;
+    background-color: #000;
+    border-radius: 50%;
+    pointer-events: none;
 }
 .plasma span {
     display: none;
@@ -288,7 +325,7 @@
 }
 .plasma:hover span {
     display: unset;
-    color: #666565;
+    color: #fff;
     font-size: 2.3rem;
 }
 .plasmaCircle {
@@ -306,6 +343,7 @@
     align-items: flex-start;
 }
 .calc {
+    position: relative;
     display: inline-block;
     width: 17vw;
     height: 57vh;
@@ -328,7 +366,7 @@
 }
 .calc:hover span {
     display: unset;
-    font-size: 2rem;
+    font-size: 2.3rem;
     color: #757575;
 
 }
@@ -354,7 +392,7 @@
 .forest:hover span {
     display: unset;
     color: #c4c4c4;
-    font-size: 2rem;
+    font-size: 2.3rem;
 }
 .foresCircle {
     position: absolute;
@@ -367,6 +405,7 @@
     z-index: -1;
 }
 .formula {
+    position: relative;
     margin-top: 3vh;
     height: 20vh;
     width: 20vh;
@@ -376,9 +415,5 @@
     background-image: url("/formula.jpg");
     background-position: center;
     background-size: cover;
+    overflow: hidden;
 }
-
-
-/* :not(:hover) {
-    filter: brightness(50%);
-} */
