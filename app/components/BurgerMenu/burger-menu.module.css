@@ -52,6 +52,14 @@
     transform: translateX(calc(100vw - 350px));
 }
 
+.menuActive1 {
+    transform: translateX(calc(100vw - 710px));
+}
+
+.menuActive2 {
+    transform: translateX(calc(100vw - 1070px));
+}
+
 .closeBtn {
     position: absolute;
     right: 42px;
