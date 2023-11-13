@@ -179,7 +179,7 @@
 }
 .engineer:hover span {
     display: unset;
-    color: #fff;
+    color: #c4c4c4;
     font-size: 2.5rem;
     text-align: center;
 }
@@ -325,7 +325,7 @@
 }
 .plasma:hover span {
     display: unset;
-    color: #fff;
+    color: #c4c4c4;
     font-size: 2.3rem;
 }
 .plasmaCircle {
