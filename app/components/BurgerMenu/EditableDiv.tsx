@@ -4,13 +4,11 @@ import React, { useState } from 'react';
 interface EditableDivProps {
   content: string;
   styles: string;
-  hoverStyles: string;
   onChangeContent: (value: string) => void;
   onChangeStyles: (value: string) => void;
-  onChangeHoverStyles: (value: string) => void;
 }
 
-const EditableDiv: React.FC<EditableDivProps> = ({ content, styles, hoverStyles, onChangeContent, onChangeStyles, onChangeHoverStyles }) => {
+const EditableDiv: React.FC<EditableDivProps> = ({ content, styles, onChangeContent, onChangeStyles }) => {
   const handleContentChange = (event: React.ChangeEvent<HTMLDivElement>) => {
     onChangeContent(event.currentTarget.textContent || '');
   };
@@ -19,27 +17,21 @@ const EditableDiv: React.FC<EditableDivProps> = ({ content, styles, hoverStyles,
     onChangeStyles(event.currentTarget.value);
   };
 
-  const handleHoverStylesChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    onChangeHoverStyles(event.currentTarget.value);
-  };
-
   return (
-    <div className="editable-div-container">
+    <div>
       <div
         contentEditable={true}
-        style={{ display: 'block', ...parseStyles(styles) }} 
+        style={{ display: 'block', ...parseStyles(styles) }}
         onInput={handleContentChange}
         dangerouslySetInnerHTML={{ __html: content }}
       />
-      <textarea placeholder="Type your styles here..." style={{ margin:'10px 20px', width:'245px', height:'78px'}} value={styles} onChange={handleStylesChange} />
-
-      {/* <textarea placeholder="Type your hover styles here..." value={hoverStyles} onChange={handleHoverStylesChange} /> */}
+      <textarea placeholder="Write down your styles here..." value={styles} style={{margin:'10px', width:'240px', height:'80px'}} onChange={handleStylesChange} />
     </div>
   );
 };
 
 const parseStyles = (styles: string): React.CSSProperties => {
-  const styleObject: Record<string, string> = {};
+  const styleObject: React.CSSProperties = {};
   styles.split(';').forEach((style) => {
     const [property, value] = style.split(':');
     if (property && value) {

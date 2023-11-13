@@ -3,13 +3,6 @@ import React, { useState } from 'react';
 import styles from './burger-menu.module.css';
 import Link from 'next/link';
 import EditableDiv from './EditableDiv'; 
-import CSS from "csstype";
-
-export const DropdownTextHov: { [P in CSS.SimplePseudos]?: CSS.Properties }  = {
-  ':hover': {
-    color: 'blue',
-  },
-}
 
 interface IBurgerContent {
   isActive: boolean;
@@ -17,13 +10,8 @@ interface IBurgerContent {
 }
 
 export default function BurgerContent({ isActive, activateMenuFunc }: IBurgerContent) {
-  const [editableContent, setEditableContent] = useState<string>('Type your text here...');
+  const [editableContent, setEditableContent] = useState<string>('Форма для редактирования');
   const [editableStyles, setEditableStyles] = useState<string>('color: red;');
-  const [editableHoverStyles, setEditableHoverStyles] = useState<string>('.menuListSubTitle li:hover { color: blue; }');
-  
-  const pseudoClasses = {
-    hover: ':hover'
-  }
 
   const handleEditableContentChange = (value: string) => {
     setEditableContent(value);
@@ -31,10 +19,6 @@ export default function BurgerContent({ isActive, activateMenuFunc }: IBurgerCon
 
   const handleEditableStylesChange = (value: string) => {
     setEditableStyles(value);
-  };
-
-  const handleEditableHoverStylesChange = (value: string) => {
-    setEditableHoverStyles(value);
   };
 
   return (
@@ -51,17 +35,14 @@ export default function BurgerContent({ isActive, activateMenuFunc }: IBurgerCon
         <EditableDiv
           content={editableContent}
           styles={editableStyles}
-          hoverStyles={editableHoverStyles}
           onChangeContent={handleEditableContentChange}
           onChangeStyles={handleEditableStylesChange}
-          onChangeHoverStyles={handleEditableHoverStylesChange}
         />
 
-        
         <ul className={styles.menuList}>
           <li className={styles.menuListTitle}>
             <Link href={'/about_us'}>О нас</Link>
-            <ul className={styles.menuListSubTitle} style={parseStyles(editableStyles) as React.CSSProperties} >
+            <ul className={styles.menuListSubTitle} style={parseStyles(editableStyles) as React.CSSProperties}>
               <li>НАША ИСТОРИЯ</li>
               <li>НАША КОМАНДА</li>
               <li>КЛИЕНТЫ</li>
