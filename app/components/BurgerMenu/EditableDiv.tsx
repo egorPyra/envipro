@@ -25,13 +25,13 @@ const EditableDiv: React.FC<EditableDivProps> = ({ content, styles, onChangeCont
         onInput={handleContentChange}
         dangerouslySetInnerHTML={{ __html: content }}
       />
-      <textarea placeholder="Write down your styles here..." value={styles} style={{margin:'10px', width:'240px', height:'80px'}} onChange={handleStylesChange} />
+      <textarea placeholder="Write down your styles here..." value={styles} style={{background:'black', color:'#4AFC12', fontFamily:'sans-serif',padding:'5px' ,fontStyle:'italic',margin:'10px', width:'240px', height:'80px'}} onChange={handleStylesChange} />
     </div>
   );
 };
 
 const parseStyles = (styles: string): React.CSSProperties => {
-  const styleObject: React.CSSProperties = {};
+  const styleObject: Record<string, string> = {};
   styles.split(';').forEach((style) => {
     const [property, value] = style.split(':');
     if (property && value) {
