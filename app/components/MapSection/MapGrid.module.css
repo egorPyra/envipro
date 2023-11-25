@@ -1,0 +1,32 @@
+/* styles/MapGrid.module.css */
+
+.mapGrid {
+    width: 100vw;
+    margin-left: 170px;
+
+    /* display: grid; */
+   
+    grid-template-columns: repeat(27, 30px); 
+    grid-template-rows: repeat(13, 30px); 
+    gap: 15px; 
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .cell {
+    width: 4vh; 
+    height: 4vh; 
+    /* border: 1px solid #ccc;  */
+    position: relative;
+    margin: 5px;
+  }
+  
+  .ball {
+    width: 100%;
+    height: 100%;
+    background-color: #393939; 
+    border-radius: 50%;
+  }
+  

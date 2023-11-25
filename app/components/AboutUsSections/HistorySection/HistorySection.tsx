@@ -6,7 +6,7 @@ export default function HistorySection() {
       <div className={styles.historyBg}></div>
       <h1 className={styles.title}>Наша история</h1>
       <p className={styles.subTitle}>Это была любовь с первого взгляда!</p>
-      <p className={styles.historyText}>
+      <p className={styles.historyTextTitle}>
         ЭнвиПро&nbsp;&mdash; это больше, чем просто компания. 
       </p>
       <p className={styles.historyText}>

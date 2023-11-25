@@ -40,7 +40,7 @@
 
 .imageContainer {
     width: 100%;
-    margin-top: -17vh;
+    margin-top: -13vh;
     /* display: inline-block; */
 }
 
@@ -51,10 +51,10 @@
     display: inline-block;
     margin-bottom: 30vh;
 
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
 
     background-color: #e0dcce;
-    background-image: url("/avatarTeamSection.jpg");
+    background-image: url("/TeamImages/img1.png");
     background-position: center;
     background-size: cover;
 }
@@ -65,10 +65,10 @@
     margin-bottom: 10vh;
     display: inline-block;
 
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
 
     background-color: #e0dcce;
-    background-image: url("/avatarTeamSection.jpg");
+    background-image: url("/TeamImages/img2.png");
     background-position: center;
     background-size: cover;
 }
@@ -85,10 +85,10 @@
     /* margin-bottom: 10vh; */
     display: block;
 
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
 
     background-color: #e0dcce;
-    background-image: url("/avatarTeamSection.jpg");
+    background-image: url("/TeamImages/img3.png");
     background-position: center;
     background-size: cover;
 }
@@ -99,10 +99,10 @@
     /* margin-bottom: 10vh; */
     display: block;
 
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
 
     background-color: #e0dcce;
-    background-image: url("/avatarTeamSection.jpg");
+    background-image: url("/TeamImages/img4.png");
     background-position: center;
     background-size: cover;
 }
@@ -113,10 +113,10 @@
     margin-bottom: 12vh;
     display: inline-block;
 
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
 
     background-color: #e0dcce;
-    background-image: url("/avatarTeamSection.jpg");
+    background-image: url("/TeamImages/img5.png");
     background-position: center;
     background-size: cover;
 }
@@ -131,24 +131,24 @@
     /* margin-bottom: 10vh; */
     display: block;
 
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
 
     background-color: #e0dcce;
-    background-image: url("/avatarTeamSection.jpg");
+    background-image: url("/TeamImages/img6.png");
     background-position: center;
     background-size: cover;
 }
 
 .img7 {
-    width: 11.5vw;
+    width: 20vh;
     height: 30vh;
     /* margin-bottom: 10vh; */
     display: block;
 
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
 
     background-color: #e0dcce;
-    background-image: url("/avatarTeamSection.jpg");
+    background-image: url("/TeamImages/img7.png");
     background-position: center;
     background-size: cover;
 }
