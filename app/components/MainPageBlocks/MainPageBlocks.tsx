@@ -5,7 +5,7 @@ import { CSSTransition } from 'react-transition-group';
 export default function MainPageBlocks() {
   const [isShown, setIsShown] = useState(false);
   const [keepActive, setKeepActive] = useState('');
-  // const nodeRef = useRef(null);
+  const nodeRef = useRef(null);
 
   return (
     <div className={styles.blocksContainer}>
@@ -13,22 +13,21 @@ export default function MainPageBlocks() {
         <div className={styles.circleLogoContainer}>
           <div className={styles.circleLogo}></div>
         </div>
-        {/* <CSSTransition
-            in={showMessage}
-            nodeRef={nodeRef}
+        <CSSTransition
+            in={keepActive === 'ecoMonitoring'}
             timeout={300}
-            classNames="alert"
-            onEnter={() => setShowButton(false)}
-            onExited={() => setShowButton(true)}
-        > */}
+            classNames="show"
+            nodeRef={nodeRef}
+        >
           <div
+            ref={nodeRef}
             onMouseEnter={() => {setIsShown(true); setKeepActive('ecoMonitoring')}}
             onMouseLeave={() => setIsShown(false)}
             className={styles.ecoMonitoring}>
               <div className={`${isShown && keepActive !== 'ecoMonitoring' ? 'greyBlock' : 'greyBlock hide'}`}></div>
             <span>ЭКОЛОГИЧЕСКИЙ<br/> МОНИТОРИНГ</span>
           </div>
-        {/* </CSSTransition> */}
+        </CSSTransition>
         <div
           onMouseEnter={() => {setIsShown(true); setKeepActive('ecology')}}
           onMouseLeave={() => setIsShown(false)}
@@ -102,7 +101,7 @@ export default function MainPageBlocks() {
             <span>ГЕОДЕЗИЯ И<br/> КАРТОГРАФИЯ</span>
           </div>
         </div>
-        <div className={styles.calcFormulaContainer}>
+        <div className={styles.calcEnvilabContainer}>
           <div
             onMouseEnter={() => {setIsShown(true); setKeepActive('calc')}}
             onMouseLeave={() => setIsShown(false)}
@@ -120,10 +119,10 @@ export default function MainPageBlocks() {
               <span>ЛЕСОПОЛЬЗОВАНИЕ</span>
             </div>
             <div
-              onMouseEnter={() => {setIsShown(true); setKeepActive('formula')}}
+              onMouseEnter={() => {setIsShown(true); setKeepActive('envilab')}}
               onMouseLeave={() => setIsShown(false)}
-              className={styles.formula}>
-              <div className={`${isShown && keepActive !== 'formula' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+              className={styles.envilab}>
+              <div className={`${isShown && keepActive !== 'envilab' ? 'greyBlock' : 'greyBlock hide'}`}></div>
             </div>
           </div>
         </div>
