@@ -9,6 +9,7 @@ export default function MainPageBlocks() {
 
   return (
     <div className={styles.blocksContainer}>
+      <div className={`${isShown ? 'greyBlockUnder' : 'greyBlockUnder hide'}`}></div>
       <div className={styles.sectionOne}>
         <div className={styles.circleLogoContainer}>
           <div className={styles.circleLogo}></div>

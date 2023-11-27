@@ -65,6 +65,7 @@
     background-color: #000;
     border-radius: 50%;
     pointer-events: none;
+    z-index: -3;
 }
 .ecology span {
     display: none;
@@ -209,7 +210,7 @@
     left: 10%;
     width: 4vh;
     height: 4vh;
-    background-color: #000;
+    background-color: transparent;
     border-radius: 50%;
 }
 .ppaUnder {
@@ -219,7 +220,7 @@
     width: 14vw;
     height: 47vh;
     background-image: url("/ppa.jpg");
-    background-size: contain;
+    background-size: 100% 102%;
     background-repeat: no-repeat;
     background-position: bottom;
     z-index: -1;
@@ -244,6 +245,7 @@
     align-items: center;
     background: none;
     padding-right: 4px;
+    background-color: #fff;
 }
 .sectionThree {
     display: inline-block;
@@ -312,6 +314,7 @@
     background-color: #000;
     border-radius: 50%;
     pointer-events: none;
+    z-index: -3;
 }
 .plasma span {
     display: none;

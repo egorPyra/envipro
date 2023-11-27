@@ -148,6 +148,19 @@ ul {
   transition: opacity 0.33s ease;
 }
 
+.greyBlockUnder {
+  position: absolute;
+  opacity: 0.8;
+  top: -2px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #363535;
+  opacity: .9;
+  transition: opacity 0.33s ease;
+  z-index: -2;
+}
+
 .hide {
   opacity: 0;
 }
