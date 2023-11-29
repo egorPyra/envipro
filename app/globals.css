@@ -164,3 +164,11 @@ ul {
 .hide {
   opacity: 0;
 }
+
+.show-enter {
+    opacity: 0;
+}
+.show-enter-active {
+    opacity: 1;
+    transition: opacity 3000ms;
+}
