@@ -25,6 +25,6 @@
   "devDependencies": {
     "@types/react-transition-group": "^4.4.9",
     "generate-react-cli": "^8.3.0",
-    "sass": "^1.68.0"
+    "sass": "^1.69.5"
   }
 }
