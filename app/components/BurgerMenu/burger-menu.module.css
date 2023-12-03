@@ -9,9 +9,11 @@
     height: 20vh;
     background-color: #000;
     border: none;
+    cursor: pointer;
 }
-.btn:active {
+.btn:active, .btn:focus {
     background-color: #363535;
+    outline: none;
 }
 
 .line {

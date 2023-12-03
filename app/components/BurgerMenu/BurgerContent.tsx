@@ -1,3 +1,4 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import styles from './burger-menu.module.css'
 import Link from "next/link";
 
@@ -14,9 +15,12 @@ export default function BurgerContent({ isActive, activateMenuFunc }: IBurgerCon
         className={isActive ? `${styles.menuContent} ${styles.menuActive}` : `${styles.menuContent}`}
         onClick={(event) => event.stopPropagation()}
       >
+        {isActive && 
         <div className={styles.closeBtnWrap}>
-          <button onClick={() => activateMenuFunc(false)} className={styles.closeBtn}/>
+          <button onClick={() => activateMenuFunc(false)} className={styles.closeBtn} />
         </div>
+        }
+        {isActive &&
         <ul className={styles.menuList}>
           <li className={styles.menuListTitle}>
             <Link href={'/about_us'}>О нас</Link>
@@ -46,6 +50,7 @@ export default function BurgerContent({ isActive, activateMenuFunc }: IBurgerCon
             <Link href={'/contacts'}>Контакты</Link>
           </li>
         </ul>
+        }
       </div>
     </>
   );

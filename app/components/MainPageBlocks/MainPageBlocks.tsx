@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import styles from './mainPageBlocks.module.css'
 import {useRef, useState} from "react";
+import Link from 'next/link';
 
 export default function MainPageBlocks() {
   const [isShown, setIsShown] = useState(false);
@@ -22,16 +23,18 @@ export default function MainPageBlocks() {
             >
           </motion.div>
         </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          onMouseEnter={() => {setIsShown(true); setKeepActive('ecoMonitoring')}}
-          onMouseLeave={() => setIsShown(false)}
-          className={styles.ecoMonitoring}>
-            <div className={`${isShown && keepActive !== 'ecoMonitoring' ? 'greyBlock' : 'greyBlock hide'}`}></div>
-          <span>ЭКОЛОГИЧЕСКИЙ<br/> МОНИТОРИНГ</span>
-        </motion.div>
+        <Link href={'/about_us'} className={styles.link}>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            onMouseEnter={() => {setIsShown(true); setKeepActive('ecoMonitoring')}}
+            onMouseLeave={() => setIsShown(false)}
+            className={styles.ecoMonitoring}>
+              <div className={`${isShown && keepActive !== 'ecoMonitoring' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+            <span>ЭКОЛОГИЧЕСКИЙ<br/> МОНИТОРИНГ</span>
+          </motion.div>
+        </Link>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -44,6 +47,7 @@ export default function MainPageBlocks() {
           className={styles.ecology}>
           <div className={`${isShown && keepActive !== 'ecology' ? 'greyBlock' : 'greyBlock hide'}`}></div>
           <span>ЭКОЛОГИЧЕСКОЕ<br/> СОПРОВОЖДЕНИЕ<br/> ДЕЯТЕЛЬНОСТИ</span>
+          <Link href={'/about_us'} className={`${styles.linkAbsolut} ${styles.link}`}></Link>
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -58,48 +62,54 @@ export default function MainPageBlocks() {
 
       <div className={styles.sectionTwo}>
         <div className={styles.sectionTwo_subBlock}>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ 
-              duration: 0.8,
-              delay: 0.5,
-            }}
-            onMouseEnter={() => {setIsShown(true); setKeepActive('earth')}}
-            onMouseLeave={() => setIsShown(false)}
-            className={styles.earth}>
-            <div className={`${isShown && keepActive !== 'earth' ? 'greyBlock' : 'greyBlock hide'}`}></div>
-            <span>НЕДРО<br/> ПОЛЬЗО<br/> ВАНИЕ</span>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ 
-              duration: 0.8,
-              delay: 0.6,
-            }}
-            onMouseEnter={() => {setIsShown(true); setKeepActive('ecoShadow')}}
-            onMouseLeave={() => setIsShown(false)}
-            className={styles.ecoShadow}>
-            <div className={`${isShown && keepActive !== 'ecoShadow' ? 'greyBlock' : 'greyBlock hide'}`}></div>
-            <span>ПРОИЗВОДСТВЕННЫЙ<br/> ЭКОЛОГИЧЕСКИЙ КОНТРОЛЬ</span>
-          </motion.div>
-        </div>
-        <div className={styles.sectionTwo_ppaEngineer}>
-          <div className={styles.sectionTwo__engineerSaveNature}>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ 
                 duration: 0.8,
-                delay: 0.4,
+                delay: 0.5,
               }}
-              onMouseEnter={() => {setIsShown(true); setKeepActive('engineer')}}
+              onMouseEnter={() => {setIsShown(true); setKeepActive('earth')}}
               onMouseLeave={() => setIsShown(false)}
-              className={styles.engineer}>
-              <div className={`${isShown && keepActive !== 'engineer' ? 'greyBlock' : 'greyBlock hide'}`}></div>
-              <span>ИНЖЕНЕРНЫЕ<br/> ИЗЫСКАНИЯ</span>
+              className={styles.earth}>
+              <Link href={'/about_us'} className={styles.link}>
+                <div className={`${isShown && keepActive !== 'earth' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+                <span>НЕДРО<br/> ПОЛЬЗО<br/> ВАНИЕ</span>
+              </Link>
             </motion.div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ 
+                duration: 0.8,
+                delay: 0.6,
+              }}
+              onMouseEnter={() => {setIsShown(true); setKeepActive('ecoShadow')}}
+              onMouseLeave={() => setIsShown(false)}
+              className={styles.ecoShadow}>
+              <Link href={'/about_us'} className={styles.link}>
+                <div className={`${isShown && keepActive !== 'ecoShadow' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+                <span>ПРОИЗВОДСТВЕННЫЙ<br/> ЭКОЛОГИЧЕСКИЙ КОНТРОЛЬ</span>
+              </Link>
+            </motion.div>
+        </div>
+        <div className={styles.sectionTwo_ppaEngineer}>
+          <div className={styles.sectionTwo__engineerSaveNature}>
+            <Link href={'/about_us'} className={styles.link}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ 
+                  duration: 0.8,
+                  delay: 0.4,
+                }}
+                onMouseEnter={() => {setIsShown(true); setKeepActive('engineer')}}
+                onMouseLeave={() => setIsShown(false)}
+                className={styles.engineer}>
+                <div className={`${isShown && keepActive !== 'engineer' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+                <span>ИНЖЕНЕРНЫЕ<br/> ИЗЫСКАНИЯ</span>
+              </motion.div>
+            </Link>
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -116,7 +126,9 @@ export default function MainPageBlocks() {
             <div
               onMouseEnter={() => {setIsShown(true); setKeepActive('ppaAbove')}}
               onMouseLeave={() => setIsShown(false)}
-              className={styles.ppaAbove}/>
+              className={styles.ppaAbove}>
+                <Link href={'/about_us'} className={`${styles.linkContainer} ${styles.link}`}></Link>
+              </div>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -138,7 +150,9 @@ export default function MainPageBlocks() {
             <div
               onMouseEnter={() => {setIsShown(true); setKeepActive('catAbove')}}
               onMouseLeave={() => setIsShown(false)}
-              className={styles.catAbove}/>
+              className={styles.catAbove}>
+                <Link href={'/about_us'} className={`${styles.linkContainer} ${styles.link}`}></Link>
+              </div>
             <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -152,28 +166,29 @@ export default function MainPageBlocks() {
               <span>КРАСНАЯ<br/> КНИГА</span>
             </motion.div>
           </div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ 
-              duration: 0.8,
-              delay: 1,
-            }}
-            onMouseEnter={() => {setIsShown(true); setKeepActive('plasma')}}
-            onMouseLeave={() => setIsShown(false)}
-            className={styles.plasma}>
-            <div className={`${isShown && keepActive !== 'plasma' ? 'greyBlock' : 'greyBlock hide'}`}></div>
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ 
                 duration: 0.8,
-                delay: 2,
+                delay: 1,
               }}
-              className={styles.plasmaCircle}
-            ></motion.div>
-            <span>ГЕОДЕЗИЯ И<br/> КАРТОГРАФИЯ</span>
-          </motion.div>
+              onMouseEnter={() => {setIsShown(true); setKeepActive('plasma')}}
+              onMouseLeave={() => setIsShown(false)}
+              className={styles.plasma}>
+              <div className={`${isShown && keepActive !== 'plasma' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+              <motion.div 
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ 
+                  duration: 0.8,
+                  delay: 2,
+                }}
+                className={styles.plasmaCircle}
+              ></motion.div>
+              <Link href={'/about_us'} className={`${styles.linkAbsolut} ${styles.link}`}></Link>
+                <span>ГЕОДЕЗИЯ И<br/> КАРТОГРАФИЯ</span>
+            </motion.div>
         </div>
         <div className={styles.calcEnvilabContainer}>
           <motion.div
@@ -186,32 +201,36 @@ export default function MainPageBlocks() {
             onMouseEnter={() => {setIsShown(true); setKeepActive('calc')}}
             onMouseLeave={() => setIsShown(false)}
             className={styles.calc}>
-            <div className={`${isShown && keepActive !== 'calc' ? 'greyBlock' : 'greyBlock hide'}`}></div>
-            <span>ПРОЕКТИРОВАНИЕ</span>
+            <Link href={'/about_us'} className={styles.link}>
+              <div className={`${isShown && keepActive !== 'calc' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+              <span>ПРОЕКТИРОВАНИЕ</span>
+            </Link>
           </motion.div>
           <div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ 
-                duration: 0.8,
-                delay: 1.2,
-              }}
-              onMouseEnter={() => {setIsShown(true); setKeepActive('forest')}}
-              onMouseLeave={() => setIsShown(false)}
-              className={styles.forest}>
-              <div className={`${isShown && keepActive !== 'forest' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+            <Link href={'/about_us'} className={styles.link}>
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ 
                   duration: 0.8,
-                  delay: 2,
+                  delay: 1.2,
                 }}
-                className={styles.foresCircle}
-              ></motion.div>
-              <span>ЛЕСОПОЛЬЗОВАНИЕ</span>
-            </motion.div>
+                onMouseEnter={() => {setIsShown(true); setKeepActive('forest')}}
+                onMouseLeave={() => setIsShown(false)}
+                className={styles.forest}>
+                <div className={`${isShown && keepActive !== 'forest' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ 
+                    duration: 0.8,
+                    delay: 2,
+                  }}
+                  className={styles.foresCircle}
+                ></motion.div>
+                <span>ЛЕСОПОЛЬЗОВАНИЕ</span>
+              </motion.div>
+            </Link>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -222,7 +241,9 @@ export default function MainPageBlocks() {
               onMouseEnter={() => {setIsShown(true); setKeepActive('envilab')}}
               onMouseLeave={() => setIsShown(false)}
               className={styles.envilab}>
-              <div className={`${isShown && keepActive !== 'envilab' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+              <Link href={'/about_us'} className={styles.link}>
+                <div  className={`${isShown && keepActive !== 'envilab' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+              </Link>
             </motion.div>
           </div>
         </div>
