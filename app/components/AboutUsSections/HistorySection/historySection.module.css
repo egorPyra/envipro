@@ -11,6 +11,7 @@
 
 .historyContainer {
     position: relative;
+    margin-top: 95px;
     margin-bottom: 50px;
     padding-bottom: 180px;
 }
@@ -38,7 +39,7 @@
 
 .historyBg {
     position: absolute;
-    top: calc(-8vh - 50px);
+    top: calc(-100px - 50px);
     right: -6rem;
     bottom: 0;
     left: -6rem;
@@ -48,4 +49,9 @@
     background-position: bottom;
     background-repeat: no-repeat;
     z-index: -1;
+}
+
+.historyContent {
+    max-width: 1920px;
+    margin: 0 auto;
 }
