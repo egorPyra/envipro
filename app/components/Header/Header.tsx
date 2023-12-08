@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 export default function Header() {
 
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-  let prevPosition = window.scrollY;
+  const [prevPosition, setPrevPosition] = useState(0);
   const handleScroll = () => {
       const position = window.scrollY;
 
@@ -20,12 +20,12 @@ export default function Header() {
           setIsHeaderVisible(true)
       }
 
-      prevPosition = position;
+      setPrevPosition(position)
   };
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
-
+    setPrevPosition(window.scrollY)
     return () => {
         window.removeEventListener('scroll', handleScroll);
     };
