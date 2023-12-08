@@ -2,34 +2,19 @@ import React, { useEffect, useState } from 'react';
 import styles from './header.module.css'
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from 'framer-motion';
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 
 export default function Header() {
 
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
-  const [prevPosition, setPrevPosition] = useState(0);
-  const handleScroll = () => {
-      const position = window.scrollY;
+  
+  const { scrollY } = useScroll();
 
-      /* if scrolling down, let it scroll out of view as normal */
-      if (prevPosition <= position){
-        setIsHeaderVisible(false);
-      }
-      /* otherwise if we're scrolling up, fix the nav to the top */
-      else{  
-          setIsHeaderVisible(true)
-      }
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    console.log("Page scroll: ", latest)
+  })
 
-      setPrevPosition(position)
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    setPrevPosition(window.scrollY)
-    return () => {
-        window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  console.log(scrollY)
 
   const variants = {
     open: { opacity: 1},
