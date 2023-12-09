@@ -29,7 +29,7 @@
     animation: fallAnimation linear 2s;
     animation-delay: 5s;
     animation-iteration-count:1;
-    opacity: 0;
+    opacity: 1;
   }
 
 .ball::after {

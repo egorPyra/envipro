@@ -1,63 +1,43 @@
-.MapContainer {
-    position: relative;
-    margin-bottom: 50px;
-    padding-top: 100px;
-    padding-bottom: 180px;
-    height: 90vh;
-    /* overflow: hidden; */
-}
-
 .title {
     margin: 0 0 6px;
     color: #313131;
     font-size: 2.7rem;
     font-weight: lighter;
 }
-
 .subTitle {
     margin-bottom: 30px;
     color: #313131;
 }
 
-.MapBg {
+.MapContainer {
+    position: relative;
+    margin-bottom: 50px;
+    /* padding-bottom: 180px; */
+  }
+  
+  .MapBg {
     position: absolute;
-    top: 0;
+    top: -5vh;
     right: -6rem;
     bottom: -100px;
-    left: -6rem; 
+    left: -6rem;
     background-color: #2f2f2f;
     background-image: url("/bgMap.svg");
-    background-size: 150%;
+    background-size: cover; /* Use cover to maintain aspect ratio and cover the entire container */
     background-position: bottom;
     background-repeat: no-repeat;
     z-index: -1;
-}
-
-
-/* balls animation */
-
-.mapSection {
-    text-align: center;
-    margin: 20px;
   }
   
   .ballContainer {
-    position: relative;
-    height: 400px; /* Adjust the height based on your needs */
-    overflow: hidden;
-    margin-top: 20px;
-  }
-
-  .MapContainer {
-    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: -100px;
   }
   
-  .Ball {
-    position: absolute;
-    width: 4vh;
-    height: 4vh;
-    background-color: #393939;
-    border-radius: 50%;
-    transition: transform 2s ease-in; /* Add transition property for smooth motion */
+  .rowContainer {
+    display: flex; /* Use flex instead of table for better responsiveness */
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
   }
   
