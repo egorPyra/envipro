@@ -12,12 +12,13 @@
 .MapContainer {
     position: relative;
     margin-bottom: 50px;
+    padding-top: 100px;
     /* padding-bottom: 180px; */
   }
   
   .MapBg {
     position: absolute;
-    top: -5vh;
+    top: 0;
     right: -6rem;
     bottom: -100px;
     left: -6rem;
