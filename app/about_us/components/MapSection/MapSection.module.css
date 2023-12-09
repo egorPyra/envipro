@@ -1,6 +1,7 @@
 .MapContainer {
     position: relative;
     margin-bottom: 50px;
+    padding-top: 100px;
     padding-bottom: 180px;
     height: 90vh;
     /* overflow: hidden; */
@@ -20,7 +21,7 @@
 
 .MapBg {
     position: absolute;
-    top: calc(-5vh - 50px);
+    top: 0;
     right: -6rem;
     bottom: -100px;
     left: -6rem; 

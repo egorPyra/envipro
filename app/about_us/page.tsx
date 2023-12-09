@@ -2,8 +2,8 @@
 
 import styles from "./page.module.css";
 import Header from "@/app/components/Header/Header";
-import MapSection from "../components/MapSection/MapSection";
-import KeepImprove from "../components/KeepImprove/KeepImprove";
+import MapSection from "./components/MapSection/MapSection";
+import KeepImprove from "./components/KeepImproveSection/KeepImprove";
 import HistorySection from "./components/HistorySection/HistorySection";
 import TeamSection from "./components/TeamSection/TeamSection";
 import { useEffect, useState } from "react";
