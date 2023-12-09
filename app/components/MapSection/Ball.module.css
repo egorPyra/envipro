@@ -1,0 +1,46 @@
+/* Ball.module.css */
+@keyframes fallAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+  }
+/*   
+  .ball {
+    width: 20px;
+    height: 20px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    animation: fallAnimation linear infinite;
+  } */
+  
+
+.ball {
+    width: 2vw;
+    height: 2vw;
+    background-color: #393939;
+    border-radius: 50%;
+    margin: 10%;
+    animation: fallAnimation linear 2s;
+    animation-delay: 5s;
+    animation-iteration-count:1;
+    opacity: 0;
+  }
+
+.ball::after {
+    opacity: 1;
+}
+  
+  .hidden {
+    width: 2vw;
+    height: 2vw;
+    background-color: transparent;
+    border-radius: 50%;
+    margin: 10%;
+  }
+  
