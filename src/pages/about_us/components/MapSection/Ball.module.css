@@ -1,5 +1,5 @@
 /* Ball.module.css */
-@keyframes fallAnimation {
+/* @keyframes fallAnimation {
     from {
       opacity: 0;
       transform: translateY(-30px);
@@ -8,7 +8,7 @@
       opacity: 1;
       transform: translateY(30px);
     }
-  }
+  } */
 /*   
   .ball {
     width: 20px;
