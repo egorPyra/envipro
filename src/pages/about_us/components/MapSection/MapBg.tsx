@@ -13,7 +13,7 @@ const MapBg = () => {
       const lines = document.querySelectorAll('.line') as NodeListOf<SVGPathElement>;
 
       // Apply wobbling animation to each path element based on mouse position
-      lines.forEach((line, index) => {
+      lines.forEach((line) => {
         const distance = calculateDistance(line, mouseX, mouseY);
         const animationDuration = 0.3; // You can adjust the duration as needed
 
