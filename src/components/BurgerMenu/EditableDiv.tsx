@@ -1,5 +1,5 @@
 // EditableDiv.tsx
-import React, { useState } from 'react';
+import React from 'react';
 
 interface EditableDivProps {
   content: string;
