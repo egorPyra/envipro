@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import style from './burger-menu.module.css';
 
 interface IBurgerBtn {
@@ -6,11 +7,17 @@ interface IBurgerBtn {
 
 export default function BurgerBtn({ activateMenuFunc }: IBurgerBtn) {
   return (
-    <button onClick={(event) => {
+    <motion.button onClick={(event) => {
       event.stopPropagation();
       activateMenuFunc(true);
-    }} className={style.btn}>
+    }} className={style.btn}
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ 
+      duration: 0.8,
+      delay: 1.2,
+    }}>
       <span className={style.line}/>
-    </button>
+    </motion.button>
   );
 }

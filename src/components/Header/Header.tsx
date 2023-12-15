@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import imgUrl from '/src/assets/img/logo.svg';
 
 export default function Header() {
-  const [hidden, setHidden] = useState(false);
+  const [hidden, setHidden] = useState(true);
   
   const { scrollY } = useScroll();
 
