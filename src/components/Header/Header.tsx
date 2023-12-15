@@ -41,7 +41,7 @@ export default function Header() {
     >
       <Link to={'/'}>
         <img
-          src='./src/assets/img/logo.svg'
+          src='./assets/img/logo.svg'
           alt="envipro"
           height={30}
           width={30}

@@ -31,7 +31,7 @@ const Pin: React.FC<PinProps> = ({ h3, text, x, y, PinSize, right }) => {
   return (
     <div className={styles.pin} style={pinStyle}>
       <div className={styles.hoverme}>
-      <img className={styles.img} src="src/assets/img/pin.svg" alt="1" style={ImgSize}/>
+      <img className={styles.img} src="./assets/img/pin.svg" alt="1" style={ImgSize}/>
       <div className={styles.pop} style={Popup}>
           <h3 className={styles.h3}>{h3}</h3>
           <p className={styles.text}>{text}</p>
