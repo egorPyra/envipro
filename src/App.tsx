@@ -8,7 +8,7 @@ import Services from './pages/services/page';
 function App() {
 
   return (
-    <main className="main">
+    <>
       <Router>
         <Routes>
           <Route path='/' element={<MainPageBlocks/>} />
@@ -17,7 +17,7 @@ function App() {
           <Route path='/services' element={<Services />} />
         </Routes>
       </Router>
-    </main>
+    </>
   )
 }
 

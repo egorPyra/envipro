@@ -1,3 +1,10 @@
+.keepContainer {
+    position: relative;
+    display: flex;
+    background: #fff;
+    height: 100vh;
+}
+
 .title {
     margin: 0 0 6px;
     color: #313131;
@@ -12,15 +19,6 @@
 .blockContainer {
     width: 140%;
     margin-top: -1.6vh;
-}
-
-.keepContainer {
-    position: relative;
-    margin-top: 20vw;
-    margin-bottom: 50px;
-    padding-bottom: 200px;
-    background: #fff;
-    /* height: 1000px; */
 }
 
 .keepBg {
@@ -42,39 +40,45 @@
     width: 21.5vw;
     height: 50vh;
     display: inline-block;
-    margin-bottom: 30vh;
     padding: 10px;
 }
 
 .we {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: green;
-
     width: 35.5vw;
     height: 100vh;
-    margin-bottom: 10vh;
-    margin-left: 2vw;
-    display: inline-block;
+    margin-right: 5vw;
+}
+
+.we p:first-child {
+    margin-bottom: 30px;
 }
 
 .understand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 33vw;
     background: blue;
-    
-    width: 32.5vw;
-    height: 51vh;
-    margin-left: 2vw;
-    margin-bottom: 35vh;
-    display: inline-block;
+    height: 48vh;
+    padding-right: 7vw;
 }
 
 .also {
+    position: absolute;
+    top: 60vh;
+    left: -15vw;
+    display: flex;
+    align-items: center;
     background: yellow;
-    display: inline-block;
-    
     width: 35.5vw;
     height: 25vh;
-    margin-left: 50vw;
-    margin-top: -20vh;
-    display: block;
     z-index: 2;
 }
 
@@ -83,4 +87,18 @@
     font-size: 1.6rem;
     padding: 5vh;
     /* margin: 0; */
+}
+
+.keepTitleContainer {
+    display: inline-block;
+    margin-top: 15vh;
+    margin-right: 5vw;
+    margin-bottom: 30vh;
+}
+
+.understandAndAlsoContainer {
+    position: relative;
+    display: inline-block;
+    margin-top: 15vh;
+    width: 28vw;
 }

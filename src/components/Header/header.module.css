@@ -1,12 +1,12 @@
 .header {
-    position: absolute;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: calc(100% - 12rem);
     height: 50px;
     padding: 0 3vw;
-    margin: 1vh auto 5vh;
+    margin: 0 auto 5vh;
     background-color: #363535;
     border-radius: 6px;
     box-shadow: 0 9px 28px 3px rgba(0, 0, 0, 0.55);

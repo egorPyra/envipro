@@ -1,3 +1,5 @@
+'use client'
+
 import { motion } from 'framer-motion';
 import styles from './mainPageBlocks.module.css'
 import { useState } from "react";
@@ -14,7 +16,7 @@ export default function MainPageBlocks() {
   const [keepActive, setKeepActive] = useState('');
 
   const { scrollY } = useScroll();
-
+  
   useMotionValueEvent(scrollY, "change", (latest) => {
     console.log(latest)
   });

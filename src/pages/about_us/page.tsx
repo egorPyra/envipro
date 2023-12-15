@@ -7,14 +7,13 @@ import HistorySection from "./components/HistorySection/HistorySection";
 import TeamSection from "./components/TeamSection/TeamSection";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import Header from "../../components/Header/Header";
-
 export default function AboutUs() {
 
-  const { scrollY } = useScroll();
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log(latest)
-  })
+  // const { scrollY } = useScroll();
+  
+  // useMotionValueEvent(scrollY, "change", (latest) => {
+  //   console.log(latest)
+  // });
 
   return (
     <>

@@ -1,16 +1,14 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Ball from './Ball';
 import styles from './MapSection.module.css';
 import ballData from '../../../../assets/img/Balls.json'; 
 import MapBg from './MapBg';
 import Pin from './Pin';
 
-const MapSection: React.FC = () => {
+export default function MapSection() {
   const [ballsData] = useState(ballData);
 
-
   return (
-    
     <section className={styles.MapContainer}>
         
       <div className={styles.MapBg}></div>
@@ -138,5 +136,3 @@ const MapSection: React.FC = () => {
     </section>
   );
 };
-
-export default MapSection;

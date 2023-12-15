@@ -1,4 +1,4 @@
-.main {
+/* .main {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -6,7 +6,7 @@
   height: 100%;
   align-items: center;
   overflow: hidden;
-}
+} */
 
 .notVisible {
   opacity: 0;

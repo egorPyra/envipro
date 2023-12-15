@@ -1,4 +1,3 @@
-/// <reference types="vite/client" />
 'use client'
 
 import { useState } from 'react';
@@ -8,18 +7,17 @@ import { Link } from 'react-router-dom';
 import imgUrl from '/src/assets/img/logo.svg';
 
 export default function Header() {
-  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [hidden, setHidden] = useState(false);
   
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const prevPositon = scrollY.getPrevious();
-    console.log(prevPositon)
 
     if (latest > prevPositon && latest >= 50) {
-      setIsHeaderVisible(true)
+      setHidden(false)
     } else {
-      setIsHeaderVisible(false)
+      setHidden(true)
     }
   });
 
@@ -28,17 +26,12 @@ export default function Header() {
     closed: { opacity: 0, y: "-100%" },
   };
 
-  // useEffect(() => {
-  //   const unsub = scrollY.on("change", (latest) => console.log(latest));
-  //   return () => unsub();
-  // }, [scrollY]);
-
   return (
     <motion.header
       className={styles.header}
-      animate={isHeaderVisible ? "open" : "closed"}
       variants={variants}
-      transition={{ duration: 0.33 }}
+      animate={hidden ? "open" : "closed"}
+      transition={{ duration: 0.33, ease: "easeInOut" }}
     >
       <Link to={'/'}>
         <img
