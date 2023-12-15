@@ -5,7 +5,6 @@ import MapSection from "./components/MapSection/MapSection";
 import KeepImprove from "./components/KeepImproveSection/KeepImprove";
 import HistorySection from "./components/HistorySection/HistorySection";
 import TeamSection from "./components/TeamSection/TeamSection";
-import { useMotionValueEvent, useScroll } from "framer-motion";
 import Header from "../../components/Header/Header";
 export default function AboutUs() {
 
