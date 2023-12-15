@@ -13,6 +13,7 @@ export default function Header() {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const prevPositon = scrollY.getPrevious();
+    console.log(prevPositon)
 
     if (latest > prevPositon && latest >= 50) {
       setIsHeaderVisible(true)
@@ -33,7 +34,7 @@ export default function Header() {
 
   return (
     <motion.header
-    className={styles.header}
+      className={styles.header}
       animate={isHeaderVisible ? "open" : "closed"}
       variants={variants}
       transition={{ duration: 0.33 }}
