@@ -1,12 +1,13 @@
+/// <reference types="vite/client" />
 'use client'
 
 import { useState } from 'react';
 import styles from './header.module.css'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import imgUrl from '/src/assets/logo.svg';
 
 export default function Header() {
-
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   
   const { scrollY } = useScroll();
@@ -41,7 +42,7 @@ export default function Header() {
     >
       <Link to={'/'}>
         <img
-          src='./assets/img/logo.svg'
+          src={imgUrl}
           alt="envipro"
           height={30}
           width={30}
