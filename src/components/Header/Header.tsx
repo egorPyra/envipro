@@ -5,7 +5,7 @@ import { useState } from 'react';
 import styles from './header.module.css'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import imgUrl from '/src/assets/logo.svg';
+import imgUrl from '/src/assets/img/logo.svg';
 
 export default function Header() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
