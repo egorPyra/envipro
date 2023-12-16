@@ -11,9 +11,9 @@
 
 .historyContainer {
     position: relative;
-    margin-top: 95px;
-    margin-bottom: 50px;
-    padding-bottom: 180px;
+    padding-top: 95px;
+    padding-bottom: 120px;
+    height: 100vh;
 }
 .historyText {
     margin: 10px auto;

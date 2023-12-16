@@ -135,4 +135,4 @@ export default function MapSection() {
       <MapBg />
     </section>
   );
-};
+}
