@@ -3,7 +3,7 @@ import styles from "./KeepImprove.module.css";
 
 export default function KeepImprove() {
     return (
-        <section className={styles.keepContainer}>
+        <section id="keep" className={styles.keepContainer}>
             {/* <div className={styles.keepBg}></div> */}
             <div className={styles.keepTitleContainer}>
                 <h1 className={styles.title}>сохраняя - улучшать</h1>

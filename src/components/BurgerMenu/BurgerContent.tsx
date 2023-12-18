@@ -1,5 +1,6 @@
 import styles from './burger-menu.module.css';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 interface IBurgerContent {
   isActive: boolean;
@@ -22,31 +23,31 @@ export default function BurgerContent({ isActive, activateMenuFunc }: IBurgerCon
         {isActive &&
         <ul className={styles.menuList}>
           <li className={styles.menuListTitle}>
-            <Link to={'/about_us'}>О нас</Link>
+            <Link className={styles.menuListLink} to={'/about_us'}>О нас</Link>
             <ul className={styles.menuListSubTitle}>
-              <li>НАША ИСТОРИЯ</li>
-              <li>НАША КОМАНДА</li>
-              <li>КЛИЕНТЫ</li>
-              <li>СОХРАНЯЯ УЛУЧШАТЬ</li>
+              <li><HashLink to={'/about_us#history'}>НАША ИСТОРИЯ</HashLink></li>
+              <li><HashLink to={'/about_us#team'}>НАША КОМАНДА</HashLink></li>
+              <li><HashLink to={'/about_us#map'}>КЛИЕНТЫ</HashLink></li>
+              <li><HashLink to={'/about_us#keep'}>СОХРАНЯЯ УЛУЧШАТЬ</HashLink></li>
             </ul>
           </li>
           <li className={styles.menuListTitle}>
-            <Link to={'/services'}>Услуги</Link>
+            <Link className={styles.menuListLink} to={'/services'}>Услуги</Link>
             <ul className={styles.menuListSubTitle}>
-              <li>ПРОИЗВОДСТВЕННЫЙ ЭКОЛОГИЧЕСКИЙ КОНТРОЛЬ</li>
-              <li>ЭКОЛОГИЧЕСКИЙ МОНИТОРИНГ</li>
-              <li>РАЗРАБОТКА&nbsp;РАЗРЕШИТЕЛЬНОЙ&nbsp;ПРИРОДООХРАННОЙ ДОКУМЕНТАЦИИ</li>
-              <li>ИНЖЕНЕРНЫЕ ИЗЫСКАНИЯ</li>
-              <li>НЕДРОПОЛЬЗОВАНИЕ</li>
-              <li>ПРОЕКТИРОВАНИЕ</li>
-              <li>ЭКОЛОГИЧЕСКОЕ СОПРОВОЖДЕНИЕ ДЕЯТЕЛЬНОСТИ</li>
-              <li>ЛАБОРАТОРНЫЕ АНАЛИЗЫ</li>
-              <li>ГЕОДЕЗИЯ, КАРТОГРАФИЯ, ГИС</li>
-              <li>РАЗРЕШЕНИЯ&nbsp;НА&nbsp;ДОБЫВАНИЕ&nbsp;ОБЪЕКТОВ&nbsp;ИЗ&nbsp;КРАСНОЙ КНИГИ И КОМПЕНСАЦИОННЫЕ МЕРОПРИЯТИЯ</li>
+              <li><HashLink to={'/services'}>ПРОИЗВОДСТВЕННЫЙ ЭКОЛОГИЧЕСКИЙ КОНТРОЛЬ</HashLink></li>
+              <li><HashLink to={'/services'}>ЭКОЛОГИЧЕСКИЙ МОНИТОРИНГ</HashLink></li>
+              <li><HashLink to={'/services'}>РАЗРАБОТКА&nbsp;РАЗРЕШИТЕЛЬНОЙ&nbsp;ПРИРОДООХРАННОЙ ДОКУМЕНТАЦИИ</HashLink></li>
+              <li><HashLink to={'/services'}>ИНЖЕНЕРНЫЕ ИЗЫСКАНИЯ</HashLink></li>
+              <li><HashLink to={'/services'}>НЕДРОПОЛЬЗОВАНИЕ</HashLink></li>
+              <li><HashLink to={'/services'}>ПРОЕКТИРОВАНИЕ</HashLink></li>
+              <li><HashLink to={'/services'}>ЭКОЛОГИЧЕСКОЕ СОПРОВОЖДЕНИЕ ДЕЯТЕЛЬНОСТИ</HashLink></li>
+              <li><HashLink to={'/services'}>ЛАБОРАТОРНЫЕ АНАЛИЗЫ</HashLink></li>
+              <li><HashLink to={'/services'}>ГЕОДЕЗИЯ, КАРТОГРАФИЯ, ГИС</HashLink></li>
+              <li><HashLink to={'/services'}>РАЗРЕШЕНИЯ&nbsp;НА&nbsp;ДОБЫВАНИЕ&nbsp;ОБЪЕКТОВ&nbsp;ИЗ&nbsp;КРАСНОЙ КНИГИ И КОМПЕНСАЦИОННЫЕ МЕРОПРИЯТИЯ</HashLink></li>
             </ul>
           </li>
           <li className={styles.menuListTitle}>
-            <Link to={'/contacts'}>Контакты</Link>
+            <Link className={styles.menuListLink} to={'/contacts'}>Контакты</Link>
           </li>
         </ul>
         }

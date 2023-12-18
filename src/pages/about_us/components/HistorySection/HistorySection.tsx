@@ -2,7 +2,7 @@ import styles from './historySection.module.css'
 
 export default function HistorySection() {
   return (
-    <section className={styles.historyContainer}>
+    <section id='history' className={styles.historyContainer}>
       <div className={styles.historyBg}></div>
       <div className={styles.historyContent}>
         <h1 className={styles.title}>Наша история</h1>

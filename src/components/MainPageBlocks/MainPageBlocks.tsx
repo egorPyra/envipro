@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import styles from './mainPageBlocks.module.css'
 import { useState } from "react";
 import { Link } from 'react-router-dom';
-import { useMotionValueEvent, useScroll } from 'framer-motion';
 import BurgerBtn from '../BurgerMenu/BurgerBtn';
 import BurgerContent from '../BurgerMenu/BurgerContent';
+import { HashLink } from 'react-router-hash-link';
 
 
 export default function MainPageBlocks() {
@@ -14,12 +14,6 @@ export default function MainPageBlocks() {
 
   const [isShown, setIsShown] = useState(false);
   const [keepActive, setKeepActive] = useState('');
-
-  const { scrollY } = useScroll();
-  
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log(latest)
-  });
 
   return (
     <section className="content" onClick={() => setIsMenuActive(false)}>
@@ -41,7 +35,7 @@ export default function MainPageBlocks() {
               >
             </motion.div>
           </div>
-          <Link to={'/about_us'} className={styles.link}>
+          <HashLink to={'/about_us'} className={styles.link}>
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -49,10 +43,10 @@ export default function MainPageBlocks() {
               onMouseEnter={() => {setIsShown(true); setKeepActive('ecoMonitoring')}}
               onMouseLeave={() => setIsShown(false)}
               className={styles.ecoMonitoring}>
-                <div className={`${isShown && keepActive !== 'ecoMonitoring' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+              <div className={`${isShown && keepActive !== 'ecoMonitoring' ? 'greyBlock' : 'greyBlock hide'}`}></div>
               <span>ЭКОЛОГИЧЕСКИЙ<br/> МОНИТОРИНГ</span>
             </motion.div>
-          </Link>
+          </HashLink>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

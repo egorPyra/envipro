@@ -30,81 +30,142 @@
 }
 
 .imageContainer {
+    display: flex;
     width: 100%;
     margin-top: -13vh;
+}
+
+.img1, .img2, .img3, .img4, .img5, .img6, .img7 {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .img1 {
     width: 15.5vw;
     height: 40vh;
-    display: inline-block;
-    margin-bottom: 30vh;
+    margin-top: 20vh;
+    padding: 20px 30px;
     background-color: #e0dcce;
     background-image: url("../../../../assets/img/TeamImages/img1.png");
     background-position: center;
     background-size: cover;
+    color: #fff;
+}
+.img1:hover {
+    background: #575757;
+}
+.img1:hover p:first-of-type {
+    display: unset;
+    width: 100%;
+}
+.img1:hover p:last-of-type {
+    display: unset;
+    font-size: 10px;
+}
+.img1 p {
+    display: none;
 }
 
 .img2 {
     width: 15.5vw;
     height: 48vh;
-    margin-bottom: 10vh;
-    display: inline-block;
-
-    /* filter: grayscale(1); */
-
+    margin-top: 30vh;
     background-color: #e0dcce;
     background-image: url("../../../../assets/img/TeamImages/img2.png");
     background-position: center;
     background-size: cover;
 }
-
+.img2:hover {
+    background: #575757;
+}
+.img2:hover p:first-of-type {
+    display: unset;
+    width: 100%;
+}
+.img2:hover p:last-of-type {
+    display: unset;
+    font-size: 10px;
+}
+.img2 p {
+    display: none;
+}
 .group1 {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
 .img3 {
     width: 14vw;
     height: 41vh;
     margin-left: 9.5vw;
-    /* margin-top: -10vh; */
-    /* margin-bottom: 10vh; */
-    display: block;
-
-    /* filter: grayscale(1); */
-
     background-color: #e0dcce;
     background-image: url("../../../../assets/img/TeamImages/img3.png");
     background-position: center;
     background-size: cover;
 }
+.img3:hover {
+    background: #575757;
+}
+.img3:hover p:first-of-type {
+    display: unset;
+    width: 100%;
+}
+.img3:hover p:last-of-type {
+    display: unset;
+    font-size: 10px;
+}
+.img3 p {
+    display: none;
+}
 
 .img4 {
     width: 23.5vw;
     height: 48vh;
-    /* margin-bottom: 10vh; */
-    display: block;
-
-    /* filter: grayscale(1); */
-
     background-color: #e0dcce;
     background-image: url("../../../../assets/img/TeamImages/img4.png");
     background-position: center;
     background-size: cover;
 }
+.img4:hover {
+    background: #575757;
+}
+.img4:hover p:first-of-type {
+    display: unset;
+    width: 100%;
+}
+.img4:hover p:last-of-type {
+    display: unset;
+    font-size: 10px;
+}
+.img4 p {
+    display: none;
+}
 
 .img5 {
     width: 14.5vw;
     height: 41vh;
-    margin-bottom: 12vh;
-    display: inline-block;
-
-    /* filter: grayscale(1); */
-
+    margin-top: 37vh;
     background-color: #e0dcce;
     background-image: url("../../../../assets/img/TeamImages/img5.png");
     background-position: center;
     background-size: cover;
+}
+.img5:hover {
+    background: #575757;
+}
+.img5:hover p:first-of-type {
+    display: unset;
+    width: 100%;
+}
+.img5:hover p:last-of-type {
+    display: unset;
+    font-size: 10px;
+}
+.img5 p {
+    display: none;
 }
 
 .group2 {
@@ -114,29 +175,47 @@
 .img6 {
     width: 16vw;
     height: 59vh;
-    /* margin-bottom: 10vh; */
-    display: block;
-
-    /* filter: grayscale(1); */
-
     background-color: #e0dcce;
     background-image: url("../../../../assets/img/TeamImages/img6.png");
     background-position: center;
     background-size: cover;
 }
+.img6:hover {
+    background: #575757;
+}
+.img6:hover p:first-of-type {
+    display: unset;
+    width: 100%;
+}
+.img6:hover p:last-of-type {
+    display: unset;
+    font-size: 10px;
+}
+.img6 p {
+    display: none;
+}
 
 .img7 {
     width: 20vh;
     height: 30vh;
-    /* margin-bottom: 10vh; */
-    display: block;
-
-    /* filter: grayscale(1); */
-
     background-color: #e0dcce;
     background-image: url("../../../../assets/img/TeamImages/img7.png");
     background-position: center;
     background-size: cover;
+}
+.img7:hover {
+    background: #575757;
+}
+.img7:hover p:first-of-type {
+    display: unset;
+    width: 100%;
+}
+.img7:hover p:last-of-type {
+    display: unset;
+    font-size: 10px;
+}
+.img7 p {
+    display: none;
 }
 
 .teamList {

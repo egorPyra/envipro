@@ -9,8 +9,7 @@ export default function MapSection() {
   const [ballsData] = useState(ballData);
 
   return (
-    <section className={styles.MapContainer}>
-        
+    <section id='map' className={styles.MapContainer}>
       <div className={styles.MapBg}></div>
       <h1 className={styles.title}>Наши клиенты</h1>
       <p className={styles.subTitle}>сотни объектов, более чем в 25 регионах!</p>
