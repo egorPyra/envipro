@@ -6,13 +6,8 @@ import KeepImprove from "./components/KeepImproveSection/KeepImprove";
 import HistorySection from "./components/HistorySection/HistorySection";
 import TeamSection from "./components/TeamSection/TeamSection";
 import Header from "../../components/Header/Header";
-export default function AboutUs() {
 
-  // const { scrollY } = useScroll();
-  
-  // useMotionValueEvent(scrollY, "change", (latest) => {
-  //   console.log(latest)
-  // });
+export default function AboutUs() {
 
   return (
     <>

@@ -12,6 +12,7 @@
 .teamContainer {
     position: relative;
     height: 100vh;
+    scroll-snap-align: start;
     padding-top: 11vh;
 }
 
