@@ -13,7 +13,6 @@ export default function MapSection() {
       <div className={styles.MapBg}></div>
       <h1 className={styles.title}>Наши клиенты</h1>
       <p className={styles.subTitle}>сотни объектов, более чем в 25 регионах!</p>
-      {/* <button onClick={handleClick}>Start Animation</button> */}
       <div className={styles.ballContainer}>
         {ballsData.map((row, rowIndex) => (
           <div key={rowIndex} className={styles.rowContainer}>
@@ -131,7 +130,7 @@ export default function MapSection() {
 
         
       </div>
-      <MapBg />
+      {/* <MapBg /> */}
     </section>
   );
 }
