@@ -9,7 +9,7 @@ import imgUrl from '/src/assets/img/logo.svg';
 export default function Header() {
   const [hidden, setHidden] = useState(true);
   const location = useLocation();
-  const isActive = (pathname) => location.pathname === pathname;
+  const isActive = (pathname: string) => location.pathname === pathname;
   
   const { scrollY } = useScroll();
 
