@@ -12,6 +12,7 @@
 .teamContainer {
     position: relative;
     height: 100vh;
+    scroll-snap-align: start;
     padding-top: 11vh;
 }
 
@@ -37,7 +38,7 @@
 
 .img1, .img2, .img3, .img4, .img5, .img6, .img7 {
     position: relative;
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
