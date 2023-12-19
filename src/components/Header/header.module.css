@@ -4,10 +4,10 @@
     justify-content: space-between;
     align-items: center;
     top: 2vh;
-    width: calc(100% - 12rem);
+    width: 90%;
     height: 50px;
     padding: 0 3vw;
-    margin: 0 auto 5vh;
+    margin: 0;
     background-color: #363535;
     border-radius: 6px;
     box-shadow: 0 9px 28px 3px rgba(0, 0, 0, 0.55);
@@ -25,8 +25,16 @@
     justify-content: flex-end;
     align-items: center;
     color: #c4c2c2;
-    font-size: 14px;
+    font-size: 16px;
+}
+.active {
+    color: #fff;
 }
 .list li:not(:last-child) {
     margin-right: 40px;
+}
+
+a {
+    margin: 0;
+    padding: 0;
 }
