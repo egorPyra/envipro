@@ -46,7 +46,7 @@
 
 .img1 {
     width: 15.5vw;
-    height: 40vh;
+    height: 39vh;
     margin-top: 20vh;
     padding: 20px 30px;
     background-color: #e0dcce;
@@ -56,15 +56,21 @@
     color: #fff;
 }
 .img1:hover {
-    background: #575757;
+    background: #4b4b4b;
 }
 .img1:hover p:first-of-type {
     display: unset;
     width: 100%;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    text-align: left;
 }
 .img1:hover p:last-of-type {
     display: unset;
-    font-size: 10px;
+    font-size: 1rem;
+    color: #cccccc;
 }
 .img1 p {
     display: none;
@@ -80,15 +86,20 @@
     background-size: cover;
 }
 .img2:hover {
-    background: #575757;
+    background: #000;
 }
 .img2:hover p:first-of-type {
     display: unset;
     width: 100%;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 .img2:hover p:last-of-type {
     display: unset;
-    font-size: 10px;
+    font-size: 1rem;
+    color: #cccccc;
 }
 .img2 p {
     display: none;
@@ -99,24 +110,31 @@
 }
 
 .img3 {
-    width: 14vw;
-    height: 41vh;
-    margin-left: 9.5vw;
+    width: 12vw;
+    height: 32vh;
+    margin-left: 11.5vw;
+    margin-top: 5.5vw;
+    padding: 20px 20px;
     background-color: #e0dcce;
     background-image: url("../../../../assets/img/TeamImages/img3.png");
     background-position: center;
     background-size: cover;
 }
 .img3:hover {
-    background: #575757;
+    background: #4b4b4b;
 }
 .img3:hover p:first-of-type {
     display: unset;
     width: 100%;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: left;
 }
 .img3:hover p:last-of-type {
     display: unset;
-    font-size: 10px;
+    font-size: 1rem;
+    color: #cccccc;
 }
 .img3 p {
     display: none;
@@ -131,39 +149,51 @@
     background-size: cover;
 }
 .img4:hover {
-    background: #575757;
+    background: #f3f3f3;
 }
 .img4:hover p:first-of-type {
     display: unset;
     width: 100%;
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 .img4:hover p:last-of-type {
     display: unset;
-    font-size: 10px;
+    font-size: 1rem;
+    color: #000;
 }
 .img4 p {
     display: none;
 }
 
 .img5 {
-    width: 14.5vw;
-    height: 41vh;
+    width: 15.4vw;
+    height: 40vh;
     margin-top: 37vh;
+    padding: 20px;
     background-color: #e0dcce;
     background-image: url("../../../../assets/img/TeamImages/img5.png");
     background-position: center;
     background-size: cover;
 }
 .img5:hover {
-    background: #575757;
+    background: #000;
 }
 .img5:hover p:first-of-type {
     display: unset;
     width: 100%;
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 .img5:hover p:last-of-type {
     display: unset;
-    font-size: 10px;
+    font-size: 1rem;
+    color: #cccccc;
+    text-align: center;
 }
 .img5 p {
     display: none;
@@ -174,35 +204,46 @@
 }
 
 .img6 {
-    width: 16vw;
-    height: 59vh;
+    width: 19vw;
+    height: 60vh;
+    margin-top: -1.5vh;
+    padding: 20px;
     background-color: #e0dcce;
     background-image: url("../../../../assets/img/TeamImages/img6.png");
     background-position: center;
     background-size: cover;
 }
 .img6:hover {
-    background: #575757;
+    background: #f3f3f3;
 }
 .img6:hover p:first-of-type {
     display: unset;
     width: 100%;
+    font-size: 1.5rem;
+    color: #000;
+    margin-bottom: 2rem;
+    text-align: center;
 }
 .img6:hover p:last-of-type {
     display: unset;
-    font-size: 10px;
+    font-size: 1rem;
+    color: #000;
+    text-align: center;
 }
 .img6 p {
     display: none;
 }
 
 .img7 {
-    width: 20vh;
-    height: 30vh;
-    background-color: #e0dcce;
+    width: 22.5vh;
+    height: 32.5vh;
+    /* background-color: #e0dcce; */
+    padding: 20px;
     background-image: url("../../../../assets/img/TeamImages/img7.png");
     background-position: center;
     background-size: cover;
+    border: none;
+    padding: none;
 }
 .img7:hover {
     background: #575757;
@@ -210,10 +251,15 @@
 .img7:hover p:first-of-type {
     display: unset;
     width: 100%;
+    font-size: 1.7rem;
+    color: #f3f3f3;
+    margin-bottom: 2rem;
+    text-align: left;
 }
 .img7:hover p:last-of-type {
     display: unset;
-    font-size: 10px;
+    font-size: 1rem;
+    color: #cccccc;
 }
 .img7 p {
     display: none;
