@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Ball from './Ball';
 import styles from './MapSection.module.css';
 import ballData from '../../../../assets/img/Balls.json'; 
-import MapBg from './MapBg';
+// import MapBg from './MapBg';
 import Pin from './Pin';
 
 export default function MapSection() {
