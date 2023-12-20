@@ -122,8 +122,11 @@
 
 html,
 body {
-  width: 100%;
+  width: calc(100vw - (100vw - 100%));
   overflow-x: hidden;
+  ::-webkit-scrollbar { 
+    display: none; 
+    }
 }
 
 a {

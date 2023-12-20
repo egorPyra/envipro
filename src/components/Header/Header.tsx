@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import styles from './header.module.css'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import imgUrl from '/src/assets/img/logo.svg';
 
 export default function Header() {
   const [hidden, setHidden] = useState(true);
+  const location = useLocation();
+  const isActive = (pathname: string) => location.pathname === pathname;
   
   const { scrollY } = useScroll();
 
@@ -35,20 +37,26 @@ export default function Header() {
         <img
           src={imgUrl}
           alt="envipro"
-          height={30}
-          width={30}
+          height={40}
+          width={40}
         />
       </Link>
       <nav className={styles.nav}>
         <ul className={styles.list}>
-          <li>
-            <Link to={'/about_us'}>about us</Link>
+        <li>
+            <Link className={isActive('/about_us') ? styles.active : ''} to="/about_us">
+              о&nbsp;нас
+            </Link>
           </li>
           <li>
-            <Link to={'/services'}>services</Link>
+            <Link className={isActive('/services') ? styles.active : ''} to="/services">
+              услуги
+            </Link>
           </li>
           <li>
-            <Link to={'/contacts'}>contacts</Link>
+            <Link className={isActive('/contacts') ? styles.active : ''} to="/contacts">
+              контакты
+            </Link>
           </li>
         </ul>
       </nav>
