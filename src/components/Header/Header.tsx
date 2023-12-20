@@ -1,5 +1,3 @@
-'use client'
-
 import { useState } from 'react';
 import styles from './header.module.css'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';

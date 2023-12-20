@@ -1,23 +1,34 @@
 import './App.css'
 import MainPageBlocks from './components/MainPageBlocks/MainPageBlocks';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import AboutUs from './pages/about_us/page';
 import Contacts from './pages/contacts/page';
 import Services from './pages/services/page';
 
 function App() {
-
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <MainPageBlocks/>
+      ),
+    },
+    {
+      path: "about_us",
+      element: <AboutUs />,
+    },
+    {
+      path: "contacts",
+      element: <Contacts />,
+    },
+    {
+      path: "services",
+      element: <Services />,
+    },
+  ]);
+  
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route path='/' element={<MainPageBlocks/>} />
-          <Route path='/about_us' element={<AboutUs />} />
-          <Route path='/contacts' element={<Contacts />} />
-          <Route path='/services' element={<Services />} />
-        </Routes>
-      </Router>
-    </>
+      <RouterProvider router={router} />
   )
 }
 

@@ -1,5 +1,3 @@
-'use client'
-
 import Header from "../../components/Header/Header";
 import styles from "./page.module.css";
 

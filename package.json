@@ -19,6 +19,7 @@
     "scss": "^0.2.4"
   },
   "devDependencies": {
+    "@types/node": "^20.10.5",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@types/react-router-hash-link": "^2.4.9",

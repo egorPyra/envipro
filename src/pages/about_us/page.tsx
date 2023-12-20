@@ -1,5 +1,3 @@
-'use client'
-
 import styles from "./page.module.css";
 import MapSection from "./components/MapSection/MapSection";
 import KeepImprove from "./components/KeepImproveSection/KeepImprove";
