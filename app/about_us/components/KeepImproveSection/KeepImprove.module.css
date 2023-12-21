@@ -24,13 +24,13 @@
 
 .keepBg {
     position: absolute;
-    top: calc(-5vh - 50px);
+    top: 0;
     right: -6rem;
-    bottom: -100px;
+    bottom: 0;
     left: -6rem; 
     background-color: #fff;
     background-image: url("/KeepImproveBg.png");
-    background-size: 150%;
+    background-size: 100%;
     background-position: bottom;
     background-repeat: no-repeat;
     z-index: -1;

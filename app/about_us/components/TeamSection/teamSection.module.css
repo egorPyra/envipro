@@ -1,19 +1,19 @@
 .title {
-    margin: 0 0 6px;
+    margin: 0;
     color: #313131;
     font-size: 2.7rem;
     font-weight: lighter;
 }
 .subTitle {
-    margin-bottom: 30px;
     color: #313131;
+    margin-bottom: 7vh;
 }
 
 .teamContainer {
     position: relative;
     height: 100vh;
     scroll-snap-align: start;
-    padding-top: 11vh;
+    padding-top: 8vh;
 }
 
 .teamBg {
@@ -33,7 +33,6 @@
 .imageContainer {
     display: flex;
     width: 100%;
-    margin-top: -13vh;
 }
 
 .img1, .img2, .img3, .img4, .img5, .img6, .img7 {
@@ -46,11 +45,10 @@
 
 .img1 {
     width: 15.5vw;
-    height: 39vh;
-    margin-top: 20vh;
+    height: 42vh;
     padding: 20px 30px;
     background-color: #e0dcce;
-    background-image: url("/TeamImages/img1.png");
+    background-image: url("/TeamImages/img1.jpg");
     background-position: center;
     background-size: cover;
     color: #fff;
@@ -79,9 +77,9 @@
 .img2 {
     width: 15.5vw;
     height: 48vh;
-    margin-top: 30vh;
+    margin-top: 24vh;
     background-color: #e0dcce;
-    background-image: url("/TeamImages/img2.png");
+    background-image: url("/TeamImages/img2.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -110,13 +108,13 @@
 }
 
 .img3 {
-    width: 12vw;
-    height: 32vh;
-    margin-left: 11.5vw;
-    margin-top: 11vh;
+    width: 13vw;
+    height: 38vh;
+    margin-left: 10.5vw;
+    margin-top: 2vh;
     padding: 20px 20px;
     background-color: #e0dcce;
-    background-image: url("/TeamImages/img3.png");
+    background-image: url("/TeamImages/img3.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -142,9 +140,9 @@
 
 .img4 {
     width: 23.5vw;
-    height: 48vh;
+    height: 52vh;
     background-color: #e0dcce;
-    background-image: url("/TeamImages/img4.png");
+    background-image: url("/TeamImages/img4.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -171,10 +169,10 @@
 .img5 {
     width: 15.4vw;
     height: 40vh;
-    margin-top: 37vh;
+    margin-top: 27vh;
     padding: 20px;
     background-color: #e0dcce;
-    background-image: url("/TeamImages/img5.png");
+    background-image: url("/TeamImages/img5.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -204,12 +202,10 @@
 }
 
 .img6 {
-    width: 22vw;
+    width: 20vw;
     height: 60vh;
-    margin-top: -1.5vh;
-    padding: 20px;
     background-color: #e0dcce;
-    background-image: url("/TeamImages/img6.png");
+    background-image: url("/TeamImages/img6.jpg");
     background-position: center;
     background-size: cover;
 }
@@ -236,10 +232,10 @@
 
 .img7 {
     width: 24.5vh;
-    height: 32.5vh;
+    height: 32vh;
     background-color: #e0dcce;
     padding: 20px;
-    background-image: url("/TeamImages/img7.png");
+    background-image: url("/TeamImages/img7.jpg");
     background-position: center;
     background-size: cover;
 }

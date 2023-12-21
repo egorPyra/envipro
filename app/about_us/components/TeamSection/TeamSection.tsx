@@ -12,21 +12,23 @@ export default function TeamSection() {
   return (
     <section id="team" className={styles.teamContainer}>
       <div className={styles.teamBg}></div>
-      <h1 className={styles.title}>Наша команда</h1>
-      <p className={styles.subTitle}>Лучшие специалисты в своем деле!</p>
       <div className={styles.imageContainer}>
+        <div>
+        <h1 className={styles.title}>Наша команда</h1>
+        <p className={styles.subTitle}>Лучшие специалисты в своем деле!</p>
         <motion.div 
-        onMouseEnter={() => {setIsShown(true); setKeepActive('img1')}}
-        onMouseLeave={() => setIsShown(false)}
-        className={styles.img1}>
+          onMouseEnter={() => {setIsShown(true); setKeepActive('img1')}}
+          onMouseLeave={() => setIsShown(false)}
+          className={styles.img1}>
           <div className={`${isShown && keepActive !== 'img1' ? 'greyBlock' : 'greyBlock hide'}`}></div>
           <p>ДРОЗДОВА<br/> АЛЕКСАНДРА<br/> АЛЕКСАНДРОВНА</p>
           <p>Руководитель отдела закупок и разрешительной документации</p>
         </motion.div>
+        </div>
         <motion.div 
-        onMouseEnter={() => {setIsShown(true); setKeepActive('img2')}}
-        onMouseLeave={() => setIsShown(false)}
-        className={styles.img2}>
+          onMouseEnter={() => {setIsShown(true); setKeepActive('img2')}}
+          onMouseLeave={() => setIsShown(false)}
+          className={styles.img2}>
           <div className={`${isShown && keepActive !== 'img2' ? 'greyBlock' : 'greyBlock hide'}`}></div>
           <p>Зубова<br/> Наталья<br/> Викторовна</p>
           <p>Генеральный директор</p>
