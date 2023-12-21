@@ -1,0 +1,435 @@
+.blocksContainer {
+    display: flex;
+    align-items: flex-start;
+}
+
+.sectionOne {
+    overflow: hidden;
+}
+
+.circleLogoContainer {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.circleLogo {
+    border: 6px solid #000;
+    border-radius: 50%;
+    height: 37vh;
+    width: 37vh;
+}
+
+.ecoMonitoring {
+    position: relative;
+    width: 23vw;
+    height: 37vh;
+    margin-bottom: 20vh;
+    background-color: #e0dcce;
+    background-image: url("/ecoMonitoring.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.ecoMonitoring span {
+    display: none;
+}
+.ecoMonitoring:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f4f4f;
+    background-image: none;
+}
+.ecoMonitoring:hover span {
+    display: unset;
+    color: white;
+    font-size: 2.3rem;
+}
+.ecology {
+    position: relative;
+    margin-left: 10vw;
+    width: 13vw;
+    height: 23vh;
+    background-image: url("/ecology.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.ecology::before {
+    position: absolute;
+    content: '';
+    top: 65%;
+    left: -30%;
+    width: 4vh;
+    height: 4vh;
+    background-color: #000;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -3;
+}
+.ecology span {
+    display: none;
+}
+.ecology:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3e3e3;
+    background-image: none;
+}
+.ecology:hover span {
+    display: unset;
+    text-align: center;
+    color: #757575;
+    font-size: 1.9rem;
+}
+.ecologyCircle {
+    position: absolute;
+    top: -5vh;
+    left: -15vw;
+    width: 50vh;
+    height: 50vh;
+    border: 5px solid #000;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.sectionTwo {
+    margin-top: 5vh;
+    max-width: 35vw;
+    height: 100%;
+}
+.sectionTwo_subBlock {
+    display: flex;
+    align-items: flex-end;
+}
+.earth {
+    position: relative;
+    margin-left: 5vw;
+    width: 10vw;
+    height: 15vh;
+    background-color: #91adc9;
+    background-image: url("/earth.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.earth span {
+    display: none;
+}
+.earth:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f4f4f;
+    background-image: none;
+    text-align: center;
+}
+.earth:hover span {
+    display: unset;
+    color: white;
+    /* font-size: 1.6rem; */
+    font-size: 2.3rem;
+}
+.ecoShadow {
+    position: relative;
+    display: inline-block;
+    width: 26vw;
+    height: 35vh;
+    background-color: #9ba3ab;
+    background-image: url("/ecoShadow.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.ecoShadow span {
+    display: none;
+}
+.ecoShadow:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3e3e3;
+    background-image: none;
+}
+.ecoShadow:hover span {
+    display: unset;
+    color: #2e2e2e;
+    font-size: 1.9rem;
+}
+
+.sectionTwo__engineerSaveNature {
+    display: inline-block;
+}
+.engineer {
+    position: relative;
+    width: 25vw;
+    height: 37vh;
+    background-color: #b8cde3;
+    background-image: url("/engineer.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.engineer span {
+    display: none;
+}
+.engineer:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    background-image: none;
+}
+.engineer:hover span {
+    display: unset;
+    color: #c4c4c4;
+    font-size: 2.5rem;
+    text-align: center;
+}
+.saveNature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.8rem;
+    width: 25vw;
+    height: 22vh;
+    padding-left: 2vw;
+}
+
+.sectionTwo_ppaEngineer {
+    display: flex;
+}
+.ppa {
+    position: relative;
+    width: 10vw;
+    height: 60vh;
+    margin: 0;
+}
+.ppa::before {
+    position: absolute;
+    content: '';
+    top: 53%;
+    left: 10%;
+    width: 4vh;
+    height: 4vh;
+    background-color: transparent;
+    border-radius: 50%;
+}
+.ppaUnder {
+    position: absolute;
+    left: 1vw;
+    top: 13vh;
+    width: 14vw;
+    height: 47vh;
+    background-image: url("/ppa.jpg");
+    background-size: 100% 102%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    z-index: -1;
+}
+.ppaUnder span {
+    display: none;
+}
+.ppaAbove {
+    position: absolute;
+    left: 1vw;
+    top: 13vh;
+    width: 14vw;
+    height: 47vh;
+}
+.ppaAbove:hover + .ppaUnder span {
+    display: unset;
+    font-size: 1.8rem;
+}
+.ppaAbove:hover + .ppaUnder {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: none;
+    padding-right: 4px;
+    background-color: #fff;
+}
+.sectionThree {
+    display: inline-block;
+    margin-top: 5vh;
+}
+.catPlasmaContainer {
+    display: flex;
+    align-items: flex-end;
+}
+.cat {
+    position: relative;
+    display: inline-block;
+    width: 11vw;
+    height: 20vh;
+}
+.catAbove {
+    position: absolute;
+    top: 11vh;
+    width: 11vw;
+    height: 20vh;
+}
+.catUnder {
+    position: absolute;
+    top: 11vh;
+    width: 11vw;
+    height: 20vh;
+    visibility: visible;
+    z-index: -1;
+    background-image: url("/cat.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+.catUnder span {
+    display: none;
+}
+.catAbove:hover + .catUnder span {
+    display: unset;
+    font-size: 1.4rem;
+    color: #fff;
+}
+.catAbove:hover + .catUnder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4f4f4f none;
+}
+.plasma {
+    position: relative;
+    display: inline-block;
+    width: 22vw;
+    height: 30vh;
+    background-color: #f7e1e5;
+    background-image: url("/plasma.jpg");
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+.plasma::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: -17%;
+    width: 4vh;
+    height: 4vh;
+    background-color: #000;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: -3;
+}
+.plasma span {
+    display: none;
+}
+.plasma:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    background-image: none;
+}
+.plasma:hover span {
+    display: unset;
+    color: #c4c4c4;
+    font-size: 2.3rem;
+}
+.plasmaCircle {
+    position: absolute;
+    top: 10vh;
+    right: -16vw;
+    width: 25vh;
+    height: 25vh;
+    border: 5px solid #000;
+    border-radius: 50%;
+    z-index: -1;
+}
+.calcEnvilabContainer {
+    display: flex;
+    align-items: flex-start;
+}
+.calc {
+    position: relative;
+    display: inline-block;
+    width: 17vw;
+    height: 54vh;
+    margin-left: 5vw;
+    margin-top: 11vh;
+    background-color: #c9afb4;
+    background-image: url("/calc.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.calc span {
+    display: none;
+}
+.calc:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e3e3e3;
+    background-image: none;
+}
+.calc:hover span {
+    display: unset;
+    font-size: 2.3rem;
+    color: #757575;
+
+}
+.forest {
+    position: relative;
+    display: flex;
+    width: 20vw;
+    height: 38vh;
+    background-color: #ab9a9d;
+    background-image: url("/forest.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.forest span {
+    display: none;
+}
+.forest:hover {
+    align-items: center;
+    justify-content: center;
+    background-color: #4f4f4f;
+    background-image: none;
+}
+.forest:hover span {
+    display: unset;
+    color: #c4c4c4;
+    font-size: 2.3rem;
+}
+.foresCircle {
+    position: absolute;
+    bottom: -29vh;
+    left: -2vw;
+    width: 38vh;
+    height: 38vh;
+    border: 5px solid #000;
+    border-radius: 50%;
+    z-index: -1;
+}
+.envilab {
+    position: relative;
+    margin-top: 3vh;
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: 3vh;
+    background-image: url("/envilab.webp");
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.linkContainer {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.linkAbsolut {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
