@@ -22,13 +22,15 @@ const Pin: React.FC<PinProps> = ({ h3, text, x, y, PinSize, right }) => {
 
   const Popup = {
     ...(right && {
-      transform: `translate(${-100}%,${-20}%)`,
+      transform: `translate(${-100}%,${-0}%)`,
+      bottom: 0,
+      top: `auto`,
       
   })
   };
 
   const ImgSize = {
-    width: `${PinSize}vw`
+    opacity: `${PinSize}`
   };
 
   return (
