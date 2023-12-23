@@ -5,10 +5,6 @@
   /* pointer-events: none; Allows clicks to go through the pin to the map */
 }
 
-.img {
-  width: 1vw;
-  transform: translateY(-1vw);
-}
 
 .hoverme {
   position: absolute;
@@ -27,6 +23,7 @@
   display: block;
 }
 
+
 .hoverme > p {
   position: relative;
   top: 50%;
@@ -35,27 +32,35 @@
 
 .pop {
   opacity: 0;
-  width: 0vw;
-  display: none;
+  width: 35vw;
   height: 0;
+  display: none;
   background: rgba(255, 255, 255, 0.9);
-  border: 3px solid white;
+  border: 5px solid white;
   border-radius: 0%;
   position: absolute;
   z-index: -1;
   margin: auto;
-  top: 0;
+  /* top: 0; */
   left: 50%;
+  transition: all 0.4s ease;
 }
 
 .pop .h3 {
   text-align: center;
   font-size: 24px;
+  font-family: 'Bebas Neue Bold';
   padding: 5px;
 }
 
 .pop .text {
-  font-size: 20px;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 12px;
+}
+
+.pop .text:last-child {
+  margin-bottom: 0;
 }
 
 .pop > p {

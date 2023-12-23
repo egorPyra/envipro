@@ -7,13 +7,15 @@ import Image from "next/image";
 interface PinProps {
   h3: string;
   text: string;
+  textSecond?: string;
   x: number;
   y: number;
   PinSize: number;
   right: boolean;
+  root: 'top' | 'bottom';
 }
 
-const Pin: React.FC<PinProps> = ({ h3, text, x, y, PinSize, right }) => {
+const Pin: React.FC<PinProps> = ({ h3, text, x, y, PinSize, right, textSecond, root }) => {
   const pinStyle = {
     left: `${x}%`,
     top: `${y}%`,
@@ -21,16 +23,21 @@ const Pin: React.FC<PinProps> = ({ h3, text, x, y, PinSize, right }) => {
   };
 
   const Popup = {
+    bottom: root === 'bottom' ? `-100%` : `auto`,
+    top: root === 'top' ? 0 : `auto`,
     ...(right && {
-      transform: `translate(${-100}%,${-0}%)`,
-      bottom: 0,
-      top: `auto`,
-      
+      transform: `translate(${-100}%,${0}%)`,
+      bottom: root === 'bottom' ? 0: `auto` ,
+      top: root === 'top' ? `-100%` : `auto`,
+      left: `15px`,
   })
   };
 
   const ImgSize = {
-    opacity: `${PinSize}`
+    width: `${PinSize}vw`,
+    ...(right && {
+    transform: `translateY(${-PinSize}vw)`,
+    })
   };
 
   return (
@@ -41,6 +48,7 @@ const Pin: React.FC<PinProps> = ({ h3, text, x, y, PinSize, right }) => {
       <div className={styles.pop} style={Popup}>
           <h3 className={styles.h3}>{h3}</h3>
           <p className={styles.text}>{text}</p>
+          {textSecond && <p className={styles.text}>{textSecond}</p>}
         </div>
       </div>
     </div>
