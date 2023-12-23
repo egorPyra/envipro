@@ -1,70 +1,69 @@
-/* Pin.module.css */
+
 .pin {
-    position: absolute;
-    z-index: 1;
-    /* pointer-events: none; Allows clicks to go through the pin to the map */
-  }
-  
-  .hoverme {
-    position: relative;
-    cursor: pointer;
-  
+  position: absolute;
+  z-index: 4;
+  /* pointer-events: none; Allows clicks to go through the pin to the map */
+}
 
-  }
 
-  .hoverme:hover {
-    /* background-color: rgba(246, 246, 246, 0.3); */
+.hoverme {
+  position: absolute;
+    width: 20px;
+    height: 20px;
+    /* background-color: green;  */
+    border-radius: 50%;
+    /* transform: translate(-50%, -50%); */
+}
 
-    & > .pop {
-      opacity: 1;
-      width: 35vw;
-      height: auto;
-      padding: 20px;
-      display: block;
-    }
-    /* & > .img {
-      opacity: 0;
-    }
-    & ~ * {
-      opacity: 0;
-    } */
-  }
+.hoverme:hover > .pop {
+  opacity: 1;
+  width: 30vw;
+  height: auto;
+  padding: 20px;
+  display: block;
+}
 
-  .hoverme > p {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  
-  .pop {
-    opacity: 0;
-    width: 35vw;
-    display: none;
-    height: 0;
-    background: rgba(255, 255, 255, 0.9);
-    border: 3px solid white;
-    border-radius: 0%;
-    position: relative;
-    z-index: 2;
-    margin: auto;
-    transition: all 0.3s ease;
 
-    transform: translateX(5%) translateY(-20%);
+.hoverme > p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-    .h3 {
-        text-align: center;
-        font-size: 24px;
-        padding: 5px;
-    }
+.pop {
+  opacity: 0;
+  width: 35vw;
+  height: 0;
+  display: none;
+  background: rgba(255, 255, 255, 0.9);
+  border: 5px solid white;
+  border-radius: 0%;
+  position: absolute;
+  z-index: -1;
+  margin: auto;
+  /* top: 0; */
+  left: 50%;
+  transition: all 0.4s ease;
+}
 
-    .text {
-        font-size: 20px;
-    }
-  }
+.pop .h3 {
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Bebas Neue Bold';
+  padding: 5px;
+}
 
-  .pop > p {
-    color: #353535;
-    font-size: 20px;
-  }
-  
-  
+.pop .text {
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 12px;
+}
+
+.pop .text:last-child {
+  margin-bottom: 0;
+}
+
+.pop > p {
+  color: #353535;
+  font-size: 20px;
+}

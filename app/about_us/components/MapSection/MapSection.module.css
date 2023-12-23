@@ -23,7 +23,7 @@
     right: -6rem;
     bottom: 0;
     left: -6rem;
-    background-color: #2f2f2f;
+    background-color: #aaaaaa;
     background-image: url("/bgMap.svg");
     background-size: cover; /* Use cover to maintain aspect ratio and cover the entire container */
     background-position: bottom;
@@ -31,17 +31,39 @@
     z-index: -1;
   }
   
-  .ballContainer {
-    display: flex;
-    flex-wrap: nowrap;
+  .MapAndPins {
     position: relative;
+    width: 90%;
+    height: 0;
+    margin: auto;
+    top: -170px;
+    padding-bottom: 50%; 
+    /* overflow: hidden; */
+    /* background-image: url("/MapBalls.png"); */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 11;
+    /* border: 1px red solid; */
+    object-fit: contain;
   }
   
-  .rowContainer {
-    display: flex; /* Use flex instead of table for better responsiveness */
-    flex-wrap: wrap;
-    justify-content: space-between; /* Adjust as needed */
+  .MapBalls {
+    position: absolute;
+    width: 100%;
+    object-fit: contain;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* border: 1px blue solid; */
   }
   
-
-  
+  .PinContainer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background-color: green;  */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
