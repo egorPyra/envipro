@@ -31,7 +31,10 @@
 
 .imageContainer {
     display: flex;
-    width: 100%;
+}
+
+.containerOne {
+    width: 15.5vw;
 }
 
 .img1, .img2, .img3, .img4, .img5, .img6, .img7 {
@@ -43,7 +46,8 @@
 }
 
 .img1 {
-    width: 15.5vw;
+    position: relative;
+    width: 100%;
     height: 42vh;
     padding: 20px 30px;
     background-color: #e0dcce;
@@ -51,6 +55,17 @@
     background-position: center;
     background-size: cover;
     color: #fff;
+}
+.img1::after {
+    content: '';
+    position: absolute;
+    width: 42vh;
+    height: 42vh;
+    border: 4px solid #000;
+    border-radius: 50%;
+    top: 21vh;
+    left: -21vh;
+    z-index: -1;
 }
 .img1:hover {
     background: #4b4b4b;
@@ -81,6 +96,26 @@
     background-image: url("/TeamImages/img2.jpg");
     background-position: center;
     background-size: cover;
+}
+.img2::after {
+    content: '';
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    background-color: #000;
+    top: -7vh;
+    left: 7vh;
+    border-radius: 50%;
+}
+.img2::before {
+    content: '';
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    background-color: #000;
+    bottom: 0;
+    left: -6vh;
+    border-radius: 50%;
 }
 .img2:hover {
     background: #000;
@@ -145,6 +180,16 @@
     background-position: center;
     background-size: cover;
 }
+.img4::before {
+    content: '';
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    background-color: #000;
+    top: -7vh;
+    left: 4vh;
+    border-radius: 50%;
+}
 .img4:hover {
     background: #f3f3f3;
 }
@@ -174,6 +219,16 @@
     background-image: url("/TeamImages/img5.jpg");
     background-position: center;
     background-size: cover;
+}
+.img5::after {
+    content: '';
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    background-color: #000;
+    top: -5vh;
+    left: 7vh;
+    border-radius: 50%;
 }
 .img5:hover {
     background: #000;
@@ -207,6 +262,27 @@
     background-image: url("/TeamImages/img6.jpg");
     background-position: center;
     background-size: cover;
+}
+.img6::after {
+    content: '';
+    position: absolute;
+    width: 60vh;
+    height: 60vh;
+    border: 4px solid #000;
+    border-radius: 50%;
+    bottom: -18vh;
+    left: 16vh;
+    z-index: -1;
+}
+.img6::before {
+    content: '';
+    position: absolute;
+    width: 4vh;
+    height: 4vh;
+    background-color: #000;
+    bottom: -8vh;
+    right: 3vh;
+    border-radius: 50%;
 }
 .img6:hover {
     background: #f3f3f3;

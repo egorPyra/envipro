@@ -21,7 +21,7 @@ export default function TeamSection() {
     <section ref={ref} id="team" className={styles.teamContainer}>
       <div className={styles.teamBg}></div>
       <div className={styles.imageContainer}>
-        <div>
+        <div className={styles.containerOne}>
         <motion.h1 
         className={styles.title}
         style={{
