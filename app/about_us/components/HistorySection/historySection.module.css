@@ -16,7 +16,6 @@
     padding-top: 95px;
     padding-bottom: 100px;
     min-height: 100vh;
-    scroll-snap-align: start;
 }
 .historyText {
     margin: 10px auto;

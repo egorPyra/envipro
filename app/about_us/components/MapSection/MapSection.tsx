@@ -1,12 +1,10 @@
 "use client"
 
 import { useState } from 'react';
-import Ball from './Ball';
-import Image from 'next/image';
 import styles from './MapSection.module.css';
 import ballData from '../../../../public/Balls.json';
-// import MapBg from './MapBg';
 import Pin from './Pin';
+import { motion } from 'framer-motion';
 
 export default function MapSection() {
   const [ballsData] = useState(ballData);
@@ -14,8 +12,22 @@ export default function MapSection() {
   return (
     <section id='map' className={styles.MapContainer}>
       <div className={styles.MapBg}></div>
-      <h1 className={styles.title}>Наши клиенты</h1>
-      <p className={styles.subTitle}>сотни объектов, более чем в 25 регионах!</p>
+      <motion.h1 
+      className={styles.title}
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ 
+        duration: 0.3,
+        delay: 0.2,
+      }}>Наши клиенты</motion.h1>
+      <motion.p 
+      className={styles.subTitle}
+      initial={{ x: -100, opacity: 0 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      transition={{ 
+        duration: 0.3,
+        delay: 0.2,
+      }}>сотни объектов, более чем в 25 регионах!</motion.p>
       <div className={styles.MapAndPins}>
         <img className={styles.MapBalls}
           src="/MapBalls.png"

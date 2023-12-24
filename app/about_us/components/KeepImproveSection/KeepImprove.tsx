@@ -1,14 +1,32 @@
 "use client"
 
+import { motion, useScroll, useTransform } from "framer-motion";
 import styles from "./KeepImprove.module.css";
+import { useRef } from "react";
 
 export default function KeepImprove() {
+
+
     return (
         <section id="keep" className={styles.keepContainer}>
             <div className={styles.keepBg}></div>
             <div className={styles.keepTitleContainer}>
-                <h1 className={styles.title}>сохраняя - улучшать</h1>
-                <p className={styles.subTitle}>суть нашей компании!</p> 
+                <motion.h1 
+                className={styles.title}
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ 
+                  duration: 0.3,
+                  delay: 0.2,
+                }}>сохраняя - улучшать</motion.h1>
+                <motion.p 
+                className={styles.subTitle}
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{ 
+                  duration: 0.3,
+                  delay: 0.2,
+                }}>суть нашей компании!</motion.p> 
                 <div className={styles.support}>
                     <p>Обеспечение достойных условий труда и уровня заработной платы, соблюдение требований промышленной безопасности и охраны труда, а также забота о здоровье сотрудников являются главными целями по отношению к персоналу компании.</p>
                 </div>

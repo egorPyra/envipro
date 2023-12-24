@@ -3,7 +3,6 @@
     display: flex;
     background: #fff;
     height: 100vh;
-    scroll-snap-align: start;
 }
 
 .title {

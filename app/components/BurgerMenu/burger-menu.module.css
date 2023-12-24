@@ -69,6 +69,7 @@
     height: 40px;
     border: none;
     background-color: #000;
+    cursor: pointer;
 }
 .closeBtn::before {
     content: '';

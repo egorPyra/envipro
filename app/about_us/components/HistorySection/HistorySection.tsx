@@ -13,27 +13,83 @@ export default function HistorySection() {
     console.log(latest)
   })
 
+  const textAnimation = {
+    hidden: { x: -100, opacity: 0 },
+    visible: { x: 0, opacity: 1 },
+  }
+
   return (
     <section id='history' className={styles.historyContainer}>
       <div className={styles.historyBg}></div>
       <div className={styles.historyContent}>
-        <h1 className={styles.title}>Наша история</h1>
-        <p className={styles.subTitle}>Это была любовь с первого взгляда!</p>
-        <p className={styles.historyTextTitle}>
+        <motion.h1 
+         className={styles.title}
+         initial={{ x: -100, opacity: 0 }}
+         animate={{ x: 0, opacity: 1 }}
+         transition={{ 
+           duration: 0.3,
+           delay: 0.2,
+         }}
+         >Наша история</motion.h1>
+        <motion.p
+         className={styles.subTitle}
+         initial={{ x: -100, opacity: 0 }}
+         animate={{ x: 0, opacity: 1 }}
+         transition={{ 
+           duration: 0.3,
+           delay: 0.2,
+         }}
+         >Это была любовь с первого взгляда!</motion.p>
+        <motion.p
+         className={styles.historyTextTitle}
+         initial={{ y: 100, opacity: 0 }}
+         animate={{ y: 0, opacity: 1 }}
+         transition={{ 
+           duration: 0.3,
+           delay: 0.5,
+         }}>
           ЭнвиПро&nbsp;&mdash; это больше, чем просто компания. 
-        </p>
-        <p className={styles.historyText}>
+        </motion.p>
+        <motion.p 
+        className={styles.historyText}
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ 
+          duration: 0.3,
+          delay: 0.8,
+        }}>
           Мы&nbsp;действительно Команда, в&nbsp;которой каждый является не&nbsp;только профессионалом своего дела, но&nbsp;и&nbsp;немного его фанатом. Уже более пяти лет мы&nbsp;оказываем различные экологические услуги во&nbsp;многих уголках нашей необъятной страны. И&nbsp;где&nbsp;бы мы&nbsp;ни&nbsp;находились, мы&nbsp;всегда получаем огромное удовольствие решая для вас даже самые сложные задачи. 
-        </p>
-        <p className={styles.historyText}>
+        </motion.p>
+        <motion.p
+         className={styles.historyText}
+         initial={{ y: 100, opacity: 0 }}
+         animate={{ y: 0, opacity: 1 }}
+         transition={{ 
+           duration: 0.3,
+           delay: 0.8,
+         }}>
           ООО «ЭнвиПро» обладает всеми необходимыми разрешительными документами, широкой базой подрядных лабораторий, а также сотрудничает с лучшими узкопрофильными специалистами ведущих научных учреждений страны.
-        </p>
-        <p className={styles.historyText}>
+        </motion.p>
+        <motion.p 
+        className={styles.historyText}
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ 
+          duration: 0.3,
+          delay: 0.8,
+        }}>
           Мы одинаково высоко ценим каждого из наших заказчиков и прилагаем все усилия, обеспечивая комфортное взаимодействие с нами. Благодаря такому подходу нас уже выбрали: ООО «Газпром Инвест», ООО «Газпром переработка», ООО «Газпром добыча Ямбург», ООО «Газпром добыча Иркутск», ООО «Газпром бурение», ПАО «Транснефть», ООО «Свод Интернешнл», АО «Объединённая Энергостроительная корпорация», ГК «Геоизол», ООО «ГазАртСтрой», ООО «ГазЭнергоСервис» и многие другие.
-        </p>
-        <p className={styles.historyText}>
+        </motion.p>
+        <motion.p 
+        className={styles.historyText}
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ 
+          duration: 0.3,
+          delay: 0.8,
+        }}>
           Постоянно развиваясь, совершенствуя свои знания, навыки и умения, осваивая и внедряя самые передовые технологии и используя современное оборудование и программное обеспечение, мы стараемся быть лучшими. Лучшими для вас. И вы несомненно останетесь довольны нашим подходом и результатом.
-        </p>
+        </motion.p>
         <AnimatePresence>
           {isShow && (
             <motion.div
@@ -55,7 +111,16 @@ export default function HistorySection() {
             </motion.div>
           )}
         </AnimatePresence>
-        <button className={styles.showBtn} onClick={() => setIsShow(!isShow)}>{isShow ? 'Свернуть' : 'Читать далее'}</button>
+        <motion.button 
+        className={styles.showBtn} 
+        onClick={() => setIsShow(!isShow)}
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ 
+          duration: 0.3,
+          delay: 1,
+        }}
+        >{isShow ? 'Свернуть' : 'Читать далее'}</motion.button>
       </div>
 
     </section>
