@@ -1,12 +1,11 @@
-import Header from '../components/Header/Header'
+import PageNotFound from '../components/PageNotFound/PageNotFound'
 import styles from './page.module.css'
 
 export default function Services() {
   return (
     <>
-      <Header/>
       <main className={styles.main}>
-        services content
+        <PageNotFound/>
       </main>
     </>
   )

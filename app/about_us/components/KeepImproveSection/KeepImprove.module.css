@@ -44,6 +44,7 @@
     width: 21.5vw;
     height: 50vh;
     padding: 10px;
+    top: -60%;
 }
 
 .we {
@@ -54,8 +55,11 @@
     background: #000;
     color: #fff;
     width: 35.5vw;
-    height: 100vh;
+    height: 102vh;
     margin-right: 5vw;
+}
+.overflowHidden {
+    overflow: hidden;
 }
 
 .we p:first-child {
