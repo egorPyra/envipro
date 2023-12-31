@@ -7,18 +7,21 @@ import HistorySection from "./components/HistorySection/HistorySection";
 import TeamSection from "./components/TeamSection/TeamSection";
 import Header from '../components/Header/Header';
 import Lenis from "@studio-freight/lenis";
+import { useEffect } from "react";
 
 
 export default function AboutUs() {
 
-  const lenis = new Lenis()
+  useEffect(() => {
+    const lenis = new Lenis()
 
-  function raf(time: any) {
-    lenis.raf(time)
+    function raf(time: any) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+  
     requestAnimationFrame(raf)
-  }
-
-  requestAnimationFrame(raf)
+  }, [])
 
   return (
     <>
