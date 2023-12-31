@@ -13,6 +13,7 @@
     position: relative;
     height: 100vh;
     padding-top: 8vh;
+    overflow-y: hidden;
 }
 
 .teamBg {
@@ -31,6 +32,8 @@
 
 .imageContainer {
     display: flex;
+    position: relative;
+    height: 100vh;
 }
 
 .containerOne {
@@ -55,6 +58,7 @@
     background-position: center;
     background-size: cover;
     color: #fff;
+    top: -200%;
 }
 .img1::after {
     content: '';
@@ -89,6 +93,7 @@
 }
 
 .img2 {
+    top: -180%;
     width: 15.5vw;
     height: 48vh;
     margin-top: 24vh;
@@ -151,6 +156,7 @@
     background-image: url("/TeamImages/img3.jpg");
     background-position: center;
     background-size: cover;
+    top: -112%;
 }
 .img3:hover {
     background: #4b4b4b;
@@ -179,6 +185,7 @@
     background-image: url("/TeamImages/img4.jpg");
     background-position: center;
     background-size: cover;
+    top: -70%;
 }
 .img4::before {
     content: '';
@@ -219,6 +226,7 @@
     background-image: url("/TeamImages/img5.jpg");
     background-position: center;
     background-size: cover;
+    top: -85%;
 }
 .img5::after {
     content: '';
@@ -262,6 +270,7 @@
     background-image: url("/TeamImages/img6.jpg");
     background-position: center;
     background-size: cover;
+    top: -165%;
 }
 .img6::after {
     content: '';
@@ -313,6 +322,7 @@
     background-image: url("/TeamImages/img7.jpg");
     background-position: center;
     background-size: cover;
+    top: -200%;
 }
 
 .img7:hover {

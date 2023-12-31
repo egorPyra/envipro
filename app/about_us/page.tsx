@@ -6,16 +6,19 @@ import KeepImprove from "./components/KeepImproveSection/KeepImprove";
 import HistorySection from "./components/HistorySection/HistorySection";
 import TeamSection from "./components/TeamSection/TeamSection";
 import Header from '../components/Header/Header';
-import { useMotionValueEvent, useScroll } from 'framer-motion';
+import Lenis from "@studio-freight/lenis";
 
 
 export default function AboutUs() {
 
-  const { scrollY } = useScroll();
+  const lenis = new Lenis()
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log(latest)
-  })
+  function raf(time: any) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+
+  requestAnimationFrame(raf)
 
   return (
     <>

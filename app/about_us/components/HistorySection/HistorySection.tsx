@@ -27,7 +27,7 @@ export default function HistorySection() {
          initial={{ x: -100, opacity: 0 }}
          animate={{ x: 0, opacity: 1 }}
          transition={{ 
-           duration: 0.3,
+           duration: 0.5,
            delay: 0.2,
          }}
          >Наша история</motion.h1>
@@ -36,7 +36,7 @@ export default function HistorySection() {
          initial={{ x: -100, opacity: 0 }}
          animate={{ x: 0, opacity: 1 }}
          transition={{ 
-           duration: 0.3,
+           duration: 0.5,
            delay: 0.2,
          }}
          >Это была любовь с первого взгляда!</motion.p>
@@ -45,7 +45,7 @@ export default function HistorySection() {
          initial={{ y: 100, opacity: 0 }}
          animate={{ y: 0, opacity: 1 }}
          transition={{ 
-           duration: 0.3,
+           duration: 0.5,
            delay: 0.5,
          }}>
           ЭнвиПро&nbsp;&mdash; это больше, чем просто компания. 
@@ -55,7 +55,7 @@ export default function HistorySection() {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ 
-          duration: 0.3,
+          duration: 0.7,
           delay: 0.8,
         }}>
           Мы&nbsp;действительно Команда, в&nbsp;которой каждый является не&nbsp;только профессионалом своего дела, но&nbsp;и&nbsp;немного его фанатом. Уже более пяти лет мы&nbsp;оказываем различные экологические услуги во&nbsp;многих уголках нашей необъятной страны. И&nbsp;где&nbsp;бы мы&nbsp;ни&nbsp;находились, мы&nbsp;всегда получаем огромное удовольствие решая для вас даже самые сложные задачи. 
@@ -65,8 +65,8 @@ export default function HistorySection() {
          initial={{ y: 100, opacity: 0 }}
          animate={{ y: 0, opacity: 1 }}
          transition={{ 
-           duration: 0.3,
-           delay: 0.8,
+           duration: 0.7,
+           delay: 1.2,
          }}>
           ООО «ЭнвиПро» обладает всеми необходимыми разрешительными документами, широкой базой подрядных лабораторий, а также сотрудничает с лучшими узкопрофильными специалистами ведущих научных учреждений страны.
         </motion.p>
@@ -75,8 +75,8 @@ export default function HistorySection() {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ 
-          duration: 0.3,
-          delay: 0.8,
+          duration: 0.7,
+          delay: 1.6,
         }}>
           Мы одинаково высоко ценим каждого из наших заказчиков и прилагаем все усилия, обеспечивая комфортное взаимодействие с нами. Благодаря такому подходу нас уже выбрали: ООО «Газпром Инвест», ООО «Газпром переработка», ООО «Газпром добыча Ямбург», ООО «Газпром добыча Иркутск», ООО «Газпром бурение», ПАО «Транснефть», ООО «Свод Интернешнл», АО «Объединённая Энергостроительная корпорация», ГК «Геоизол», ООО «ГазАртСтрой», ООО «ГазЭнергоСервис» и многие другие.
         </motion.p>
@@ -85,8 +85,8 @@ export default function HistorySection() {
         initial={{ y: 100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ 
-          duration: 0.3,
-          delay: 0.8,
+          duration: 0.7,
+          delay: 2,
         }}>
           Постоянно развиваясь, совершенствуя свои знания, навыки и умения, осваивая и внедряя самые передовые технологии и используя современное оборудование и программное обеспечение, мы стараемся быть лучшими. Лучшими для вас. И вы несомненно останетесь довольны нашим подходом и результатом.
         </motion.p>
@@ -118,7 +118,7 @@ export default function HistorySection() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ 
           duration: 0.3,
-          delay: 1,
+          delay: 2.4,
         }}
         >{isShow ? 'Свернуть' : 'Читать далее'}</motion.button>
       </div>

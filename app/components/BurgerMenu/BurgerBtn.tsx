@@ -6,16 +6,32 @@ interface IBurgerBtn {
 }
 
 export default function BurgerBtn({ activateMenuFunc }: IBurgerBtn) {
+  const variants = {
+    initial: {
+      y: 50,
+      x: 50,
+      opacity: 0,
+      scale: 0.9,
+    },
+    animate: {
+      y: 0,
+      x: 0,
+      opacity: 1,
+      scale: 1,
+    }
+  }
+
   return (
     <motion.button onClick={(event) => {
       event.stopPropagation();
       activateMenuFunc(true);
     }} className={style.btn}
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
+    variants={variants}
+    initial='initial'
+    animate='animate'
     transition={{ 
-      duration: 0.8,
-      delay: 1.2,
+      duration: 0.5,
+      delay: 0.4,
     }}>
       <span className={style.line}/>
     </motion.button>

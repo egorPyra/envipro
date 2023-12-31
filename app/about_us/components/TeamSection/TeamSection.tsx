@@ -12,10 +12,16 @@ export default function TeamSection() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
       target: ref,
-      offset: ['0 1', '1.33 1'],
+      offset: ['0 1', '1 0'],
   });
-  const translateYProgress = useTransform(scrollYProgress, [0, 0.6], [50, 0])
-  const opacityProgress = useTransform(scrollYProgress, [0, 0.6], [0., 1])
+  const y4 = useTransform(scrollYProgress, [0, 1], [0, 1000])
+  const y5 = useTransform(scrollYProgress, [0, 1], [0, 1300])
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, 1600])
+  const y6 = useTransform(scrollYProgress, [0, 1], [0, 2300])
+  const y2 = useTransform(scrollYProgress, [0, 1], [0, 2600])
+  const y7 = useTransform(scrollYProgress, [0, 1], [0, 2800])
+  const y1 = useTransform(scrollYProgress, [0, 1], [0, 2800])
+
 
   return (
     <section ref={ref} id="team" className={styles.teamContainer}>
@@ -24,22 +30,25 @@ export default function TeamSection() {
         <div className={styles.containerOne}>
         <motion.h1 
         className={styles.title}
-        style={{
-          y: translateYProgress,
-          opacity: opacityProgress,
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ 
+          duration: 0.5,
+          delay: 0.2,
         }}>Наша команда</motion.h1>
         <motion.p 
         className={styles.subTitle}
-        style={{
-          y: translateYProgress,
-          opacity: opacityProgress,
-        }}>Лучшие специалисты в своем деле!</motion.p>
+        initial={{ x: -100, opacity: 0 }}
+         animate={{ x: 0, opacity: 1 }}
+         transition={{ 
+           duration: 0.5,
+           delay: 0.2,
+         }}>Лучшие специалисты в своем деле!</motion.p>
         <motion.div 
           onMouseEnter={() => {setIsShown(true); setKeepActive('img1')}}
           onMouseLeave={() => setIsShown(false)}
           style={{
-            y: translateYProgress,
-            opacity: opacityProgress,
+            y: y1,
           }}
           className={styles.img1}>
           <div className={`${isShown && keepActive !== 'img1' ? 'greyBlock' : 'greyBlock hide'}`}></div>
@@ -51,8 +60,7 @@ export default function TeamSection() {
           onMouseEnter={() => {setIsShown(true); setKeepActive('img2')}}
           onMouseLeave={() => setIsShown(false)}
           style={{
-            y: translateYProgress,
-            opacity: opacityProgress,
+            y: y2,
           }}
           className={styles.img2}>
           <div className={`${isShown && keepActive !== 'img2' ? 'greyBlock' : 'greyBlock hide'}`}></div>
@@ -64,8 +72,7 @@ export default function TeamSection() {
           onMouseEnter={() => {setIsShown(true); setKeepActive('img3')}}
           onMouseLeave={() => setIsShown(false)}
           style={{
-            y: translateYProgress,
-            opacity: opacityProgress,
+            y: y3,
           }}
           className={styles.img3}>
             <div className={`${isShown && keepActive !== 'img3' ? 'greyBlock' : 'greyBlock hide'}`}></div>
@@ -76,8 +83,7 @@ export default function TeamSection() {
           onMouseEnter={() => {setIsShown(true); setKeepActive('img4')}}
           onMouseLeave={() => setIsShown(false)}
           style={{
-            y: translateYProgress,
-            opacity: opacityProgress,
+            y: y4,
           }}
           className={styles.img4}>
             <div className={`${isShown && keepActive !== 'img4' ? 'greyBlock' : 'greyBlock hide'}`}></div>
@@ -89,8 +95,7 @@ export default function TeamSection() {
         onMouseEnter={() => {setIsShown(true); setKeepActive('img5')}}
         onMouseLeave={() => setIsShown(false)}
         style={{
-          y: translateYProgress,
-          opacity: opacityProgress,
+          y: y5,
         }}
         className={styles.img5}>
           <div className={`${isShown && keepActive !== 'img5' ? 'greyBlock' : 'greyBlock hide'}`}></div>
@@ -102,8 +107,7 @@ export default function TeamSection() {
           onMouseEnter={() => {setIsShown(true); setKeepActive('img6')}}
           onMouseLeave={() => setIsShown(false)} 
           style={{
-            y: translateYProgress,
-            opacity: opacityProgress,
+            y: y6,
           }}
           className={styles.img6}>
             <div className={`${isShown && keepActive !== 'img6' ? 'greyBlock' : 'greyBlock hide'}`}></div>
@@ -114,8 +118,7 @@ export default function TeamSection() {
           onMouseEnter={() => {setIsShown(true); setKeepActive('img7')}}
           onMouseLeave={() => setIsShown(false)} 
           style={{
-            y: translateYProgress,
-            opacity: opacityProgress,
+            y: y7,
           }}
           className={styles.img7}>
             <div className={`${isShown && keepActive !== 'img7' ? 'greyBlock' : 'greyBlock hide'}`}></div>

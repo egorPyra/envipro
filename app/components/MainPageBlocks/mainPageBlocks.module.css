@@ -3,22 +3,22 @@
     align-items: flex-start;
 }
 
-.sectionOne {
-    overflow: hidden;
-}
-
 .circleLogoContainer {
     height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 .circleLogo {
     border: 6px solid #000;
     border-radius: 50%;
     height: 37vh;
     width: 37vh;
+}
+.mainLogo {
+    position: absolute;
+    top: 0;
+    left: 5vw;
 }
 
 .ecoMonitoring {

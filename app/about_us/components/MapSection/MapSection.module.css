@@ -11,7 +11,7 @@
 
 .MapContainer {
     position: relative;
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 70px;
     height: 100vh;
   }
@@ -35,7 +35,7 @@
     width: 90%;
     height: 0;
     margin: auto;
-    top: -170px;
+    top: -100px;
     padding-bottom: 50%; 
     /* overflow: hidden; */
     /* background-image: url("/MapBalls.png"); */
