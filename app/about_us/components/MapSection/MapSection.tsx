@@ -29,11 +29,8 @@ export default function MapSection() {
         delay: 0.2,
       }}>сотни объектов, более чем в 25 регионах!</motion.p>
       <div className={styles.MapAndPins}>
-        <img className={styles.MapBalls}
-          src="/MapBalls.png"
-          alt="Map"
-        />
-        <div className={styles.PinContainer} style={{ left: '50%', top: '50%' }}>
+        <img className={styles.MapBalls} src="/MapBalls.png" alt="Map"/>
+        <motion.div className={styles.PinContainer} style={{ left: '50%', top: '50%' }}>
           <Pin
             h3={'Камчатский край'}
             text={'Разработку разрешительной природоохранной документации, экологический мониторинг и контроль качества почв после рекультивации выполняют специалисты компании на объектах транспорта газа в регионе'}
@@ -194,7 +191,7 @@ export default function MapSection() {
             text={'В области компания проводит экологический мониторинг при строительстве и реконструкции портовой инфраструктуры и берегозащитных сооружений, при строительстве объектов хранения газа '}
             x={6.1} y={19.2} PinSize={1.5} right={false} root={'top'} />
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );

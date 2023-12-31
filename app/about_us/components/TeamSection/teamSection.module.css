@@ -60,7 +60,7 @@
     color: #fff;
     top: -200%;
 }
-.img1::after {
+/* .img1::after {
     content: '';
     position: absolute;
     width: 42vh;
@@ -70,7 +70,7 @@
     top: 21vh;
     left: -21vh;
     z-index: -1;
-}
+} */
 .img1:hover {
     background: #4b4b4b;
 }
@@ -272,7 +272,7 @@
     background-size: cover;
     top: -165%;
 }
-.img6::after {
+/* .img6::after {
     content: '';
     position: absolute;
     width: 60vh;
@@ -282,7 +282,7 @@
     bottom: -18vh;
     left: 16vh;
     z-index: -1;
-}
+} */
 .img6::before {
     content: '';
     position: absolute;
