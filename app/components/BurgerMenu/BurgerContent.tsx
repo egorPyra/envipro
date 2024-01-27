@@ -14,11 +14,6 @@ export default function BurgerContent({ isActive, activateMenuFunc }: IBurgerCon
         className={isActive ? `${styles.menuContent} ${styles.menuActive}` : `${styles.menuContent}`}
         onClick={(event) => event.stopPropagation()}
       >
-        {isActive && 
-        <div className={styles.closeBtnWrap}>
-          <button onClick={() => activateMenuFunc(false)} className={styles.closeBtn} />
-        </div>
-        }
         {isActive &&
         <ul className={styles.menuList}>
           <li className={styles.menuListTitle}>

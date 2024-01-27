@@ -10,33 +10,122 @@
     background-color: #000;
     border: none;
     cursor: pointer;
-}
-.btn:active, .btn:focus {
-    background-color: #363535;
-    outline: none;
+    z-index: 2;
+    transition: width .2s ease, height .2s ease;
 }
 
-.line {
-    display: block;
-    position: relative;
-    height: 2px;
-    width: 40%;
-    background-color: #fff;
-}
-
-.line::before, .line::after {
-    content: '';
+.btn span {
     position: absolute;
-    top: -8px;
-    left: 0;
-    height: 2px;
-    width: 100%;
-    background-color: #fff;
-}
+    width: 50px;
+    height: 4px;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: all 0.3s linear;
+  }
 
-.line::after {
-    top: 8px;
-}
+  .btn span:nth-child(1) {
+    animation: span-first-off 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .btn span:nth-child(2) {
+    animation: span-second-off 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .btn span:nth-child(3) {
+    animation: span-third-off 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  
+  .btn.on span:nth-child(1) {
+    animation: span-first-on 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .btn.on span:nth-child(2) {
+    animation: span-second-on 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .btn.on span:nth-child(3) {
+    animation: span-third-on 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+  }
+  .btn.on {
+    width: 9vw;
+    height: 12vh;
+    transition: all .2s ease;
+  }
+  
+  @keyframes span-first-on {
+    0% {
+      transform: translate(-50%, -300%);
+    }
+    30% {
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+  @keyframes span-first-off {
+    0% {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    30% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -300%);
+    }
+  }
+  @keyframes span-second-on {
+    0% {
+      transform: translate(-50%, -50%);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+      transform: translate(-150%, -50%) scale(0);
+    }
+  }
+  @keyframes span-second-off {
+    0% {
+      transform: translate(-150%, -50%) scale(0);
+    }
+    25% {
+      background: gray;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      transform: translate(-50%, -50%);
+    }
+  }
+  @keyframes span-third-on {
+    0% {
+      transform: translate(-50%, 200%);
+    }
+    30% {
+      transform: translate(-50%, -50%);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+  @keyframes span-third-off {
+    0% {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    30% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, 200%);
+    }
+  }
 
 .menuContent {
     position: absolute;
@@ -52,14 +141,6 @@
 
 .menuActive {
     transform: translateX(calc(100vw - 350px));
-}
-
-.menuActive1 {
-    transform: translateX(calc(100vw - 710px));
-}
-
-.menuActive2 {
-    transform: translateX(calc(100vw - 1070px));
 }
 
 .closeBtn {
@@ -156,9 +237,6 @@
 }
 
 .menuListSubTitle li:hover {
-    /* font-size: 1.02rem; */
-    /* padding-top: 3px;
-    padding-bottom: 2px; */
     padding-left: 38px;
     border-bottom: #c4c2c2 1px solid;
     border-top: #c4c2c2 1px solid;

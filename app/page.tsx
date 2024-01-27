@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <section className={styles.content} onClick={() => setIsMenuActive(false)}>
-      <BurgerBtn activateMenuFunc={setIsMenuActive}/>
+      <BurgerBtn isActive={isMenuActive} activateMenuFunc={setIsMenuActive}/>
       <BurgerContent isActive={isMenuActive} activateMenuFunc={setIsMenuActive}/>
       <MainPageBlocks/>
     </section>

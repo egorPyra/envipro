@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 import styles from './mainPageBlocks.module.css'
 import { useState } from "react";
 import Link from 'next/link';
@@ -14,16 +14,10 @@ export default function MainPageBlocks() {
 
   const variants = {
     initial: {
-      y: 50,
-      x: 50,
       opacity: 0,
-      scale: 0.9,
     },
     animate: {
-      y: 0,
-      x: 0,
       opacity: 1,
-      scale: 1,
     },
     logoCenter: {
       y: '40vh',
