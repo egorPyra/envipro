@@ -45,7 +45,7 @@ export default function MainPageBlocks() {
           animate='logoCorner'
           >
             <Image
-              src="/mainLogo.svg"
+              src="/MAIN_ENVI_new.svg"
               alt="Landscape picture"
               width={150}
               height={150}
@@ -57,7 +57,7 @@ export default function MainPageBlocks() {
               animate='animate'
               transition={{ 
                 duration: 0.5,
-                delay: 0.7,
+                delay: 5.7,
                 ease: 'easeInOut'
               }}
               className={styles.circleLogo}
