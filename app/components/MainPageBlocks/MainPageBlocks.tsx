@@ -14,21 +14,29 @@ export default function MainPageBlocks() {
 
   const variants = {
     initial: {
+      y: 0,
+      x: 0,
       opacity: 0,
+      scale: 0.9,
     },
     animate: {
+      y: 0,
+      x: 0,
       opacity: 1,
+      scale: 1,
     },
     logoCenter: {
-      y: '40vh',
-      x: '40vw'
+      y: '37vh',
+      x: '40vw',
+      scale: 2
     },
     logoCorner: {
       y: 0,
       x: 0,
+      scale: 1,
       transition: { 
         duration: 1.5,
-        delay: 0,
+        delay: 5.2,
         ease: 'easeInOut'
       }
     }
@@ -57,7 +65,7 @@ export default function MainPageBlocks() {
               animate='animate'
               transition={{ 
                 duration: 0.5,
-                delay: 5.7,
+                delay: 6.7,
                 ease: 'easeInOut'
               }}
               className={styles.circleLogo}
@@ -71,7 +79,7 @@ export default function MainPageBlocks() {
               animate='animate'
               transition={{ 
                 duration: 0.5,
-                delay: 0.5,
+                delay: 6.7,
                 ease: 'easeInOut'
               }}
               onMouseEnter={() => {setIsShown(true); setKeepActive('ecoMonitoring')}}
@@ -87,7 +95,7 @@ export default function MainPageBlocks() {
               animate='animate'
               transition={{ 
                 duration: 0.5,
-                delay: 1.2,
+                delay: 6.7,
                 ease: 'easeInOut'
               }}
             onMouseEnter={() => {setIsShown(true); setKeepActive('ecology')}}
@@ -102,7 +110,7 @@ export default function MainPageBlocks() {
               animate='animate'
               transition={{ 
                 duration: 0.5,
-                delay: 1.7,
+                delay: 6.8,
                 ease: 'easeInOut'
               }}
               className={styles.ecologyCircle}
@@ -118,7 +126,7 @@ export default function MainPageBlocks() {
               animate='animate'
               transition={{ 
                 duration: 0.5,
-                delay: 0.6,
+                delay: 6.85,
                 ease: 'easeInOut'
               }}
                 onMouseEnter={() => {setIsShown(true); setKeepActive('earth')}}
@@ -135,7 +143,7 @@ export default function MainPageBlocks() {
               animate='animate'
               transition={{ 
                 duration: 0.5,
-                delay: 0.8,
+                delay: 6.95,
                 ease: 'easeInOut'
               }}
                 onMouseEnter={() => {setIsShown(true); setKeepActive('ecoShadow')}}
@@ -156,7 +164,7 @@ export default function MainPageBlocks() {
                   animate='animate'
                   transition={{ 
                     duration: 0.5,
-                    delay: 0.9,
+                    delay: 7,
                     ease: 'easeInOut'
                   }}
                   onMouseEnter={() => {setIsShown(true); setKeepActive('engineer')}}
@@ -172,7 +180,7 @@ export default function MainPageBlocks() {
                animate='animate'
                transition={{ 
                  duration: 0.5,
-                 delay: 1,
+                 delay: 7.05,
                  ease: 'easeInOut'
                }}
                 className={styles.saveNature}
@@ -193,7 +201,7 @@ export default function MainPageBlocks() {
               animate='animate'
               transition={{ 
                 duration: 0.5,
-                delay: 0.6,
+                delay: 7.1,
                 ease: 'easeInOut'
               }}
                 className={styles.ppaUnder}>
@@ -219,7 +227,7 @@ export default function MainPageBlocks() {
               animate='animate'
               transition={{ 
                 duration: 0.5,
-                delay: 0.6,
+                delay: 7.15,
                 ease: 'easeInOut'
               }}
               className={styles.catUnder}
@@ -234,7 +242,7 @@ export default function MainPageBlocks() {
               animate='animate'
               transition={{ 
                 duration: 0.8,
-                delay: 0.8,
+                delay: 7.3,
                 ease: 'easeInOut'
               }}
                 onMouseEnter={() => {setIsShown(true); setKeepActive('plasma')}}
@@ -247,7 +255,7 @@ export default function MainPageBlocks() {
                   animate='animate'
                   transition={{ 
                     duration: 0.5,
-                    delay: 1.7,
+                    delay: 7.25,
                     ease: 'easeInOut'
                   }}
                   className={styles.plasmaCircle}
@@ -263,7 +271,7 @@ export default function MainPageBlocks() {
               animate='animate'
               transition={{ 
                 duration: 0.8,
-                delay: 0.8,
+                delay: 7.35,
                 ease: 'easeInOut'
               }}
               onMouseEnter={() => {setIsShown(true); setKeepActive('calc')}}
@@ -282,7 +290,7 @@ export default function MainPageBlocks() {
                   animate='animate'
                   transition={{ 
                     duration: 0.8,
-                    delay: 0.8,
+                    delay: 7.3,
                     ease: 'easeInOut'
                   }}
                   onMouseEnter={() => {setIsShown(true); setKeepActive('forest')}}
@@ -295,7 +303,7 @@ export default function MainPageBlocks() {
                     animate='animate'
                     transition={{ 
                       duration: 0.5,
-                      delay: 1.7,
+                      delay: 7.5,
                       ease: 'easeInOut'
                     }}
                     className={styles.foresCircle}
@@ -309,7 +317,7 @@ export default function MainPageBlocks() {
               animate='animate'
               transition={{ 
                 duration: 0.8,
-                delay: 0.8,
+                delay: 7.5,
                 ease: 'easeInOut'
               }}
                 onMouseEnter={() => {setIsShown(true); setKeepActive('envilab')}}

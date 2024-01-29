@@ -42,7 +42,11 @@ const Pin: React.FC<PinProps> = ({ h3, text, x, y, PinSize, right, textSecond, r
   };
 
   return (
-    <motion.div className={styles.pin} style={pinStyle} initial={{y: -100, opacity: 0}} whileInView={{y: 0, opacity: 1}} transition={{ delay: 0.3, duration: 0.5}}>
+    <motion.div className={styles.pin} style={pinStyle} whileInView={{y: 0, opacity: 1}} transition={{ delay: 0.3, duration: 0.5}}
+    animate={{
+      scale: [0, 1, 1.1, 0.9, 1],
+      rotate: [-10, -5, 10, -5, 0],
+    }}>
       <div className={styles.hoverme}>
       <img className={styles.img} src="/pin.svg" alt="1" style={ImgSize}/>
 

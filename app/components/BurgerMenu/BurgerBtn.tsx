@@ -9,8 +9,8 @@ interface IBurgerBtn {
 export default function BurgerBtn({ isActive, activateMenuFunc }: IBurgerBtn) {
   const variants = {
     initial: {
-      y: 50,
-      x: 50,
+      y: 0,
+      x: 0,
       opacity: 0,
       scale: 0.9,
     },
@@ -32,7 +32,7 @@ export default function BurgerBtn({ isActive, activateMenuFunc }: IBurgerBtn) {
     animate='animate'
     transition={{ 
       duration: 0.5,
-      delay: 0.4,
+      delay: 7.4,
     }}>
       <span></span><span></span><span></span>
     </motion.button>
