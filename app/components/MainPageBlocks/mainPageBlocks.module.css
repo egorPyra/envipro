@@ -419,6 +419,7 @@
     background-position: center;
     background-size: cover;
     overflow: hidden;
+    border: 5px black solid;
 }
 
 .linkContainer {
