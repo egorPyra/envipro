@@ -1,8 +1,8 @@
 'use client'
 
-import { motion } from 'framer-motion';
+import { animate, motion } from 'framer-motion';
 import styles from './mainPageBlocks.module.css'
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -46,12 +46,13 @@ export default function MainPageBlocks() {
 
       <div className={styles.blocksContainer}>
         <div className={`${isShown ? 'greyBlockUnder' : 'greyBlockUnder hide'}`}></div>
+        <motion.div transition={{delay: 7}} initial={{display: 'block'}} animate={{display: 'none'}} className={styles.logoBackgroundBlock}></motion.div>
         <div className={styles.sectionOne}>
           <motion.div className={styles.circleLogoContainer}
-          variants={variants}
-          initial='logoCenter'
-          animate='logoCorner'
-          >
+            variants={variants}
+            initial='logoCenter'
+            animate='logoCorner'
+            >
             <Image
               src="/MAIN_ENVI_new.svg"
               alt="Landscape picture"
