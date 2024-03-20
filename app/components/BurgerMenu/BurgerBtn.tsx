@@ -1,5 +1,6 @@
-import { motion } from 'framer-motion';
+import { animate } from 'framer-motion';
 import style from './burger-menu.module.css';
+import { useEffect } from 'react';
 
 interface IBurgerBtn {
   isActive: boolean;
@@ -7,34 +8,19 @@ interface IBurgerBtn {
 }
 
 export default function BurgerBtn({ isActive, activateMenuFunc }: IBurgerBtn) {
-  const variants = {
-    initial: {
-      y: 0,
-      x: 0,
-      opacity: 0,
-      scale: 0.9,
-    },
-    animate: {
-      y: 0,
-      x: 0,
-      opacity: 1,
-      scale: 1,
+
+  useEffect(() => {
+    if(!localStorage.getItem('animationEnvipro')) {
+      animate('#burgerBtn', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.4, ease: 'easeInOut'})
     }
-  }
+  }, [])
 
   return (
-    <motion.button onClick={(event) => {
+    <button onClick={(event) => {
       event.stopPropagation();
       activateMenuFunc(!isActive);
-    }} className={`${style.btn} ${isActive ? style.on : ''}`}
-    variants={variants}
-    initial='initial'
-    animate='animate'
-    transition={{ 
-      duration: 0.5,
-      delay: 7.4,
-    }}>
+    }} id='burgerBtn' className={`${style.btn} ${isActive ? style.on : ''}`}>
       <span></span><span></span><span></span>
-    </motion.button>
+    </button>
   );
 }
