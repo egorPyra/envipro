@@ -24,28 +24,28 @@ export default function MainPageBlocks() {
 
       const temp2 = document.getElementById('circleLogoContainer')
       if(temp2) animate(
-        '#circleLogoContainer', 
+        '#logoAnimate', 
         { x: [window.innerWidth/2 - temp2.clientWidth/2, 0], 
           y: [window.innerHeight/2 - temp2.clientHeight/2, 0], 
           scale: [2, 1] 
         },
-        { duration: 0.5, delay: 6.7, ease: 'easeInOut'})
-      animate('#circleLogo', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 1.5, delay: 5.2, ease: 'easeInOut'})
-      animate('#ecoMonitoring', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 6.7, ease: 'easeInOut'})
-      animate('#ecology', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 6.7, ease: 'easeInOut'})
-      animate('#ecologyCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 6.8, ease: 'easeInOut'})
-      animate('#earth', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 6.85, ease: 'easeInOut'})
-      animate('#engineer', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7, ease: 'easeInOut'})
-      animate('#ecoShadow', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 6.95, ease: 'easeInOut'})
-      animate('#saveNature', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.05, ease: 'easeInOut'})
-      animate('#ppaUnder', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.1, ease: 'easeInOut'})
-      animate('#catUnder', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.15, ease: 'easeInOut'})
-      animate('#plasma', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 7.3, ease: 'easeInOut'})
-      animate('#plasmaCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.25, ease: 'easeInOut'})
-      animate('#forest', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 7.3, ease: 'easeInOut'})
-      animate('#calc', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 7.35, ease: 'easeInOut'})
-      animate('#foresCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.5, ease: 'easeInOut'})
-      animate('#envilab', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 7.5, ease: 'easeInOut'})
+        { duration: 1, delay: 6.7, ease: 'easeInOut'})
+      animate('#circleLogo', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 1.5, delay: 7.2, ease: 'easeInOut'})
+      animate('#ecoMonitoring', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.2, ease: 'easeInOut'})
+      animate('#ecology', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.2, ease: 'easeInOut'})
+      animate('#ecologyCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.3, ease: 'easeInOut'})
+      animate('#earth', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.35, ease: 'easeInOut'})
+      animate('#engineer', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.5, ease: 'easeInOut'})
+      animate('#ecoShadow', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.45, ease: 'easeInOut'})
+      animate('#saveNature', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.55, ease: 'easeInOut'})
+      animate('#ppaUnder', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.6, ease: 'easeInOut'})
+      animate('#catUnder', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.65, ease: 'easeInOut'})
+      animate('#plasma', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 7.8, ease: 'easeInOut'})
+      animate('#plasmaCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.75, ease: 'easeInOut'})
+      animate('#forest', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 7.8, ease: 'easeInOut'})
+      animate('#calc', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 7.85, ease: 'easeInOut'})
+      animate('#foresCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 8, ease: 'easeInOut'})
+      animate('#envilab', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 8, ease: 'easeInOut'})
     }
   }, [])
 
@@ -62,6 +62,7 @@ export default function MainPageBlocks() {
               width={150}
               height={150}
               className={styles.mainLogo}
+              id='logoAnimate'
             />
             <div
               id='circleLogo'

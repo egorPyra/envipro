@@ -1,6 +1,5 @@
 "use client"
 
-import { useRef, useState } from "react";
 import styles from "./teamSection.module.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 
@@ -19,7 +18,7 @@ export default function TeamSection() {
         className={styles.title}
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ 
+        transition={{
           duration: 0.5,
           delay: 0.2,
         }}>Наша команда</motion.h1>
