@@ -2,7 +2,6 @@
 
 import React from 'react';
 import styles from './Pin.module.css';
-import Image from "next/image";
 import { motion } from 'framer-motion';
 
 interface PinProps {
@@ -42,11 +41,15 @@ const Pin: React.FC<PinProps> = ({ h3, text, x, y, PinSize, right, textSecond, r
   };
 
   return (
-    <motion.div className={styles.pin} style={pinStyle} whileInView={{y: 0, opacity: 1}} transition={{ delay: 0.3, duration: 0.5}}
-    animate={{
+    <motion.div className={styles.pin} style={pinStyle} transition={{ delay: 0.3, duration: 0.5}}
+    initial={{ opacity: 0 }}
+    whileInView={{
       scale: [0, 1, 1.1, 0.9, 1],
       rotate: [-10, -5, 10, -5, 0],
-    }}>
+      y: 0,
+      opacity: 1
+    }}
+    viewport={{ once: true }}>
       <div className={styles.hoverme}>
       <img className={styles.img} src="/pin.svg" alt="1" style={ImgSize}/>
 
