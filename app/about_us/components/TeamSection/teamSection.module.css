@@ -109,17 +109,23 @@
     top: -7vh;
     left: 7vh;
     border-radius: 50%;
+    animation: move 50s infinite alternate ease-in-out;
+    pointer-events: none;
 }
+
 .img2::before {
     content: '';
     position: absolute;
     width: 4vh;
     height: 4vh;
-    background-color: #000;
+    background-color: #000000;
     bottom: 0;
     left: -6vh;
     border-radius: 50%;
+    animation: move1 40s infinite alternate ease-in-out;
+    pointer-events: none;
 }
+
 .img2:hover {
     background: #000;
 }
@@ -192,7 +198,10 @@
     top: -7vh;
     left: 4vh;
     border-radius: 50%;
+    animation: move 60s infinite alternate ease-in-out;
+    pointer-events: none;
 }
+
 .img4:hover {
     background: #f3f3f3;
 }
@@ -232,7 +241,10 @@
     top: -5vh;
     left: 7vh;
     border-radius: 50%;
+    animation: move1 30s infinite alternate ease-in-out;
+    pointer-events: none;
 }
+
 .img5:hover {
     background: #000;
 }
@@ -286,7 +298,10 @@
     bottom: -8vh;
     right: 3vh;
     border-radius: 50%;
+    animation: move 50s infinite alternate ease-in-out;
+    pointer-events: none;
 }
+
 .img6:hover {
     background: #f3f3f3;
 }
@@ -366,4 +381,61 @@
     max-height: 150px;
     object-fit: contain;
     margin-bottom: 8px;
+}
+
+
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(1vh, 1vh);
+    }
+    20% {
+        transform: translate(20px, 1vw);
+    }
+    30% {
+        transform: translate(-3vh, 4%);
+    }
+    50% {
+        transform: translate(2vh, -2vh);
+    }
+    75% {
+        transform: translate(0, 0);
+    }
+    83% {
+        transform: translate(1vh, -1vh);
+    }
+    100% {
+        transform: translate(-1vh, 1.6vh);
+    }
+}
+
+
+@keyframes move1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(-1vw, 0.5vh);
+    }
+    20% {
+        transform: translate(20%, -1vw);
+    }
+    30% {
+        transform: translate(-3vh, -2.4vw);
+    }
+    50% {
+        transform: translate(2vh, -2vh);
+    }
+    75% {
+        transform: translate(0, 0);
+    }
+    83% {
+        transform: translate(11px, -1vw);
+    }
+    100% {
+        transform: translate(-1vh, 1.6vh);
+    }
 }
