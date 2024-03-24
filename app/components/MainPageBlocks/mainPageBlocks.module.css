@@ -76,6 +76,8 @@
     border-radius: 50%;
     pointer-events: none;
     z-index: -3;
+    animation: move 50s infinite alternate ease-in-out;
+    pointer-events: none;
 }
 .ecology span {
     display: none;
@@ -325,6 +327,8 @@
     border-radius: 50%;
     pointer-events: none;
     z-index: -3;
+    animation: move1 40s infinite alternate ease-in-out;
+    pointer-events: none;
 }
 .plasma span {
     display: none;
@@ -443,4 +447,58 @@
     right: 0;
     bottom: 0;
     left: 0;
+}
+
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(1vh, 1vh);
+    }
+    20% {
+        transform: translate(20px, 1vw);
+    }
+    30% {
+        transform: translate(-3vh, 4%);
+    }
+    50% {
+        transform: translate(2vh, -2vh);
+    }
+    75% {
+        transform: translate(0, 0);
+    }
+    83% {
+        transform: translate(1vh, -1vh);
+    }
+    100% {
+        transform: translate(-1vh, 1.6vh);
+    }
+}
+@keyframes move1 {
+    0% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(-1vw, 0.5vh);
+    }
+    20% {
+        transform: translate(20%, -1vw);
+    }
+    30% {
+        transform: translate(-3vh, -2.4vw);
+    }
+    50% {
+        transform: translate(2vh, -2vh);
+    }
+    75% {
+        transform: translate(0, 0);
+    }
+    83% {
+        transform: translate(11px, -1vw);
+    }
+    100% {
+        transform: translate(-1vh, 1.6vh);
+    }
 }

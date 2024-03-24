@@ -27,13 +27,13 @@ export default function MainPageBlocks() {
         '#logoAnimate', 
         { x: [window.innerWidth/2 - temp2.clientWidth/2, 0], 
           y: [window.innerHeight/2 - temp2.clientHeight/2, 0], 
-          scale: [2, 1] 
+          scale: [4, 1] 
         },
         { duration: 1, delay: 6.7, ease: 'easeInOut'})
-      animate('#circleLogo', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 1.5, delay: 7.2, ease: 'easeInOut'})
+      animate('#circleLogo', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 1.5, delay: 7.7, ease: 'easeInOut'})
       animate('#ecoMonitoring', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.2, ease: 'easeInOut'})
       animate('#ecology', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.2, ease: 'easeInOut'})
-      animate('#ecologyCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.3, ease: 'easeInOut'})
+      animate('#ecologyCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 1.5, delay: 7.8, ease: 'easeInOut'})
       animate('#earth', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.35, ease: 'easeInOut'})
       animate('#engineer', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.5, ease: 'easeInOut'})
       animate('#ecoShadow', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.45, ease: 'easeInOut'})
@@ -41,10 +41,10 @@ export default function MainPageBlocks() {
       animate('#ppaUnder', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.6, ease: 'easeInOut'})
       animate('#catUnder', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.65, ease: 'easeInOut'})
       animate('#plasma', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 7.8, ease: 'easeInOut'})
-      animate('#plasmaCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.75, ease: 'easeInOut'})
+      animate('#plasmaCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 1.5, delay: 8.35, ease: 'easeInOut'})
       animate('#forest', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 7.8, ease: 'easeInOut'})
       animate('#calc', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 7.85, ease: 'easeInOut'})
-      animate('#foresCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 8, ease: 'easeInOut'})
+      animate('#foresCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 1.5, delay: 8.5, ease: 'easeInOut'})
       animate('#envilab', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 8, ease: 'easeInOut'})
     }
   }, [])
