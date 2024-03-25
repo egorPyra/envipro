@@ -24,6 +24,8 @@
     border-radius: 50%;
     height: 37vh;
     width: 37vh;
+    animation: move1 60s infinite alternate ease-in-out;
+    pointer-events: none;
 }
 .mainLogo {
     position: absolute;
@@ -76,7 +78,7 @@
     border-radius: 50%;
     pointer-events: none;
     z-index: -3;
-    animation: move 50s infinite alternate ease-in-out;
+    animation: move2 50s infinite alternate ease-in-out;
     pointer-events: none;
 }
 .ecology span {
@@ -104,6 +106,8 @@
     border: 5px solid #000;
     border-radius: 50%;
     z-index: -1;
+    animation: move 49s infinite alternate ease-in-out;
+    pointer-events: none;
 }
 
 .sectionTwo {
@@ -354,6 +358,8 @@
     border: 5px solid #000;
     border-radius: 50%;
     z-index: -1;
+    animation: move 57s infinite alternate ease-in-out;
+    pointer-events: none;
 }
 .calcEnvilabContainer {
     display: flex;
@@ -420,6 +426,8 @@
     border: 5px solid #000;
     border-radius: 50%;
     z-index: -1;
+    animation: move2 52s infinite alternate ease-in-out;
+    pointer-events: none;
 }
 .envilab {
     position: relative;
@@ -497,6 +505,32 @@
     }
     83% {
         transform: translate(11px, -1vw);
+    }
+    100% {
+        transform: translate(-1vh, 1.6vh);
+    }
+}
+@keyframes move2 {
+    0% {
+        transform: translate(0, 0);
+    }
+    10% {
+        transform: translate(1.6vw, -0.5vh);
+    }
+    20% {
+        transform: translate(10%, -1vw);
+    }
+    30% {
+        transform: translate(-2.1vh, 2.4vw);
+    }
+    50% {
+        transform: translate(2vh, -2vw);
+    }
+    75% {
+        transform: translate(10%, 0);
+    }
+    83% {
+        transform: translate(11px, -1vh);
     }
     100% {
         transform: translate(-1vh, 1.6vh);
