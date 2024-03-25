@@ -29,6 +29,8 @@
     stroke-dashoffset:800;
     animation: one 5s ease forwards;
     animation-delay: 2s;
+    -webkit-animation: one 5s ease forwards;
+    -webkit-animation-delay: 2s;
 	}
 
 .st1-1{
@@ -38,18 +40,21 @@
     stroke-dashoffset:800;
     animation: one 5s ease forwards;
     animation-delay: 2s;
+    -webkit-animation: one 5s ease forwards;
+    -webkit-animation: 2s;
 	}
 .st2-1{
 		
 		stroke-miterlimit:10;
     stroke-dasharray:800;
     stroke-dashoffset:800;
-    animation: one 4s ease forwards;
-    animation-delay: 2.8s;
+    -webkit-animation: one 4s ease forwards;
+    -webkit-animation-delay: 2.8s;
 	}
  @keyframes one {
   100% {
     stroke-dashoffset: 0;
+    -webkit-stroke-dashoffset: 0;
   }
 }
 	.st3{
@@ -58,6 +63,10 @@
     stroke-dashoffset:500;
     animation: two 2s linear forwards;
     animation-delay: 2.1s;
+    -webkit-animation: two 2s linear forwards;
+    -webkit-animation-delay: 2.1s;
+    -moz-animation: two 2s linear forwards;
+    -moz-animation-delay: 2.1s;
 /*     animation-direction: reverse; */
 /*     animation-iteration-count:odd; */
 	}
@@ -67,6 +76,10 @@
     stroke-dashoffset:500;
     animation: two 2s linear forwards;
     animation-delay: 2.12s; 
+    -webkit-animation: two 2s linear forwards;
+    -webkit-animation-delay: 2.12s; 
+    -moz-animation: two 2s linear forwards;
+    -moz-animation-delay: 2.12s; 
 	}
 
  @keyframes two {
@@ -80,6 +93,10 @@
     stroke-dashoffset:500;
     animation: five 1.6s linear forwards;
     animation-delay: 4.45s;
+    -webkit-animation: five 1.6s linear forwards;
+    -webkit-animation-delay: 4.45s;
+    -moz-animation: five 1.6s linear forwards;
+    -moz-animation-delay: 4.45s;
 	} 
 .st4-1{ 
 		stroke-miterlimit:10; 
@@ -87,6 +104,10 @@
     stroke-dashoffset:500;
     animation: five 1.8s linear forwards;
     animation-delay: 4.8s;
+    -webkit-animation: five 1.8s linear forwards;
+    -webkit-animation-delay: 4.8s;
+    -moz-animation: five 1.8s linear forwards;
+    -moz-animation-delay: 4.8s;
 	}
 @keyframes five {
   100% {
@@ -96,17 +117,25 @@
  
 .st5{
 		stroke-miterlimit:10;
-	  stroke-dasharray:800;
-    stroke-dashoffset: -800;
+	  stroke-dasharray:600;
+    stroke-dashoffset: -600;
     animation: four 1.6s linear forwards;
     animation-delay: 3.12s;
+    -webkit-animation: four 1.6s linear forwards;
+    -webkit-animation-delay: 3.12s;
+    -moz-animation: four 1.6s linear forwards;
+    -moz-animation-delay: 3.12s;
 	}
 .st5-1{
 		stroke-miterlimit:10;
-	  stroke-dasharray:800;
-    stroke-dashoffset: -800;
+	  stroke-dasharray:500;
+    stroke-dashoffset: -500;
     animation: four 2s linear forwards; 
     animation-delay: 2.67s;
+    -webkit-animation: four 2s linear forwards; 
+    -webkit-animation-delay: 2.67s;
+    -moz-animation: four 2s linear forwards; 
+    -moz-animation-delay: 2.67s;
 	}
 @keyframes  four {
   100% {
@@ -114,7 +143,7 @@
   }
 }
 
-   
+    
    
  
 </style>
