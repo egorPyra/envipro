@@ -13,9 +13,10 @@ interface PinProps {
   PinSize: number;
   right: boolean;
   root: 'top' | 'bottom';
+  delay: number;
 }
 
-const Pin: React.FC<PinProps> = ({ h3, text, x, y, PinSize, right, textSecond, root }) => {
+const Pin: React.FC<PinProps> = ({ h3, text, x, y, PinSize, right, textSecond, root, delay }) => {
   const pinStyle = {
     left: `${x}%`,
     top: `${y}%`,
@@ -41,7 +42,7 @@ const Pin: React.FC<PinProps> = ({ h3, text, x, y, PinSize, right, textSecond, r
   };
 
   return (
-    <motion.div className={styles.pin} style={pinStyle} transition={{ delay: 0.3, duration: 0.5}}
+    <motion.div className={styles.pin} style={pinStyle} transition={{ delay:  delay, duration: 0.9}}
     initial={{ opacity: 0 }}
     whileInView={{
       scale: [0, 1, 1.1, 0.9, 1],
