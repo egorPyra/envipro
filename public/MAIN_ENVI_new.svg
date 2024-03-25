@@ -1,6 +1,9 @@
 <svg width="426" height="426" viewBox="0 0 426 426" fill="none" xmlns="http://www.w3.org/2000/svg">
 
 <style type="text/css">
+* {
+  -webkit-transform: translate3d(0,0,0)
+}
   
 .first {
   opacity:0;
@@ -93,15 +96,15 @@
  
 .st5{
 		stroke-miterlimit:10;
-	  stroke-dasharray:500;
-    stroke-dashoffset: -500;
+	  stroke-dasharray:800;
+    stroke-dashoffset: -800;
     animation: four 1.6s linear forwards;
     animation-delay: 3.12s;
 	}
 .st5-1{
 		stroke-miterlimit:10;
-	  stroke-dasharray:500;
-    stroke-dashoffset: -500;
+	  stroke-dasharray:800;
+    stroke-dashoffset: -800;
     animation: four 2s linear forwards; 
     animation-delay: 2.67s;
 	}
