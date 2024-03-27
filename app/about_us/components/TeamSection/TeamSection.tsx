@@ -1,16 +1,31 @@
 "use client"
 
+import { useEffect, useRef } from "react";
 import styles from "./teamSection.module.css";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { animate, motion, useInView, useScroll, useTransform } from "framer-motion";
 
 
 export default function TeamSection() {
   // const [isShown, setIsShown] = useState(false);
   // const [keepActive, setKeepActive] = useState('');
+  const container = useRef(null)
+  const isInView = useInView(container, { amount: 0.08, once: true })
+
+  useEffect(() => {
+    if(isInView) {
+      animate('#img1', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.4, delay: 0.2, ease: 'easeInOut'})
+      animate('#img2', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.4, delay: 0.5, ease: 'easeInOut'})
+      animate('#img4', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.4, delay: 0.7, ease: 'easeInOut'})
+      animate('#img3', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.4, delay: 1, ease: 'easeInOut'})
+      animate('#img5', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.4, delay: 1.2, ease: 'easeInOut'})
+      animate('#img6', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.4, delay: 1.4, ease: 'easeInOut'})
+      animate('#img7', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.4, delay: 1.5, ease: 'easeInOut'})
+    }
+  }, [isInView])
 
 
   return (
-    <section id="team" className={styles.teamContainer}>
+    <section ref={container} id="team" className={styles.teamContainer}>
       <div className={styles.teamBg}></div>
       <div className={styles.imageContainer}>
         <div className={styles.containerOne}>
@@ -30,45 +45,52 @@ export default function TeamSection() {
            duration: 0.5,
            delay: 0.2,
          }}>Лучшие специалисты в своем деле!</motion.p>
-        <motion.div 
+        <div
+          id="img1"
           className={styles.img1}>
           <p>ДРОЗДОВА<br/> АЛЕКСАНДРА<br/> АЛЕКСАНДРОВНА</p>
           <p>Руководитель отдела закупок и разрешительной документации</p>
-        </motion.div>
         </div>
-        <motion.div 
+        </div>
+        <div 
+          id="img2"
           className={styles.img2}>
           <p>Зубова<br/> Наталья<br/> Викторовна</p>
           <p>Генеральный директор</p>
-        </motion.div>
+        </div>
         <div className={styles.group1}>
-          <motion.div 
+          <div 
+          id="img3"
           className={styles.img3}>
             <p>Пучнина<br/> Екатерина<br/> Валерьевна</p>
             <p>Руководитель отдела инженерно-экологических изысканий</p>
-          </motion.div>
-          <motion.div
+          </div>
+          <div
+          id="img4"
           className={styles.img4}>
             <p>Зубов<br/> Антон<br/> Игоревич</p>
             <p>Технический директор</p>
-          </motion.div>
+          </div>
         </div>
-        <motion.div 
+        <div 
+        id="img5"
         className={styles.img5}>
           <p>Блинова<br/> Елена<br/> Валентиновна</p>
           <p>Заместитель директора по развитию&nbsp;и&nbsp;управлению проектами</p>
-        </motion.div>
+        </div>
         <div className={styles.group2}>
-          <motion.div
+          <div
+          id="img6"
           className={styles.img6}>
             <p>Зибаровская<br/> Раиса<br/> АЛЕКСАНДРОВНА</p>
             <p>Руководитель отдела <br/>экологического аудита <br/>и сопровождения</p>
-          </motion.div>
-          <motion.div
+          </div>
+          <div
+          id="img7"
           className={styles.img7}>
             <p>Митрофанова<br/> Екатерина<br/> Сергеевна</p>
             <p>Руководитель отдела производственного экологического мониторинга</p>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

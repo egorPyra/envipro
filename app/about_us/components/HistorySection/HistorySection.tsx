@@ -7,17 +7,6 @@ import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-
 export default function HistorySection() {
   const [isShow, setIsShow] = useState(false);
 
-  const { scrollY } = useScroll();
-
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log(latest)
-  })
-
-  const textAnimation = {
-    hidden: { x: -100, opacity: 0 },
-    visible: { x: 0, opacity: 1 },
-  }
-
   return (
     <section id='history' className={styles.historyContainer}>
       <div className={styles.historyBg}></div>
