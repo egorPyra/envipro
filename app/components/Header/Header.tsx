@@ -36,9 +36,9 @@ export default function Header() {
       animate={hidden ? "open" : "closed"}
       transition={{ duration: 0.33, ease: "easeInOut" }}
     >
-      <Link href={'/'}>
+      <Link href={'https://se.ifmo.ru/~s338844/other/enviroment'}>
         <Image
-            src='/logo.svg'
+            src='/~s338844/other/enviroment/logo.svg'
             alt="envipro"
             height={30}
             width={30}
@@ -47,17 +47,17 @@ export default function Header() {
       <nav className={styles.nav}>
         <ul className={styles.list}>
         <li>
-            <Link className={location === '/about_us' ? styles.active : ''} href={'/about_us'}>
+            <Link className={location === '/about_us' ? styles.active : ''} href={'https://se.ifmo.ru/~s338844/other/enviroment/about_us'}>
               о&nbsp;нас
             </Link>
           </li>
           <li>
-            <Link className={location === '/services' ? styles.active : ''} href={'/services'}>
+            <Link className={location === '/services' ? styles.active : ''} href={'https://se.ifmo.ru/~s338844/other/enviroment/services'}>
               услуги
             </Link>
           </li>
           <li>
-            <Link className={location === '/contacts' ? styles.active : ''} href={'/contacts'}>
+            <Link className={location === '/contacts' ? styles.active : ''} href={'https://se.ifmo.ru/~s338844/other/enviroment/contacts'}>
               контакты
             </Link>
           </li>

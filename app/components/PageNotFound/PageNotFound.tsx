@@ -7,7 +7,7 @@ export default function PageNotFound() {
     <div className={styles.preloader}>
       <div className={styles.bg}></div>
       <Link href={'/'}>
-        <img className={styles.logo} src="/MAIN_ENVI_404.svg" alt="SVG Image" width="400" height="400" />
+        <img className={styles.logo} src="/~s338844/other/enviroment/MAIN_ENVI_404.svg" alt="SVG Image" width="400" height="400" />
       </Link>
     </div>
   );

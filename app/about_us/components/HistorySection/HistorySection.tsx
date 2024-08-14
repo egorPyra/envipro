@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import styles from './historySection.module.css'
-import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function HistorySection() {
   const [isShow, setIsShow] = useState(false);

@@ -23,7 +23,7 @@ export default function ContactPage() {
         </div>
         <div className={styles.imageContainer}>
         <img className={styles.Map}
-          src="/MapBallsGrey.png"
+          src="/~s338844/other/enviroment/MapBallsGrey.png"
           alt="Map"
         />
         </div>

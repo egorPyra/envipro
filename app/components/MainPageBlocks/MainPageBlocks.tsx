@@ -57,7 +57,7 @@ export default function MainPageBlocks() {
         <div className={styles.sectionOne}>
           <div id='circleLogoContainer' className={styles.circleLogoContainer}>
             <Image
-              src="/MAIN_ENVI_new.svg"
+              src="/~s338844/other/enviroment/MAIN_ENVI_new.svg"
               alt="Landscape picture"
               width={150}
               height={150}
@@ -70,7 +70,7 @@ export default function MainPageBlocks() {
               >
             </div>
           </div>
-          <Link href={'/about_us'} className={styles.link}>
+          <Link href={'https://se.ifmo.ru/~s338844/other/enviroment/about_us'} className={styles.link}>
             <div
               onMouseEnter={() => {setIsShown(true); setKeepActive('ecoMonitoring')}}
               onMouseLeave={() => setIsShown(false)}
@@ -87,7 +87,7 @@ export default function MainPageBlocks() {
             className={styles.ecology}>
             <div className={`${isShown && keepActive !== 'ecology' ? 'greyBlock' : 'greyBlock hide'}`}></div>
             <span>ЭКОЛОГИЧЕСКОЕ<br/> СОПРОВОЖДЕНИЕ<br/> ДЕЯТЕЛЬНОСТИ</span>
-            <Link href={'/about_us'} className={`${styles.linkAbsolut} ${styles.link}`}></Link>
+            <Link href={'https://se.ifmo.ru/~s338844/other/enviroment/about_us'} className={`${styles.linkAbsolut} ${styles.link}`}></Link>
             <div 
               id='ecologyCircle'
               className={styles.ecologyCircle}
@@ -102,7 +102,7 @@ export default function MainPageBlocks() {
                 onMouseLeave={() => setIsShown(false)}
                 id='earth'
                 className={styles.earth}>
-                <Link href={'/about_us'} className={styles.link}>
+                <Link href={'https://se.ifmo.ru/~s338844/other/enviroment/about_us'} className={styles.link}>
                   <div className={`${isShown && keepActive !== 'earth' ? 'greyBlock' : 'greyBlock hide'}`}></div>
                   <span>НЕДРО<br/> ПОЛЬЗО<br/> ВАНИЕ</span>
                 </Link>
@@ -112,7 +112,7 @@ export default function MainPageBlocks() {
                 onMouseLeave={() => setIsShown(false)}
                 id='ecoShadow'
                 className={styles.ecoShadow}>
-                <Link href={'/about_us'} className={styles.link}>
+                <Link href={'https://se.ifmo.ru/~s338844/other/enviroment/about_us'} className={styles.link}>
                   <div className={`${isShown && keepActive !== 'ecoShadow' ? 'greyBlock' : 'greyBlock hide'}`}></div>
                   <span>ПРОИЗВОДСТВЕННЫЙ<br/> ЭКОЛОГИЧЕСКИЙ КОНТРОЛЬ</span>
                 </Link>
@@ -120,7 +120,7 @@ export default function MainPageBlocks() {
           </div>
           <div className={styles.sectionTwo_ppaEngineer}>
             <div className={styles.sectionTwo__engineerSaveNature}>
-              <Link href={'/about_us'} className={styles.link}>
+              <Link href={'https://se.ifmo.ru/~s338844/other/enviroment/about_us'} className={styles.link}>
                 <div
                   onMouseEnter={() => {setIsShown(true); setKeepActive('engineer')}}
                   onMouseLeave={() => setIsShown(false)}
@@ -139,7 +139,7 @@ export default function MainPageBlocks() {
                 onMouseEnter={() => {setIsShown(true); setKeepActive('ppaAbove')}}
                 onMouseLeave={() => setIsShown(false)}
                 className={styles.ppaAbove}>
-                  <Link href={'/about_us'} className={`${styles.linkContainer} ${styles.link}`}></Link>
+                  <Link href={'https://se.ifmo.ru/~s338844/other/enviroment/about_us'} className={`${styles.linkContainer} ${styles.link}`}></Link>
                 </div>
               <div id='ppaUnder' className={styles.ppaUnder}>
                 <div className={`${isShown && keepActive !== 'ppaAbove' ? 'greyBlock' : 'greyBlock hide'}`}></div>
@@ -156,7 +156,7 @@ export default function MainPageBlocks() {
                 onMouseEnter={() => {setIsShown(true); setKeepActive('catAbove')}}
                 onMouseLeave={() => setIsShown(false)}
                 className={styles.catAbove}>
-                  <Link href={'/about_us'} className={`${styles.linkContainer} ${styles.link}`}></Link>
+                  <Link href={'https://se.ifmo.ru/~s338844/other/enviroment/about_us'} className={`${styles.linkContainer} ${styles.link}`}></Link>
                 </div>
               <div id='catUnder' className={styles.catUnder}>
                 <div className={`${isShown && keepActive !== 'catAbove' ? 'greyBlock' : 'greyBlock hide'}`}></div>
@@ -170,7 +170,7 @@ export default function MainPageBlocks() {
                 className={styles.plasma}>
                 <div className={`${isShown && keepActive !== 'plasma' ? 'greyBlock' : 'greyBlock hide'}`}></div>
                 <div id='plasmaCircle' className={styles.plasmaCircle}></div>
-                <Link href={'/about_us'} className={`${styles.linkAbsolut} ${styles.link}`}></Link>
+                <Link href={'https://se.ifmo.ru/~s338844/other/enviroment/about_us'} className={`${styles.linkAbsolut} ${styles.link}`}></Link>
                 <span>ГЕОДЕЗИЯ И<br/> КАРТОГРАФИЯ</span>
               </div>
           </div>
@@ -180,13 +180,13 @@ export default function MainPageBlocks() {
               onMouseLeave={() => setIsShown(false)}
               id='calc'
               className={styles.calc}>
-              <Link href={'/about_us'} className={styles.link}>
+              <Link href={'https://se.ifmo.ru/~s338844/other/enviroment/about_us'} className={styles.link}>
                 <div className={`${isShown && keepActive !== 'calc' ? 'greyBlock' : 'greyBlock hide'}`}></div>
                 <span>ПРОЕКТИРОВАНИЕ</span>
               </Link>
             </div>
             <div>
-              <Link href={'/about_us'} className={styles.link}>
+              <Link href={'https://se.ifmo.ru/~s338844/other/enviroment/about_us'} className={styles.link}>
                 <div
                   onMouseEnter={() => {setIsShown(true); setKeepActive('forest')}}
                   onMouseLeave={() => setIsShown(false)}
@@ -202,7 +202,7 @@ export default function MainPageBlocks() {
                 onMouseLeave={() => setIsShown(false)}
                 id='envilab'
                 className={styles.envilab}>
-                <Link href={'/about_us'} className={styles.link}>
+                <Link href={'https://se.ifmo.ru/~s338844/other/enviroment/about_us'} className={styles.link}>
                   <div  className={`${isShown && keepActive !== 'envilab' ? 'greyBlock' : 'greyBlock hide'}`}></div>
                 </Link>
               </div>

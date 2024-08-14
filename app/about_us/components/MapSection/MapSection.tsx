@@ -29,7 +29,7 @@ export default function MapSection() {
         delay: 0.2,
       }}>сотни объектов, более чем в 25 регионах!</motion.p>
       <div className={styles.MapAndPins}>
-        <img className={styles.MapBalls} src="/MapBalls.png" alt="Map"/>
+        <img className={styles.MapBalls} src="/~s338844/other/enviroment/MapBalls.png" alt="Map"/>
         <motion.div className={styles.PinContainer} style={{ left: '50%', top: '50%' }}>
           <Pin
             h3={'Камчатский край'}
