@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import Header from '../components/Header/Header';
 import { useMotionValueEvent, useScroll } from 'framer-motion';
 import ContactPage from "./components/ContactPage";
+import PageNotFound from "../components/PageNotFound/PageNotFound";
 
 
 export default function Contacts() {
@@ -18,7 +19,8 @@ export default function Contacts() {
     <>
     <main className={styles.main}>
       <Header/>
-      <ContactPage/>
+      {/* <ContactPage/> */}
+      <PageNotFound/>
       </main>
     </>
   )

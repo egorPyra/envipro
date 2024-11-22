@@ -492,7 +492,7 @@
         transform: translate(-1vw, 0.5vh);
     }
     20% {
-        transform: translate(20%, -1vw);
+        transform: translate(10%, -1vw);
     }
     30% {
         transform: translate(-3vh, -2.4vw);
