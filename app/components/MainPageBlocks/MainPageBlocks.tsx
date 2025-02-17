@@ -5,13 +5,17 @@ import styles from './mainPageBlocks.module.css'
 import { useEffect, useState } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
+import PopUpMainPageBlock from './PopUpMainPageBlock';
+import { Content } from './PopUpContent';
 
 
 export default function MainPageBlocks() {
 
   const [isShown, setIsShown] = useState(false);
   const [keepActive, setKeepActive] = useState('');
-  const [popupVisible, setPopupVisible] = useState(false);
+  const [popupVisible, setPopupVisible] = useState<{show: boolean, contentName?: Content}>(
+    { show: false, contentName: 'ecoMonitoring' }
+  );
 
 
   useEffect(() => {
@@ -75,26 +79,16 @@ export default function MainPageBlocks() {
             <div
               onMouseEnter={() => {setIsShown(true); setKeepActive('ecoMonitoring')}}
               onMouseLeave={() => setIsShown(false)}
-              onClick={() => setPopupVisible(true)}
+              onClick={() => setPopupVisible({show: true, contentName: 'ecoMonitoring'})}
               id='ecoMonitoring'
               className={styles.ecoMonitoring}>
               <div className={`${isShown && keepActive !== 'ecoMonitoring' ? 'greyBlock' : 'greyBlock hide'}`}></div>
               <span>ЭКОЛОГИЧЕСКИЙ<br/> МОНИТОРИНГ</span>
             </div>
-            {popupVisible && (
-        <div className={styles.popupOverlay} onClick={() => setPopupVisible(false)}>
-          <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
-            <span className={styles.closeButton} onClick={() => setPopupVisible(false)}>&times;</span>
-            <h2>ИНЖЕНЕРНЫЕ ИЗЫСКАНИЯ</h2>
-            <p><p>ООО &laquo;ЭнвиПро&raquo;&nbsp;&mdash; ваш надежный партнер в&nbsp;инженерно-экологических изысканиях. Мы&nbsp;оцениваем состояние окружающей среды и&nbsp;прогнозируем изменения под влиянием строительства. Наши услуги включают экологическую съемку, анализ почв, воды, изучение растительности и&nbsp;животного мира, а&nbsp;также оценку физического и&nbsp;радиационного воздействия. Мы&nbsp;обеспечиваем экологический мониторинг для выявления изменений и&nbsp;минимизации вредных последствий.<br />
-            ООО &laquo;ЭнвиПро&raquo; предлагает комплексные решения для инженерно-гидрометеорологических и&nbsp;инженерно-геологических изысканий. Мы&nbsp;обеспечим точный анализ и&nbsp;прогноз для вашего проекта, от&nbsp;водоснабжения до&nbsp;защиты от&nbsp;подтоплений. Наши услуги включают полевые исследования, лабораторный анализ и&nbsp;разработку рекомендаций по&nbsp;инженерной защите.</p></p>
-          </div>
-        </div>
-      )}
           <div
             onMouseEnter={() => {setIsShown(true); setKeepActive('ecology')}}
             onMouseLeave={() => setIsShown(false)}
-            onClick={() => setPopupVisible(true)}
+            onClick={() => setPopupVisible({show: true, contentName: 'ecology'})}
             id='ecology'
             className={styles.ecology}>
             <div className={`${isShown && keepActive !== 'ecology' ? 'greyBlock' : 'greyBlock hide'}`}></div>
@@ -104,16 +98,6 @@ export default function MainPageBlocks() {
               id='ecologyCircle'
               className={styles.ecologyCircle}
             ></div>
-            {popupVisible && (
-        <div className={styles.popupOverlay} onClick={() => setPopupVisible(false)}>
-          <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
-            <span className={styles.closeButton} onClick={() => setPopupVisible(false)}>&times;</span>
-            <h2>ИНЖЕНЕРНЫЕ ИЗЫСКАНИЯ</h2>
-            <p><p>ООО &laquo;ЭнвиПро&raquo;&nbsp;&mdash; ваш надежный партнер в&nbsp;инженерно-экологических изысканиях. Мы&nbsp;оцениваем состояние окружающей среды и&nbsp;прогнозируем изменения под влиянием строительства. Наши услуги включают экологическую съемку, анализ почв, воды, изучение растительности и&nbsp;животного мира, а&nbsp;также оценку физического и&nbsp;радиационного воздействия. Мы&nbsp;обеспечиваем экологический мониторинг для выявления изменений и&nbsp;минимизации вредных последствий.<br />
-            ООО &laquo;ЭнвиПро&raquo; предлагает комплексные решения для инженерно-гидрометеорологических и&nbsp;инженерно-геологических изысканий. Мы&nbsp;обеспечим точный анализ и&nbsp;прогноз для вашего проекта, от&nbsp;водоснабжения до&nbsp;защиты от&nbsp;подтоплений. Наши услуги включают полевые исследования, лабораторный анализ и&nbsp;разработку рекомендаций по&nbsp;инженерной защите.</p></p>
-          </div>
-        </div>
-      )}
           </div>
         </div>
 
@@ -122,36 +106,39 @@ export default function MainPageBlocks() {
               <div
                 onMouseEnter={() => {setIsShown(true); setKeepActive('earth')}}
                 onMouseLeave={() => setIsShown(false)}
+                onClick={() => setPopupVisible({show: true, contentName: 'earth'})}
                 id='earth'
                 className={styles.earth}>
-                <Link href={'/about_us'} className={styles.link}>
+                {/* <Link href={'/about_us'} className={styles.link}> */}
                   <div className={`${isShown && keepActive !== 'earth' ? 'greyBlock' : 'greyBlock hide'}`}></div>
                   <span>НЕДРО<br/> ПОЛЬЗО<br/> ВАНИЕ</span>
-                </Link>
+                {/* </Link> */}
               </div>
               <div
                 onMouseEnter={() => {setIsShown(true); setKeepActive('ecoShadow')}}
                 onMouseLeave={() => setIsShown(false)}
+                onClick={() => setPopupVisible({show: true, contentName: 'ecoShadow'})}
                 id='ecoShadow'
                 className={styles.ecoShadow}>
-                <Link href={'/about_us'} className={styles.link}>
+                {/* <Link href={'/about_us'} className={styles.link}> */}
                   <div className={`${isShown && keepActive !== 'ecoShadow' ? 'greyBlock' : 'greyBlock hide'}`}></div>
                   <span>ПРОИЗВОДСТВЕННЫЙ<br/> ЭКОЛОГИЧЕСКИЙ КОНТРОЛЬ</span>
-                </Link>
+                {/* </Link> */}
               </div>
           </div>
           <div className={styles.sectionTwo_ppaEngineer}>
             <div className={styles.sectionTwo__engineerSaveNature}>
-              <Link href={'/about_us'} className={styles.link}>
+              {/* <Link href={'/about_us'} className={styles.link}> */}
                 <div
                   onMouseEnter={() => {setIsShown(true); setKeepActive('engineer')}}
                   onMouseLeave={() => setIsShown(false)}
+                  onClick={() => setPopupVisible({show: true, contentName: 'engineer'})}
                   id='engineer'
                   className={styles.engineer}>
                   <div className={`${isShown && keepActive !== 'engineer' ? 'greyBlock' : 'greyBlock hide'}`}></div>
                   <span>ИНЖЕНЕРНЫЕ<br/> ИЗЫСКАНИЯ</span>
                 </div>
-              </Link>
+              {/* </Link> */}
               <div id='saveNature' className={styles.saveNature}>
                 СОХРАНЯЯ ПРИРОДУ<br/> ДЛЯ БУДУЩИХ ПОКОЛЕНИЙ
               </div>
@@ -160,8 +147,9 @@ export default function MainPageBlocks() {
               <div
                 onMouseEnter={() => {setIsShown(true); setKeepActive('ppaAbove')}}
                 onMouseLeave={() => setIsShown(false)}
+                onClick={() => setPopupVisible({show: true, contentName: 'ppaAbove'})}
                 className={styles.ppaAbove}>
-                  <Link href={'/about_us'} className={`${styles.linkContainer} ${styles.link}`}></Link>
+                  {/* <Link href={'/about_us'} className={`${styles.linkContainer} ${styles.link}`}></Link> */}
                 </div>
               <div id='ppaUnder' className={styles.ppaUnder}>
                 <div className={`${isShown && keepActive !== 'ppaAbove' ? 'greyBlock' : 'greyBlock hide'}`}></div>
@@ -177,8 +165,9 @@ export default function MainPageBlocks() {
               <div
                 onMouseEnter={() => {setIsShown(true); setKeepActive('catAbove')}}
                 onMouseLeave={() => setIsShown(false)}
+                onClick={() => setPopupVisible({show: true, contentName: 'catAbove'})}
                 className={styles.catAbove}>
-                  <Link href={'/about_us'} className={`${styles.linkContainer} ${styles.link}`}></Link>
+                  {/* <Link href={'/about_us'} className={`${styles.linkContainer} ${styles.link}`}></Link> */}
                 </div>
               <div id='catUnder' className={styles.catUnder}>
                 <div className={`${isShown && keepActive !== 'catAbove' ? 'greyBlock' : 'greyBlock hide'}`}></div>
@@ -188,11 +177,12 @@ export default function MainPageBlocks() {
               <div
                 onMouseEnter={() => {setIsShown(true); setKeepActive('plasma')}}
                 onMouseLeave={() => setIsShown(false)}
+                onClick={() => setPopupVisible({show: true, contentName: 'plasma'})}
                 id='plasma'
                 className={styles.plasma}>
                 <div className={`${isShown && keepActive !== 'plasma' ? 'greyBlock' : 'greyBlock hide'}`}></div>
                 <div id='plasmaCircle' className={styles.plasmaCircle}></div>
-                <Link href={'/about_us'} className={`${styles.linkAbsolut} ${styles.link}`}></Link>
+                {/* <Link href={'/about_us'} className={`${styles.linkAbsolut} ${styles.link}`}></Link> */}
                 <span>ГЕОДЕЗИЯ И<br/> КАРТОГРАФИЯ</span>
               </div>
           </div>
@@ -200,37 +190,43 @@ export default function MainPageBlocks() {
             <div
               onMouseEnter={() => {setIsShown(true); setKeepActive('calc')}}
               onMouseLeave={() => setIsShown(false)}
+              onClick={() => setPopupVisible({show: true, contentName: 'calc'})}
               id='calc'
               className={styles.calc}>
-              <Link href={'/about_us'} className={styles.link}>
+              {/* <Link href={'/about_us'} className={styles.link}> */}
                 <div className={`${isShown && keepActive !== 'calc' ? 'greyBlock' : 'greyBlock hide'}`}></div>
                 <span>ПРОЕКТИРОВАНИЕ</span>
-              </Link>
+              {/* </Link> */}
             </div>
             <div>
-              <Link href={'/about_us'} className={styles.link}>
+              {/* <Link href={'/about_us'} className={styles.link}> */}
                 <div
                   onMouseEnter={() => {setIsShown(true); setKeepActive('forest')}}
                   onMouseLeave={() => setIsShown(false)}
+                  onClick={() => setPopupVisible({show: true, contentName: 'forest'})}
                   id='forest'
                   className={styles.forest}>
                   <div className={`${isShown && keepActive !== 'forest' ? 'greyBlock' : 'greyBlock hide'}`}></div>
                   <div id='foresCircle' className={styles.foresCircle}></div>
                   <span>ЛЕСОПОЛЬЗОВАНИЕ</span>
                 </div>
-              </Link>
+              {/* </Link> */}
               <div
                 onMouseEnter={() => {setIsShown(true); setKeepActive('envilab')}}
                 onMouseLeave={() => setIsShown(false)}
+                onClick={() => setPopupVisible({show: true, contentName: 'envilab'})}
                 id='envilab'
                 className={styles.envilab}>
-                <Link href={'/about_us'} className={styles.link}>
+                {/* <Link href={'/about_us'} className={styles.link}> */}
                   <div  className={`${isShown && keepActive !== 'envilab' ? 'greyBlock' : 'greyBlock hide'}`}></div>
-                </Link>
+                {/* </Link> */}
               </div>
             </div>
           </div>
         </div>
+        {popupVisible.show && (
+          <PopUpMainPageBlock close={setPopupVisible} contentName={popupVisible.contentName}/>
+        )}
       </div>
   );
 }
