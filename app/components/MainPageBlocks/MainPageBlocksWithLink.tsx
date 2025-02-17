@@ -11,8 +11,6 @@ export default function MainPageBlocks() {
 
   const [isShown, setIsShown] = useState(false);
   const [keepActive, setKeepActive] = useState('');
-  const [popupVisible, setPopupVisible] = useState(false);
-
 
   useEffect(() => {
     if(!localStorage.getItem('animationEnvipro')) {
@@ -72,48 +70,28 @@ export default function MainPageBlocks() {
               >
             </div>
           </div>
+          <Link href={'/about_us'} className={styles.link}>
             <div
               onMouseEnter={() => {setIsShown(true); setKeepActive('ecoMonitoring')}}
               onMouseLeave={() => setIsShown(false)}
-              onClick={() => setPopupVisible(true)}
               id='ecoMonitoring'
               className={styles.ecoMonitoring}>
               <div className={`${isShown && keepActive !== 'ecoMonitoring' ? 'greyBlock' : 'greyBlock hide'}`}></div>
               <span>ЭКОЛОГИЧЕСКИЙ<br/> МОНИТОРИНГ</span>
             </div>
-            {popupVisible && (
-        <div className={styles.popupOverlay} onClick={() => setPopupVisible(false)}>
-          <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
-            <span className={styles.closeButton} onClick={() => setPopupVisible(false)}>&times;</span>
-            <h2>ИНЖЕНЕРНЫЕ ИЗЫСКАНИЯ</h2>
-            <p><p>ООО &laquo;ЭнвиПро&raquo;&nbsp;&mdash; ваш надежный партнер в&nbsp;инженерно-экологических изысканиях. Мы&nbsp;оцениваем состояние окружающей среды и&nbsp;прогнозируем изменения под влиянием строительства. Наши услуги включают экологическую съемку, анализ почв, воды, изучение растительности и&nbsp;животного мира, а&nbsp;также оценку физического и&nbsp;радиационного воздействия. Мы&nbsp;обеспечиваем экологический мониторинг для выявления изменений и&nbsp;минимизации вредных последствий.<br />
-            ООО &laquo;ЭнвиПро&raquo; предлагает комплексные решения для инженерно-гидрометеорологических и&nbsp;инженерно-геологических изысканий. Мы&nbsp;обеспечим точный анализ и&nbsp;прогноз для вашего проекта, от&nbsp;водоснабжения до&nbsp;защиты от&nbsp;подтоплений. Наши услуги включают полевые исследования, лабораторный анализ и&nbsp;разработку рекомендаций по&nbsp;инженерной защите.</p></p>
-          </div>
-        </div>
-      )}
+          </Link>
           <div
             onMouseEnter={() => {setIsShown(true); setKeepActive('ecology')}}
             onMouseLeave={() => setIsShown(false)}
-            onClick={() => setPopupVisible(true)}
             id='ecology'
             className={styles.ecology}>
             <div className={`${isShown && keepActive !== 'ecology' ? 'greyBlock' : 'greyBlock hide'}`}></div>
             <span>ЭКОЛОГИЧЕСКОЕ<br/> СОПРОВОЖДЕНИЕ<br/> ДЕЯТЕЛЬНОСТИ</span>
-            {/* <Link href={'/about_us'} className={`${styles.linkAbsolut} ${styles.link}`}></Link> */}
+            <Link href={'/about_us'} className={`${styles.linkAbsolut} ${styles.link}`}></Link>
             <div 
               id='ecologyCircle'
               className={styles.ecologyCircle}
             ></div>
-            {popupVisible && (
-        <div className={styles.popupOverlay} onClick={() => setPopupVisible(false)}>
-          <div className={styles.popupContent} onClick={(e) => e.stopPropagation()}>
-            <span className={styles.closeButton} onClick={() => setPopupVisible(false)}>&times;</span>
-            <h2>ИНЖЕНЕРНЫЕ ИЗЫСКАНИЯ</h2>
-            <p><p>ООО &laquo;ЭнвиПро&raquo;&nbsp;&mdash; ваш надежный партнер в&nbsp;инженерно-экологических изысканиях. Мы&nbsp;оцениваем состояние окружающей среды и&nbsp;прогнозируем изменения под влиянием строительства. Наши услуги включают экологическую съемку, анализ почв, воды, изучение растительности и&nbsp;животного мира, а&nbsp;также оценку физического и&nbsp;радиационного воздействия. Мы&nbsp;обеспечиваем экологический мониторинг для выявления изменений и&nbsp;минимизации вредных последствий.<br />
-            ООО &laquo;ЭнвиПро&raquo; предлагает комплексные решения для инженерно-гидрометеорологических и&nbsp;инженерно-геологических изысканий. Мы&nbsp;обеспечим точный анализ и&nbsp;прогноз для вашего проекта, от&nbsp;водоснабжения до&nbsp;защиты от&nbsp;подтоплений. Наши услуги включают полевые исследования, лабораторный анализ и&nbsp;разработку рекомендаций по&nbsp;инженерной защите.</p></p>
-          </div>
-        </div>
-      )}
           </div>
         </div>
 

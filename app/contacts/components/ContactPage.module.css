@@ -31,8 +31,15 @@
     margin: 5vh 0;
 }
 
-.address li:last-child {
+.address li {
     margin-top: 1rem;
+}
+.address li:last-child {
+    margin-bottom: 1rem;
+}
+
+.contactInfo strong{
+    margin-right: 0.5rem;
 }
 
 .imageContainer {

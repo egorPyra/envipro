@@ -19,8 +19,8 @@ export default function Contacts() {
     <>
     <main className={styles.main}>
       <Header/>
-      {/* <ContactPage/> */}
-      <PageNotFound/>
+      <ContactPage/>
+      {/* <PageNotFound/> */}
       </main>
     </>
   )
