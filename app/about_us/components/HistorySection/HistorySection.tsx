@@ -79,7 +79,7 @@ export default function HistorySection() {
         }}>
           Постоянно развиваясь, совершенствуя свои знания, навыки и умения, осваивая и внедряя самые передовые технологии и используя современное оборудование и программное обеспечение, мы стараемся быть лучшими. Лучшими для вас. И вы несомненно останетесь довольны нашим подходом и результатом.
         </motion.p>
-        <AnimatePresence>
+        {/* <AnimatePresence>
           {isShow && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -99,8 +99,8 @@ export default function HistorySection() {
               </p>
             </motion.div>
           )}
-        </AnimatePresence>
-        <motion.button 
+        </AnimatePresence> */}
+        {/* <motion.button 
         className={styles.showBtn} 
         onClick={() => setIsShow(!isShow)}
         initial={{ y: 100, opacity: 0 }}
@@ -109,7 +109,7 @@ export default function HistorySection() {
           duration: 0.3,
           delay: 2.4,
         }}
-        >{isShow ? 'Свернуть' : 'Читать далее'}</motion.button>
+        >{isShow ? 'Свернуть' : 'Читать далее'}</motion.button> */}
       </div>
 
     </section>
