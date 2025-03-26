@@ -56,7 +56,8 @@
     background-image: url("/TeamImages/img1.jpg");
     background-position: center;
     background-size: cover;
-    color: #fff;
+    color: transparent;
+    transition: background-image .3s ease-in-out;
 }
 /* .img1::after {
     content: '';
@@ -70,8 +71,29 @@
     z-index: -1;
 } */
 .img1:hover {
-    background: #4b4b4b;
+    background-color: #4b4b4b;
+    background-image: url("/TeamImages/img1hover.png");
+    background-position: center;
+    background-size: cover;
 }
+
+.img1 p:first-of-type {
+    display: unset;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #4b4b4b00;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    transition: color .3s ease-in-out;
+}
+.img1 p:last-of-type {
+    display: unset;
+    font-size: 1rem;
+    color: #4b4b4b00;
+    transition: color .3s ease-in-out;
+}
+
 .img1:hover p:first-of-type {
     display: unset;
     width: 100%;
@@ -86,9 +108,7 @@
     font-size: 1rem;
     color: #cccccc;
 }
-.img1 p {
-    display: none;
-}
+
 
 .img2 {
     width: 15.5vw;
@@ -98,6 +118,8 @@
     background-image: url("/TeamImages/img2.jpg");
     background-position: center;
     background-size: cover;
+    color: transparent;
+    transition: background-image .3s ease-in-out;
 }
 .img2::after {
     content: '';
@@ -127,7 +149,27 @@
 
 .img2:hover {
     background: #000;
+    background-image: url("/TeamImages/img2hover.png");
+    background-position: center;
+    background-size: cover;
 }
+
+.img2 p:first-of-type {
+    display: unset;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #00000000;
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: color .3s ease-in-out;
+}
+.img2 p:last-of-type {
+    display: unset;
+    font-size: 1rem;
+    color: #00000000;
+    transition: color .3s ease-in-out;
+}
+
 .img2:hover p:first-of-type {
     display: unset;
     width: 100%;
@@ -141,9 +183,7 @@
     font-size: 1rem;
     color: #cccccc;
 }
-.img2 p {
-    display: none;
-}
+
 .group1 {
     display: inline-block;
     flex-direction: column;
@@ -159,9 +199,28 @@
     background-image: url("/TeamImages/img3.jpg");
     background-position: center;
     background-size: cover;
+    transition: background-image .3s ease-in-out;
 }
 .img3:hover {
     background: #4b4b4b;
+    background-image: url("/TeamImages/img3hover.png");
+    background-position: center;
+    background-size: cover;
+}
+.img3 p:first-of-type {
+    display: unset;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #ffffff00;
+    margin-bottom: 2rem;
+    text-align: left;
+    transition: color .3s ease-in-out;
+}
+.img3 p:last-of-type {
+    display: unset;
+    font-size: 1rem;
+    color: #cccccc00;
+    transition: color .3s ease-in-out;
 }
 .img3:hover p:first-of-type {
     display: unset;
@@ -176,9 +235,7 @@
     font-size: 1rem;
     color: #cccccc;
 }
-.img3 p {
-    display: none;
-}
+
 
 .img4 {
     width: 23.5vw;
@@ -187,6 +244,7 @@
     background-image: url("/TeamImages/img4.jpg");
     background-position: center;
     background-size: cover;
+    transition: background-image .3s ease-in-out;
 }
 .img4::before {
     content: '';
@@ -203,6 +261,25 @@
 
 .img4:hover {
     background: #f3f3f3;
+    background-image: url("/TeamImages/img4hover.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.img4 p:first-of-type {
+    display: unset;
+    width: 100%;
+    font-size: 2rem;
+    color: #00000000;
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: color .3s ease-in-out;
+}
+.img4 p:last-of-type {
+    display: unset;
+    font-size: 1rem;
+    color: #00000000;
+    transition: color .3s ease-in-out;
 }
 .img4:hover p:first-of-type {
     display: unset;
@@ -217,9 +294,7 @@
     font-size: 1rem;
     color: #000;
 }
-.img4 p {
-    display: none;
-}
+
 
 .img5 {
     width: 15.4vw;
@@ -230,6 +305,7 @@
     background-image: url("/TeamImages/img5.jpg");
     background-position: center;
     background-size: cover;
+    transition: background-image .3s ease-in-out;
 }
 .img5::after {
     content: '';
@@ -246,7 +322,29 @@
 
 .img5:hover {
     background: #000;
+    background-image: url("/TeamImages/img5hover.png");
+    background-position: center;
+    background-size: cover;
+    
 }
+
+.img5 p:first-of-type {
+    display: unset;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #ffffff00;
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: color .3s ease-in-out;
+}
+.img5 p:last-of-type {
+    display: unset;
+    font-size: 1rem;
+    color: #cccccc00;
+    text-align: center;
+    transition: color .3s ease-in-out;
+}
+
 .img5:hover p:first-of-type {
     display: unset;
     width: 100%;
@@ -261,9 +359,7 @@
     color: #cccccc;
     text-align: center;
 }
-.img5 p {
-    display: none;
-}
+
 
 .group2 {
     display: inline-block;
@@ -276,6 +372,7 @@
     background-image: url("/TeamImages/img6.jpg");
     background-position: center;
     background-size: cover;
+    transition: background-image .3s ease-in-out;
 }
 /* .img6::after {
     content: '';
@@ -303,6 +400,25 @@
 
 .img6:hover {
     background: #f3f3f3;
+    background-image: url("/TeamImages/img6hover.png");
+    background-position: center;
+    background-size: cover;
+}
+.img6 p:first-of-type {
+    display: unset;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #00000000;
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: color .3s ease-in-out;
+}
+.img6 p:last-of-type {
+    display: unset;
+    font-size: 1rem;
+    color: #00000000;
+    text-align: center;
+    transition: color .3s ease-in-out;
 }
 .img6:hover p:first-of-type {
     display: unset;
@@ -318,9 +434,7 @@
     color: #000;
     text-align: center;
 }
-.img6 p {
-    display: none;
-}
+
 
 .img7 {
     width: 24.5vh;
@@ -330,12 +444,30 @@
     background-image: url("/TeamImages/img7.jpg");
     background-position: center;
     background-size: cover;
+    transition: background-image .3s ease-in-out;
 }
 
 .img7:hover {
     background: #575757;
+    background-image: url("/TeamImages/img7hover.png");
+    background-position: center;
+    background-size: cover;
 }
-
+.img7 p:first-of-type {
+    display: unset;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #f3f3f300;
+    margin-bottom: 2rem;
+    text-align: left;
+    transition: color .3s ease-in-out;
+}
+.img7 p:last-of-type {
+    display: unset;
+    font-size: 1rem;
+    color: #cccccc00;
+    transition: color .3s ease-in-out;
+}
 .img7:hover p:first-of-type {
     display: unset;
     width: 100%;
