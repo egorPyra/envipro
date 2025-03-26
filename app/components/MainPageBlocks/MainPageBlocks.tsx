@@ -31,11 +31,12 @@ export default function MainPageBlocks() {
       const temp2 = document.getElementById('circleLogoContainer')
       if(temp2) animate(
         '#logoAnimate', 
-        { x: [window.innerWidth/2 - temp2.clientWidth/2, 0], 
-          y: [window.innerHeight/2 - temp2.clientHeight/2, 0], 
-          scale: [4, 1] 
+        { opacity: [1, 0, 0, 1],
+          x: [window.innerWidth/2 - temp2.clientWidth/2, window.innerWidth/2 - temp2.clientWidth/2, 0, 0], 
+          y: [window.innerHeight/2 - temp2.clientHeight/2, window.innerHeight/2 - temp2.clientHeight/2, 0, 0], 
+          scale: [4, 0, 0, 1] 
         },
-        { duration: 1, delay: 6.7, ease: 'easeInOut'})
+        { duration: 1.4, delay: 6.7, ease: 'easeInOut'})
       animate('#circleLogo', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 1.5, delay: 7.7, ease: 'easeInOut'})
       animate('#ecoMonitoring', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.2, ease: 'easeInOut'})
       animate('#ecology', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.2, ease: 'easeInOut'})

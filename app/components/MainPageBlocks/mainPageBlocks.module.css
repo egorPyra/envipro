@@ -31,6 +31,7 @@
     position: absolute;
     top: 0;
     left: 5vw;
+    max-width: 500px;
 }
 
 .ecoMonitoring {
