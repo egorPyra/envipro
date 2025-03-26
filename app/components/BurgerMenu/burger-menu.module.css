@@ -14,6 +14,13 @@
     transition: width .2s ease, height .2s ease;
 }
 
+.btn:hover span{
+    width: 52px;
+    height: 6px;
+    background: #bbb;
+    transition: all .3s ease-in-out;
+}
+
 .btn span {
     position: absolute;
     width: 50px;
