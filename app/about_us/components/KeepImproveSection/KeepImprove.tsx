@@ -24,7 +24,7 @@ export default function KeepImprove() {
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ 
-                  duration: 0.3,
+                  duration: 0.5,
                   delay: 0.2,
                 }}>сохраняя - улучшать</motion.h1>
                 <motion.p 
@@ -32,7 +32,7 @@ export default function KeepImprove() {
                 initial={{ x: -100, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ 
-                  duration: 0.3,
+                  duration: 0.5,
                   delay: 0.2,
                 }}>суть нашей компании!</motion.p> 
                 <motion.div style={{ x: x1 }} className={styles.support}>

@@ -32,7 +32,7 @@ export default function TeamSection() {
         <motion.h1 
         className={styles.title}
         initial={{ x: -100, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
+        whileInView={{ x: 0, opacity: 1 }}
         transition={{
           duration: 0.5,
           delay: 0.2,
@@ -40,7 +40,7 @@ export default function TeamSection() {
         <motion.p 
         className={styles.subTitle}
         initial={{ x: -100, opacity: 0 }}
-         animate={{ x: 0, opacity: 1 }}
+        whileInView={{ x: 0, opacity: 1 }}
          transition={{ 
            duration: 0.5,
            delay: 0.2,

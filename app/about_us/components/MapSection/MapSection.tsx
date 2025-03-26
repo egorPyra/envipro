@@ -17,7 +17,7 @@ export default function MapSection() {
       initial={{ x: -100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ 
-        duration: 2.3,
+        duration: 0.5,
         delay: 0.2,
       }}>Наши клиенты</motion.h1>
       <motion.p 
@@ -25,7 +25,7 @@ export default function MapSection() {
       initial={{ x: -100, opacity: 0 }}
       whileInView={{ x: 0, opacity: 1 }}
       transition={{ 
-        duration: 2.3,
+        duration: 0.5,
         delay: 0.2,
       }}>сотни объектов, более чем в 25 регионах!</motion.p>
       <div className={styles.MapAndPins}>
