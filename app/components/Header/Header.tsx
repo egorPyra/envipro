@@ -11,7 +11,7 @@ export default function Header() {
   const [hidden, setHidden] = useState(true);
 
   const location = usePathname();
-  
+
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -38,29 +38,39 @@ export default function Header() {
     >
       <Link href={'/'}>
         <Image
-            src='/logo.svg'
-            alt="envipro"
-            height={30}
-            width={30}
-          />
+          src='/logo.svg'
+          alt="envipro"
+          height={30}
+          width={30}
+        />
       </Link>
       <nav className={styles.nav}>
         <ul className={styles.list}>
-        <li>
+          <motion.li
+            whileHover={{ scale: 1.08 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
             <Link className={location === '/about_us' ? styles.active : ''} href={'/about_us'}>
               о&nbsp;нас
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            whileHover={{ scale: 1.08 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
             <Link className={location === '/services' ? styles.active : ''} href={'/services'}>
               услуги
             </Link>
-          </li>
-          <li>
+          </motion.li>
+
+          <motion.li
+            whileHover={{ scale: 1.08 }}
+            transition={{ type: "spring", stiffness: 300 }}
+          >
             <Link className={location === '/contacts' ? styles.active : ''} href={'/contacts'}>
               контакты
             </Link>
-          </li>
+          </motion.li>
         </ul>
       </nav>
     </motion.header>
