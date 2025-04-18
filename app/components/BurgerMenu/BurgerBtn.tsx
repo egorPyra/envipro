@@ -10,7 +10,7 @@ interface IBurgerBtn {
 export default function BurgerBtn({ isActive, activateMenuFunc }: IBurgerBtn) {
 
   useEffect(() => {
-    if(!localStorage.getItem('animationEnvipro')) {
+    if(!sessionStorage.getItem('animationEnvipro')) {
       animate('#burgerBtn', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.4, ease: 'easeInOut'})
     }
   }, [])

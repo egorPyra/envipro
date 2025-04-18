@@ -13,8 +13,8 @@ export default function MainPageBlocks() {
   const [keepActive, setKeepActive] = useState('');
 
   useEffect(() => {
-    if(!localStorage.getItem('animationEnvipro')) {
-      localStorage.setItem('animationEnvipro', 'played');
+    if(!sessionStorage.getItem('animationEnvipro')) {
+      sessionStorage.setItem('animationEnvipro', 'played');
 
       const temp = document.getElementById('logoBackgroundBlock')
       if(temp) temp.style.display = 'block'
@@ -202,7 +202,7 @@ export default function MainPageBlocks() {
                 onMouseLeave={() => setIsShown(false)}
                 id='envilab'
                 className={styles.envilab}>
-                <Link href={'/about_us'} className={styles.link}>
+                <Link href={'/envilab'} className={styles.link}>
                   <div  className={`${isShown && keepActive !== 'envilab' ? 'greyBlock' : 'greyBlock hide'}`}></div>
                 </Link>
               </div>

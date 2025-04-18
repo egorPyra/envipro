@@ -19,8 +19,8 @@ export default function MainPageBlocks() {
 
 
   useEffect(() => {
-    if(!localStorage.getItem('animationEnvipro')) {
-      localStorage.setItem('animationEnvipro', 'played');
+    if(!sessionStorage.getItem('animationEnvipro')) {
+      sessionStorage.setItem('animationEnvipro', 'played');
 
       const temp = document.getElementById('logoBackgroundBlock')
       if(temp) temp.style.display = 'block'
