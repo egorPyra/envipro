@@ -17,28 +17,12 @@ interface ServiceBlockProps {
 }
 
 export default function ServiceBlock(props: ServiceBlockProps) {
-    const { id, title, text, list, secondText, bottomText, imageLeft, imageRight, color, size } = props;
-    const ref = useRef<HTMLElement>(null);
-    const [isActive, setIsActive] = useState(false);
-  
-    useEffect(() => {
-      if (!ref.current) return;
-      const obs = new IntersectionObserver(
-        ([entry]) => setIsActive(entry.isIntersecting),
-        {
-          root: null,            // viewport
-          threshold: 0.5,        // «активна», когда секция ≥50% в области
-        }
-      );
-      obs.observe(ref.current);
-      return () => obs.disconnect();
-    }, []);
-      
+  const { id, title, text, list, secondText, bottomText, imageLeft, imageRight, color, size } = props;
+
   return (
     <section
       id={id}
-      ref={ref}
-      className={`${styles.section} ${isActive ? styles.active : ''}`}
+      className={`${styles.section} `}
     >
       <div className={styles.left}>
         <Image src={imageLeft} alt="" fill className={styles.imageLeft} />

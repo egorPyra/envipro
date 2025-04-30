@@ -270,14 +270,15 @@
 .ppaUnder {
     position: absolute;
     left: 0vw;
-    top: 13vh;
+    top: 10vh;
     width: 15vw;
-    height: 47vh;
+    height: 50vh;
     background-image: url("/ppa.jpg");
     background-size: 100% 102%;
     background-repeat: no-repeat;
     background-position: bottom;
     z-index: -1;
+    
 }
 .ppaUnder span {
     display: none;
@@ -285,9 +286,9 @@
 .ppaAbove {
     position: absolute;
     left: 0vw;
-    top: 13vh;
+    top: 10vh;
     width: 14vw;
-    height: 47vh;
+    height: 50vh;
 }
 .ppaAbove:hover + .ppaUnder span {
     display: unset;

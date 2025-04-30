@@ -105,8 +105,8 @@ const Pin: React.FC<PinProps> = ({
         {isOpen && (
           <motion.div className={styles.pop} style={Popup} 
           transition={{ duration: 0.2 }}
-          initial={{ opacity: 0, left: '10px', width: '35.5vw ' }}
-          animate={{ opacity: 1, left: right ? '20px' : '0px', width: '35vw' }}
+          initial={{ opacity: 0, left: '10px', width: '35.5vw ', padding: '0' }}
+          animate={{ opacity: 1, left: right ? '20px' : '0px', width: '35vw', padding: '20px' }}
           exit={{ opacity: 0,left: '-10px' }}>
             <button onClick={() => setIsOpen(false)} className={styles.close}>×</button>
             <h3 className={styles.h3}>{h3}</h3>

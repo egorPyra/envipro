@@ -8,22 +8,37 @@
   height: 100vh;
   overflow: hidden; 
   background-color: black;
-
 }
 
-.scrollContainer {
-  flex: 1;
+.verticalMagnet {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.magnetScroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: top 750ms ease;
+  flex:1;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
   -webkit-overflow-scrolling: touch;
-
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  perspective-origin: center center;
 }
 
-.scrollContainer > * {
+/* каждый потомок magnetScroll */
+.magnetScroll > * {
   scroll-snap-align: start;
   scroll-snap-stop: always;
 }
+
+/* если внутри блока нужен скролл контента */
+.scrollable {
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+

@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from "react";
-import MainPageBlocks from "@/app/components/MainPageBlocks/MainPageBlocks";
+import MainPageBlocks from "@/app/components/MainPageBlocks/MainPageBlocksWithLink";
 import styles from "./page.module.css";
 import BurgerBtn from "./components/BurgerMenu/BurgerBtn";
 import BurgerContent from "./components/BurgerMenu/BurgerContent";

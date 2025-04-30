@@ -28,18 +28,16 @@ export default function BurgerContent({ isActive, activateMenuFunc }: IBurgerCon
           <li className={styles.menuListTitle}>
             <Link className={styles.menuListLink} href={'/services'}>Услуги</Link>
             <ul className={styles.menuListSubTitle}>
-              <li><Link href={'/services'}>ИНЖЕНЕРНЫЕ ИЗЫСКАНИЯ</Link></li>
-              <li><Link href={'/services'}>ЭКОЛОГИЧЕСКИЙ МОНИТОРИНГ</Link></li>
-              <li><Link href={'/services'}>ПРОИЗВОДСТВЕННЫЙ ЭКОЛОГИЧЕСКИЙ КОНТРОЛЬ</Link></li>
-              <li><Link href={'/services'}>НЕДРОПОЛЬЗОВАНИЕ</Link></li>
-              <li><Link href={'/services'}>РАЗРАБОТКА ПРОЕКТНОЙ ДОКУМЕНТАЦИИ</Link></li>
-              <li><Link href={'/services'}>РАЗРЕШЕНИЯ&nbsp;И&nbsp;СОГЛАСОВАНИЕ&nbsp;ПРИРОДООХРАННОЙ РАЗРЕШИТЕЛЬНОЙ ДОКУМЕНТАЦИИ</Link></li>
-              <li><Link href={'/services'}>ЭКОЛОГИЧЕСКОЕ СОПРОВОЖДЕНИЕ</Link></li>
-              <li><Link href={'/services'}>ЛАБОРАТОРНЫЕ ИССЛЕДОВАНИЯ</Link></li>
-              <li><Link href={'/services'}>ГЕОДЕЗИЧЕСКИЕ И КАДАСТРОВЫЕ РАБОТЫ</Link></li>
-              <li><Link href={'/services'}>АЭРОФОТОСЪЕМКА, КАРТОГРАФИЯ И ГИС</Link></li>
-              <li><Link href={'/services'}>КОМПЕНСАЦИОННЫЕ МЕРОПРИЯТИЯ</Link></li>
-              <li><Link href={'/services'}>РАЗРАБОТКА ПРОЕКТОВ РЕКУЛЬТИВАЦИИ НАРУШЕННЫХ ЗЕМЕЛЬ</Link></li>
+              <li><Link href={'/services#monitoring'}>ЭКОЛОГИЧЕСКИЙ МОНИТОРИНГ</Link></li>
+              <li><Link href={'/services#ecoShadow'}>Производственный экологический контроль</Link></li>
+              <li><Link href={'/services#ppa'}>Разработка&nbsp;И&nbsp;СОГЛАСОВАНИЕ&nbsp;ПРИРОДООХРАННОЙ РАЗРЕШИТЕЛЬНОЙ ДОКУМЕНТАЦИИ</Link></li>
+              <li><Link href={'/services#earth'}>НЕДРОПОЛЬЗОВАНИЕ</Link></li>
+              <li><Link href={'/services#engineer'}>Инженерные&nbsp;изыскания</Link></li>
+              <li><Link href={'/services#ecology'}>ЭКОЛОГИЧЕСКОЕ СОПРОВОЖДЕНИЕ ДЕЯТЕЛЬНОСТИ</Link></li>
+              <li><Link href={'/services#documentation'}>РАЗРАБОТКА проектной документации</Link></li>
+              <li><Link href={'/services#geo'}>геодезия и картография</Link></li>
+              <li><Link href={'/services#save'}>Сохранение биологического разнообразия</Link></li>
+              <li><Link href={'/services#forest'}>ЛЕСОПОЛЬЗОВАНИЕ</Link></li>
             </ul>
           </li>
           <li className={styles.menuListTitle}>
