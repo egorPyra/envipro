@@ -1,0 +1,74 @@
+.section {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 60%;
+  height: 100%;
+  z-index: 1;
+  
+}
+
+.imageLeft {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-attachment: fixed;
+}
+
+.right {
+  position: absolute;
+  left: 60%;
+  top: 0;
+  display: flex;
+  width: 40%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.imageRight {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container {
+  width: 100%;
+  padding: 1.5rem;
+  margin-right: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 3;
+  color: white;
+
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.text,
+.secondText,
+.list,
+.bottomText {
+  font-size: 0.85rem;
+  white-space: pre-line;
+  margin-bottom: 1rem;
+}
+
+.bottomText {
+  position: absolute;
+  bottom: 3%;
+}

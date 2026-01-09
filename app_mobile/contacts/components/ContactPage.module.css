@@ -1,0 +1,58 @@
+.container {
+    color:#ccc;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0 -5vw;
+}
+
+.textContainer{
+    font-size: 1.1rem;
+    font-family: 'Bebas Neue Regular';
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 15vw;
+    margin-right: 0;
+}
+
+.text, .address {
+    margin: 5vh 0;
+}
+
+.address li {
+    margin-top: 1rem;
+}
+.address li:last-child {
+    margin-bottom: 1rem;
+}
+
+.contactInfo strong{
+    margin-right: 0.5rem;
+}
+
+.imageContainer {
+    
+    flex: 1; 
+    overflow: hidden;
+}
+
+.Map {
+    /* width: 100%; */
+    height: 100vh;
+    object-fit: contain;
+    position: relative;
+    left: 0;
+    /* transform: translateX(-5vw); */
+}

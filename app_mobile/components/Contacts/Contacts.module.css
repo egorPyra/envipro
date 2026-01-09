@@ -1,0 +1,63 @@
+.contactContainer {
+    position: relative;
+    /* height: 100vh; */
+    /* padding: 90px 20px 60px; */
+    background: #121212;
+    /* overflow: hidden; */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    text-align: center;
+    overflow-y: hidden;
+}
+
+.imageWrap {
+    position: relative;
+    left: 35%;
+}
+
+.mapImg {
+    width: 120%;
+    height: auto;
+    display: block;
+}
+
+.text,
+.address {
+    margin: 5vh 0;
+}
+
+.address li {
+    margin-top: 1rem;
+}
+
+.address li:last-child {
+    margin-bottom: 1rem;
+}
+
+.contactInfo strong {
+    margin-right: 0.5rem;
+}
+
+.footer {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    mix-blend-mode: lighten;
+    
+}
+
+@media (max-width: 768px) {
+    /* .contactContainer {
+        padding: 70px 18px 50px;
+    } */
+
+    .imageWrap,
+    .contactInfo,
+    .additionalInfo {
+        width: 100%;
+        margin-left: 0;
+    }
+}

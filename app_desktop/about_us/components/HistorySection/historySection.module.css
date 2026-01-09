@@ -1,0 +1,67 @@
+.title {
+    align-self: flex-start;
+    margin: 0 0 6px;
+    color: #fff;
+    font-size: 2.7rem;
+    font-weight: lighter;
+}
+.subTitle {
+    align-self: flex-start;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.historyContainer {
+    position: relative;
+    padding-top: 95px;
+    padding-bottom: 100px;
+    min-height: 100vh;
+}
+.historyText {
+    margin: 10px auto;
+    padding: 0;
+    color: #fff;
+    line-height: 1.6rem;
+    text-align: center;
+    max-width: 900px;
+    font-family: 'Bebas Neue Regular';
+    font-size: 1.2rem;
+}
+
+.historyTextTitle {
+    margin: 10px auto;
+    padding: 0;
+    color: #fff;
+    line-height: 1.6rem;
+    text-align: center;
+    max-width: 1200px;
+    font-family: 'Bebas Neue Regular';
+    font-size: 1.6rem;
+}
+
+.historyBg {
+    position: absolute;
+    top: calc(-100px - 50px);
+    right: -6rem;
+    bottom: 0;
+    left: -6rem;
+    background-color: #2f2f2f;
+    background-image: url("/bgHistory.jpg");
+    background-size: 150%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.historyContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.showBtn {
+    margin-top: 30px;
+    padding: 5px 8px;
+}
