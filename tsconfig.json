@@ -25,5 +25,12 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/about_us/page.jsx","types.d.ts", "src"],
-  "exclude": ["node_modules"]
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out",
+    ".app_backup",
+    "app_desktop",
+    "app_mobile"
+  ]
 }

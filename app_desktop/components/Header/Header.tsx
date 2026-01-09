@@ -33,7 +33,7 @@ export default function Header() {
   // Слушаем скролл: при прокрутке вверх — показываем + ресет таймера,
   // при прокрутке вниз за 50px — сразу скрываем
   useMotionValueEvent(scrollY, 'change', (latest) => {
-    const prev = scrollY.getPrevious()
+    const prev = scrollY.getPrevious() ?? latest
     if (latest < prev) {
       setShow(true)
       scheduleHide(3000)

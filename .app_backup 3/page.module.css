@@ -1,0 +1,111 @@
+.notVisible {
+  opacity: 0;
+}
+
+.main {
+  width: 100dvw;
+  overflow-y: hidden;
+  min-height: 100dvh;
+  background: #000;
+}
+
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+  background-image: url('/bg-main-mobile.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.heroContent {
+  width: min(320px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.logoWrap {
+  width: min(220px, 65vw);
+  aspect-ratio: 1 / 1;
+  background: #fff;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.logoImg {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.ctaList {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+  color: #fff;
+}
+
+.cta {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  color: #fff;
+  border-radius: 6px;
+  text-align: center;
+  color: inherit;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+  font-size: 20px;
+  transition: background 200ms ease, border-color 200ms ease;
+}
+
+.cta:hover,
+.cta:focus-visible {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+}
+
+.arrow {
+  height: 10dvh;
+  position: absolute;
+  bottom: calc(env(safe-area-inset-bottom, 0px) + 36px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  color: #fff;
+  text-decoration: none;
+  animation: bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 6px);
+  }
+}
+
+.sentinel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.2px;
+}
