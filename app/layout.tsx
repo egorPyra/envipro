@@ -6,14 +6,27 @@ import React from "react";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'envipro',
-  description: 'static pages with animations',
+  title: {
+    default: 'ЭнвиПро — экологическая организаия',
+    template: '%s | ЭнвиПро'
+  },
+
+  description:
+    'Экологическое сопровождение деятельности, производственный экологический контроль, недропользование и инженерные изыскания. ООО «ЭнвиПро».',
+
+  keywords: [
+    'экологическое сопровождение',
+    'производственный экологический контроль',
+    'инженерные изыскания',
+    'экологическая компания',
+    'экологические услуги'
+  ],
+
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-
   return (
-    <html lang="ru" suppressHydrationWarning>
+    <html lang="ru">
       <body className={inter.className}>
         {children}
       </body>
