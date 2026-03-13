@@ -9,17 +9,20 @@
     flex-direction: column;
     gap: 28px;
     text-align: center;
-    overflow-x: hidden;
+    overflow-x: clip;
     font-family: "Bebas Neue Regular"
 }
 
 .imageWrap {
     position: relative;
-    left: 35%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .mapImg {
-    width: 120%;
+    width: 100%;
+    max-width: 100%;
     height: auto;
     display: block;
 }
@@ -39,6 +42,13 @@
 
 .contactInfo strong {
     margin-right: 0.5rem;
+}
+
+.address p,
+.contactInfo p,
+.contactInfo a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .footer {

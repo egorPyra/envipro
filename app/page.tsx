@@ -75,9 +75,9 @@ export default function MobileHome() {
         </section>
 
         {/* Услуги */}
-        <section id="services" className={styles.services}>
+        {/* <section id="services" className={styles.services}>
           <ServiceBlock />
-        </section>
+        </section> */}
 
         {/* Контакты */}
         <section id="contacts" className={styles.mapBlock}>

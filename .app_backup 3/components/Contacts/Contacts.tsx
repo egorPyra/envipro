@@ -38,7 +38,7 @@ export default function Contacts() {
             </div>
 
             <Image
-                    src="/footer.png"
+                    src="/footer.jpg"
                     alt="footer"
                     width={2704}
                     height={872}

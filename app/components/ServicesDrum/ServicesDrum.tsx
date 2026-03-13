@@ -1,30 +1,40 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState, type MouseEvent } from "react"
 import styles from "./ServicesDrum.module.css"
 import { services } from "./servicesData"
+import HeroMain from "../HeroMain/HeroMain"
 
 export default function ServicesDrum() {
-  const PAUSE_BEFORE_SNAP_MS = 260
-  const SNAP_THRESHOLD_PX = 10
-  const SNAP_DURATION_MS = 620
+  const PAUSE_BEFORE_SNAP_MS = 220
+  const SNAP_THRESHOLD_PX = 18
+  const SNAP_DURATION_MS = 520
 
   const [openId, setOpenId] = useState<string | null>(null)
   const [isClosing, setIsClosing] = useState(false)
+  const [isHeroMainOpen, setIsHeroMainOpen] = useState(false)
+  const [isHeroMainClosing, setIsHeroMainClosing] = useState(false)
   const [activeId, setActiveId] = useState<string>(services[0]?.id ?? "")
 
   const cardRefs = useRef<Record<string, HTMLDivElement | null>>({})
+  const sectionRef = useRef<HTMLElement | null>(null)
+  const activeIdRef = useRef(activeId)
+  const openIdRef = useRef<string | null>(openId)
+
   const stopTimerRef = useRef<number | null>(null)
-  const snapAnimationRef = useRef<number | null>(null)
+  const autoAlignUnlockRef = useRef<number | null>(null)
+  const heroMainCloseTimerRef = useRef<number | null>(null)
   const isAutoAligningRef = useRef(false)
 
   const lastScrollYRef = useRef(0)
-  const gestureStartIdRef = useRef<string | null>(null)
-  const gestureDeltaRef = useRef(0)
-  const gestureDirectionRef = useRef<1 | -1 | 0>(0)
 
   useEffect(() => {
-    if (openId !== null) {
+    activeIdRef.current = activeId
+  }, [activeId])
+
+  useEffect(() => {
+    openIdRef.current = openId
+    if (openId !== null || isHeroMainOpen) {
       document.body.style.overflow = "hidden"
     } else {
       document.body.style.overflow = ""
@@ -33,97 +43,77 @@ export default function ServicesDrum() {
     return () => {
       document.body.style.overflow = ""
     }
-  }, [openId])
+  }, [openId, isHeroMainOpen])
 
   useEffect(() => {
-    if (openId !== null) return
-
-    const animateSnapBy = (delta: number) => {
-      if (Math.abs(delta) < SNAP_THRESHOLD_PX) return
-
-      if (snapAnimationRef.current) {
-        window.cancelAnimationFrame(snapAnimationRef.current)
+    return () => {
+      if (heroMainCloseTimerRef.current) {
+        window.clearTimeout(heroMainCloseTimerRef.current)
       }
-
-      isAutoAligningRef.current = true
-
-      const startY = window.scrollY
-      const targetY = startY + delta
-      const startTime = performance.now()
-
-      const step = (now: number) => {
-        const elapsed = now - startTime
-        const progress = Math.min(elapsed / SNAP_DURATION_MS, 1)
-        const eased = 1 - Math.pow(1 - progress, 3)
-
-        window.scrollTo({
-          top: startY + (targetY - startY) * eased,
-          behavior: "auto",
-        })
-
-        if (progress < 1) {
-          snapAnimationRef.current = window.requestAnimationFrame(step)
-          return
-        }
-
-        isAutoAligningRef.current = false
-        snapAnimationRef.current = null
-      }
-
-      snapAnimationRef.current = window.requestAnimationFrame(step)
     }
+  }, [])
 
+  useEffect(() => {
     const alignAfterStop = () => {
-      let targetId = activeId
+      if (openIdRef.current !== null) return
+      const sectionNode = sectionRef.current
+      if (!sectionNode) return
 
-      const startId = gestureStartIdRef.current
-      const direction = gestureDirectionRef.current
-      const hasGesture = Math.abs(gestureDeltaRef.current) >= 2
+      const sectionRect = sectionNode.getBoundingClientRect()
+      const viewportCenter = window.innerHeight / 2
+      const isViewportCenterInsideSection =
+        viewportCenter >= sectionRect.top && viewportCenter <= sectionRect.bottom
 
-      // If user made a short scroll but didn't switch active card yet,
-      // nudge to next/prev card by scroll direction.
-      if (startId && startId === activeId && direction !== 0 && hasGesture) {
-        const currentIndex = services.findIndex((service) => service.id === activeId)
-        if (currentIndex >= 0) {
-          const nextIndex = currentIndex + direction
-          if (nextIndex >= 0 && nextIndex < services.length) {
-            targetId = services[nextIndex].id
-          }
-        }
+      if (!isViewportCenterInsideSection) {
+        return
       }
 
-      const node = cardRefs.current[targetId]
+      const currentActiveId = activeIdRef.current
+      const node = cardRefs.current[currentActiveId]
       if (!node) return
 
       const rect = node.getBoundingClientRect()
-      const viewportCenter = window.innerHeight / 2
       const cardCenter = rect.top + rect.height / 2
-      const delta = cardCenter - viewportCenter
+      const centerDelta = cardCenter - viewportCenter
 
-      animateSnapBy(delta)
+      if (Math.abs(centerDelta) < SNAP_THRESHOLD_PX) {
+        return
+      }
 
-      gestureStartIdRef.current = null
-      gestureDeltaRef.current = 0
-      gestureDirectionRef.current = 0
+      isAutoAligningRef.current = true
+      node.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "nearest",
+      })
+
+      if (autoAlignUnlockRef.current) {
+        window.clearTimeout(autoAlignUnlockRef.current)
+      }
+
+      autoAlignUnlockRef.current = window.setTimeout(() => {
+        isAutoAligningRef.current = false
+      }, SNAP_DURATION_MS)
+
     }
 
     const handleScroll = () => {
+      if (openIdRef.current !== null) return
       if (isAutoAligningRef.current) return
+      const sectionNode = sectionRef.current
+      if (!sectionNode) return
+
+      const sectionRect = sectionNode.getBoundingClientRect()
+      const viewportCenter = window.innerHeight / 2
+      const isViewportCenterInsideSection =
+        viewportCenter >= sectionRect.top && viewportCenter <= sectionRect.bottom
+
+      if (!isViewportCenterInsideSection) {
+        return
+      }
 
       const currentY = window.scrollY
-      const deltaY = currentY - lastScrollYRef.current
       lastScrollYRef.current = currentY
-
-      if (!gestureStartIdRef.current) {
-        gestureStartIdRef.current = activeId
-        gestureDeltaRef.current = 0
-        gestureDirectionRef.current = 0
-      }
-
-      gestureDeltaRef.current += deltaY
-      if (Math.abs(deltaY) >= 0.5) {
-        gestureDirectionRef.current = deltaY > 0 ? 1 : -1
-      }
 
       if (stopTimerRef.current) {
         window.clearTimeout(stopTimerRef.current)
@@ -144,16 +134,16 @@ export default function ServicesDrum() {
         window.clearTimeout(stopTimerRef.current)
       }
 
-      if (snapAnimationRef.current) {
-        window.cancelAnimationFrame(snapAnimationRef.current)
+      if (autoAlignUnlockRef.current) {
+        window.clearTimeout(autoAlignUnlockRef.current)
       }
     }
-  }, [activeId, openId])
+  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        let nextActive = activeId
+        let nextActive = activeIdRef.current
         let bestDistance = Number.POSITIVE_INFINITY
 
         for (const entry of entries) {
@@ -173,7 +163,7 @@ export default function ServicesDrum() {
           }
         }
 
-        if (nextActive !== activeId) {
+        if (nextActive !== activeIdRef.current) {
           setActiveId(nextActive)
         }
       },
@@ -190,37 +180,114 @@ export default function ServicesDrum() {
     }
 
     return () => observer.disconnect()
-  }, [activeId])
+  }, [])
 
   const handleClose = () => {
     setIsClosing(true)
 
-    setTimeout(() => {
+    window.setTimeout(() => {
       setOpenId(null)
       setIsClosing(false)
     }, 420)
   }
 
+  const handleHeroBubbleClick = (event: MouseEvent<HTMLButtonElement>) => {
+    // Keep hero bubbles independently clickable on cover.
+    event.stopPropagation()
+    setIsHeroMainClosing(false)
+    setIsHeroMainOpen(true)
+  }
+
+  const handleHeroMainClose = () => {
+    setIsHeroMainClosing(true)
+    if (heroMainCloseTimerRef.current) {
+      window.clearTimeout(heroMainCloseTimerRef.current)
+    }
+    heroMainCloseTimerRef.current = window.setTimeout(() => {
+      setIsHeroMainOpen(false)
+      setIsHeroMainClosing(false)
+    }, 420)
+  }
+
   const active = services.find((s) => s.id === openId)
+  const activeIndex = services.findIndex((service) => service.id === activeId)
 
   return (
-    <section className={styles.section}>
-      <div className={styles.cards}>
-        {services.map((service) => (
-          <div
-            key={service.id}
-            ref={(node) => {
-              cardRefs.current[service.id] = node
-            }}
-            data-service-id={service.id}
-            className={`${styles.card} ${service.coverHeight === "hero" ? styles.cardHero : ""} ${activeId === service.id ? styles.cardActive : ""}`}
-            onClick={() => setOpenId(service.id)}
-          >
-            <img src={service.cover} className={styles.cover} />
+    <section ref={sectionRef} className={styles.section}>
+      {isHeroMainOpen && (
+        <div className={`${styles.heroMainOverlay} ${isHeroMainClosing ? styles.heroMainOverlayClosing : ""}`}>
+          <HeroMain onClose={handleHeroMainClose} />
+        </div>
+      )}
 
-            <div className={styles.cardTitle}>{service.title}</div>
-          </div>
-        ))}
+      <div className={styles.cards}>
+        {services.map((service, index) => {
+          const isHero = service.id === "welcome"
+          const shouldPrioritizeCover = activeIndex >= 0 && Math.abs(index - activeIndex) <= 1
+
+          return (
+            <div
+              key={service.id}
+              ref={(node) => {
+                cardRefs.current[service.id] = node
+              }}
+              data-service-id={service.id}
+              className={`${styles.card} ${service.coverHeight === "hero" ? styles.cardHero : ""} ${activeId === service.id ? styles.cardActive : ""}`}
+              onClick={() => setOpenId(service.id)}
+            >
+              {!isHero && (
+                <img
+                  src={service.cover}
+                  className={styles.cover}
+                  alt={service.title}
+                  loading={shouldPrioritizeCover ? "eager" : "lazy"}
+                  decoding="async"
+                  fetchPriority={shouldPrioritizeCover ? "high" : "low"}
+                />
+              )}
+
+              {isHero && (
+                <div className={styles.heroDecor}>
+                  <button
+                    className={`${styles.heroBubbleBtn} ${styles.heroBubblePrimary}`}
+                    type="button"
+                    aria-label="Hero button 1"
+                    onClick={handleHeroBubbleClick}
+                  >
+                    <span className={styles.heroMenuIcon} aria-hidden="true">
+                      <span className={styles.heroMenuLine} />
+                      <span className={styles.heroMenuLine} />
+                      <span className={styles.heroMenuLine} />
+                    </span>
+                  </button>
+
+                  <img
+                    className={`${styles.heroPhoto} ${styles.heroPhotoOne}`}
+                    src="/logoBlackRus.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
+                  />
+                  <img
+                    className={`${styles.heroPhoto} ${styles.heroPhotoTwo}`}
+                    src="/Savee.png"
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
+                  />
+                  <span className={styles.heroSmallDot} aria-hidden="true" />
+                  <span className={styles.heroCornerRing} aria-hidden="true" />
+                </div>
+              )}
+
+              {/* <div className={styles.cardTitle}>{service.title}</div> */}
+            </div>
+          )
+        })}
       </div>
 
       {active && (
@@ -229,11 +296,27 @@ export default function ServicesDrum() {
             <button className={styles.close} onClick={handleClose}>✕</button>
           </div>
 
-          <img src={active.images[0]} className={styles.detailImage} />
+          <div className={styles.panelBody}>
+            <img
+              src={active.images[0]}
+              className={styles.detailImage}
+              alt={active.title}
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+            />
 
-          <img src={active.images[1]} className={styles.detailImage} />
+            <img
+              src={active.images[1]}
+              className={styles.detailImage}
+              alt={`${active.title} detail`}
+              loading="lazy"
+              decoding="async"
+              fetchPriority="low"
+            />
 
-          <div className={styles.panelText}>{active.text}</div>
+            <div className={styles.panelText}>{active.text}</div>
+          </div>
         </div>
       )}
     </section>
