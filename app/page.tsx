@@ -7,6 +7,8 @@ import styles from "./page.module.css";
 import HistorySectionMobile from "./components/HistorySectionMobile/HistorySectionMobile";
 import Contacts from "./components/Contacts/Contacts";
 import ServiceBlock from "./components/ServiceBlock/ServiceBlock";
+import ScrollDrum from "@/app/components/ServicesDrum/ServicesDrum";
+// import { scrollDrumData } from "@/app/components/ServicesDrum/servicesData";
 
 const heroLinks = [
   { label: "О НАС", target: "#about" },
@@ -23,10 +25,10 @@ export default function MobileHome() {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <main className={styles.main}>
         {/* HERO */}
-        <section className={styles.hero}>
+        {/* <section className={styles.hero}>
           <div className={styles.heroContent}>
             <div className={styles.logoWrap}>
               <Image
@@ -61,6 +63,10 @@ export default function MobileHome() {
           >
             ⌄
           </a>
+        </section> */}
+
+        <section aria-label="Drum gallery">
+          <ScrollDrum />
         </section>
 
         {/* История */}

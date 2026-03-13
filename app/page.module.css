@@ -4,7 +4,8 @@
 
 .main {
   width: 100dvw;
-  overflow-y: hidden;
+  overflow-y: visible;
+  overflow-x: clip;
   min-height: 100dvh;
   background: #000;
 }
