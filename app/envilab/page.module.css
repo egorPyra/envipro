@@ -1,0 +1,39 @@
+
+.preloader {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: black; */
+  /* opacity: 0.8; */
+  font-family: 'Bebas Neue';
+}
+
+.logo {
+  display: inline-block;
+  position: relative;
+  width: 1000px;
+  height: 600px;;
+  transform: translate(200px,0px);
+  margin:0;
+  padding:0;
+  border-radius: 50%;
+  /* animation: logoToCorner 2s ease, backgroundToBlack 300ms ease; */
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+}
+
+.bg {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7;
+}

@@ -1,0 +1,18 @@
+/* page.module.css */
+
+.main {
+  display: block;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.verticalMagnet {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.magnetScroll {
+  width: 100%;
+}

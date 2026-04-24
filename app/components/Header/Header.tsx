@@ -1,100 +1,93 @@
-'use client';
-import type { MouseEvent } from "react";
-import { useEffect, useState } from 'react';
-import styles from './Header.module.css';
+'use client'
 
-const navLinks = [
-  { href: "#about", label: "О НАС" },
-  { href: "#services", label: "УСЛУГИ" },
-  { href: "#contacts", label: "КОНТАКТЫ" },
-];
+import { useState, useRef, useEffect } from 'react'
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
+import { usePathname } from 'next/navigation'
+import Link from 'next/link'
+import Image from 'next/image'
+import styles from './header.module.css'
 
 export default function Header() {
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
+  // true = показываем хэдер
+  const [show, setShow] = useState(true)
+  const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const location = usePathname()
+  const { scrollY } = useScroll()
 
+  // Функция для автоскрытия через delay мс
+  const scheduleHide = (delay = 3000) => {
+    if (hideTimer.current) clearTimeout(hideTimer.current)
+    hideTimer.current = setTimeout(() => {
+      setShow(false)
+    }, delay)
+  }
+
+  // При монтировании показываем 3 сек, потом скрываем
   useEffect(() => {
-    let frame: number | null = null;
-
-    const updateProgress = () => {
-      const doc = document.documentElement;
-      const maxScroll = doc.scrollHeight - window.innerHeight;
-      const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
-      setScrollProgress(Math.min(1, Math.max(0, progress)));
-      frame = null;
-    };
-
-    const handleScroll = () => {
-      if (frame !== null) return;
-      frame = requestAnimationFrame(updateProgress);
-    };
-
-    const handleResize = () => {
-      updateProgress();
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    window.addEventListener('resize', handleResize);
-    updateProgress();
-
+    scheduleHide(3000)
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('resize', handleResize);
-      if (frame !== null) {
-        cancelAnimationFrame(frame);
+      if (hideTimer.current) clearTimeout(hideTimer.current)
+    }
+  }, [])
+
+  // Слушаем скролл: при прокрутке вверх — показываем + ресет таймера,
+  // при прокрутке вниз за 50px — сразу скрываем
+  useMotionValueEvent(scrollY, 'change', (latest) => {
+    const prev = scrollY.getPrevious() ?? latest
+    if (latest < prev) {
+      setShow(true)
+      scheduleHide(3000)
+    } else if (latest > prev && latest >= 50) {
+      setShow(false)
+    }
+  })
+
+  // Слушаем движение мыши: если курсор <50px от верха — показываем + таймер
+  useEffect(() => {
+    const onMouseMove = (e: MouseEvent) => {
+      if (e.clientY < 50) {
+        setShow(true)
+        scheduleHide(3000)
       }
-    };
-  }, []);
+    }
+    window.addEventListener('mousemove', onMouseMove)
+    return () => window.removeEventListener('mousemove', onMouseMove)
+  }, [])
 
-  const shade = Math.round(17 + 238 * scrollProgress);
-  const backgroundColor = `rgb(${shade}, ${shade}, ${shade})`;
-  const textColor = scrollProgress > 0.7 ? '#111' : '#fff';
-  const borderColor = scrollProgress > 0.85 ? '#e5e5e5' : 'transparent';
-
-  const handleToggle = () => setIsOpen((prev) => !prev);
-
-  const scrollToSection = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
-    event.preventDefault();
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: "smooth", block: "start" });
-  };
+  const variants = {
+    show: { opacity: 1, y: 0 },
+    hide: { opacity: 0, y: '-100%' },
+  }
 
   return (
-    <header
+    <motion.header
       className={styles.header}
-      style={{ backgroundColor, color: textColor, borderColor }}
+      variants={variants}
+      animate={show ? 'show' : 'hide'}
+      transition={{ duration: 0.33, ease: 'easeInOut' }}
     >
-      <button
-        className={`${styles.burger} ${isOpen ? styles.burgerActive : ''}`}
-        aria-label="Открыть меню"
-        aria-expanded={isOpen}
-        onClick={handleToggle}
-      >
-        <span />
-        <span />
-        <span />
-      </button>
-
-      <div className={styles.brand}>ЭнвиПро</div>
-
-      <nav
-        className={`${styles.ctaList} ${isOpen ? styles.open : ''}`}
-        aria-hidden={!isOpen}
-      >
-        {navLinks.map((link, index) => (
-          <a
-            key={`${link.href}-${index}`}
-            className={styles.cta}
-            href={link.href}
-            onClick={(event) => {
-              scrollToSection(event, link.href);
-              setIsOpen(false);
-            }}
-          >
-            {link.label}
-          </a>
-        ))}
+      <Link href="/">
+        <Image src="/envi_rus.png" alt="envipro" height={30} width={30} />
+      </Link>
+      <nav className={styles.nav}>
+        <ul className={styles.list}>
+          <motion.li whileHover={{ scale: 1.08 }} transition={{ type: 'spring', stiffness: 300 }}>
+            <Link className={location === '/about_us' ? styles.active : ''} href="/about_us">
+              о&nbsp;нас
+            </Link>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.08 }} transition={{ type: 'spring', stiffness: 300 }}>
+            <Link className={location === '/services' ? styles.active : ''} href="/services">
+              услуги
+            </Link>
+          </motion.li>
+          <motion.li whileHover={{ scale: 1.08 }} transition={{ type: 'spring', stiffness: 300 }}>
+            <Link className={location === '/contacts' ? styles.active : ''} href="/contacts">
+              контакты
+            </Link>
+          </motion.li>
+        </ul>
       </nav>
-    </header>
-  );
+    </motion.header>
+  )
 }

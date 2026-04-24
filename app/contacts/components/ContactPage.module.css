@@ -1,0 +1,124 @@
+.container {
+    color:#ccc;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin: 0 -5vw;
+}
+
+.textContainer{
+    font-size: 1.1rem;
+    font-family: 'Bebas Neue Regular';
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-left: 15vw;
+    margin-right: 0;
+}
+
+.text, .address {
+    margin: 5vh 0;
+}
+
+.address li {
+    margin-top: 1rem;
+    transition: all 180ms ease;
+}
+.address li:last-child {
+    margin-bottom: 1rem;
+}
+
+.activeOffice {
+    color: #ffffff;
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+.contactInfo strong{
+    margin-right: 0.5rem;
+}
+
+.imageContainer {
+    position: relative;
+    flex: 1; 
+    overflow: hidden;
+}
+
+.Map {
+    /* width: 100%; */
+    height: 100vh;
+    object-fit: contain;
+    position: relative;
+    left: 0;
+    /* transform: translateX(-5vw); */
+}
+
+.pin {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    transform: translate3d(-50%, -100%, 0);
+    transform-origin: 50% 100%;
+    transition: transform 180ms ease, opacity 180ms ease;
+    opacity: 1;
+    overflow: visible;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform, opacity;
+}
+
+.pin::after {
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.65) 0%, rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    transition: opacity 180ms ease;
+    pointer-events: none;
+}
+
+.pin img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.pinSpb {
+    left: 35%;
+    top: 30%;
+}
+
+.pinSochi {
+    left: 7%;
+    top: 66%;
+}
+
+.pinActive {
+    opacity: 1;
+    transform: translate3d(-50%, -100%, 0) scale(1.12);
+}
+
+.pinActive::after {
+    opacity: 1;
+}
