@@ -49,6 +49,33 @@
     margin-right: 0.5rem;
 }
 
+.legalLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 0.65rem;
+    margin-top: 2rem;
+}
+
+.legalLinks a,
+.cookiesButton {
+    color: #ccc;
+    font-size: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    transition: color 180ms ease;
+}
+
+.legalLinks a:hover {
+    color: #ffffff;
+}
+
+.cookiesButton {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
 .imageContainer {
     position: relative;
     flex: 1; 

@@ -1,9 +1,15 @@
 'use client'
 import { useState } from 'react';
+import Link from 'next/link';
 import styles from './ContactPage.module.css';
+import { COOKIE_SETTINGS_EVENT } from '@/app/lib/cookieConsent';
 
 export default function ContactPage() {
   const [activeOffice, setActiveOffice] = useState<null | 'sochi' | 'spb'>(null)
+
+  const openCookieSettings = () => {
+    window.dispatchEvent(new Event(COOKIE_SETTINGS_EVENT))
+  }
   
   return (
     <section className={styles.container}>
@@ -31,6 +37,13 @@ export default function ContactPage() {
           <div className={styles.contactInfo}>
             <p><strong>Телефон:</strong> 8-800-333-22-84</p>
             <p><strong>E-mail:</strong> <a href="mailto:info@envi-pro.ru">info@envi-pro.ru</a></p>
+          </div>
+          <div className={styles.legalLinks}>
+            <Link href="/privacy">Политика конфиденциальности</Link>
+            <Link href="/cookies">Политика cookies</Link>
+            <button type="button" className={styles.cookiesButton} onClick={openCookieSettings}>
+              Настройки cookies
+            </button>
           </div>
         </div>
       </div>

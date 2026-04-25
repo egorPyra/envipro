@@ -51,8 +51,8 @@ export default function MainPageBlocks() {
     const introAnimation = animate(
       '#introLogoAnimate',
       {
-        opacity: [1, 1, 0],
-        scale: [1, 0.35, 0],
+        opacity: [1, 0],
+        scale: [1, 0],
       },
       { duration: 0.9, delay: 6.7, ease: 'easeInOut' }
     )
@@ -63,21 +63,22 @@ export default function MainPageBlocks() {
   }, [showIntro])
 
   return (
-
-    <div className={styles.blocksContainer}>
-      <div className={`${isShown ? 'greyBlockUnder' : 'greyBlockUnder hide'}`}></div>
-      {showIntro && (
-        <div className={styles.introOverlay}>
-          <img
-            id='introLogoAnimate'
-            className={styles.introLogo}
-            src="/Logo_ENVI_rus.svg"
-            alt=""
-            aria-hidden="true"
-          />
-        </div>
-      )}
-      <div className={styles.sectionOne}>
+    <div className={styles.sceneViewport}>
+      <div className={styles.sceneCanvas}>
+        <div className={styles.blocksContainer}>
+          <div className={`${isShown ? 'greyBlockUnder' : 'greyBlockUnder hide'}`}></div>
+          {showIntro && (
+            <div className={styles.introOverlay}>
+              <img
+                id='introLogoAnimate'
+                className={styles.introLogo}
+                src="/Logo_ENVI_rus.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
+          )}
+          <div className={styles.sectionOne}>
         <div id='circleLogoContainer' className={styles.circleLogoContainer}>
           <Image
             src="/Logos/logoBlackRus.png"
@@ -231,6 +232,8 @@ export default function MainPageBlocks() {
               </Link>
             </div>
           </div>
+        </div>
+      </div>
         </div>
       </div>
     </div>

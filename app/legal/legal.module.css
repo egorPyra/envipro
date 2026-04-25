@@ -1,0 +1,60 @@
+.page {
+  min-height: 100vh;
+  padding: 8rem 5vw 4rem;
+  background: #0f0f0f;
+  color: #d4d4d4;
+}
+
+.container {
+  max-width: 880px;
+}
+
+.title {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  line-height: 0.95;
+}
+
+.updated {
+  margin-bottom: 2rem;
+  color: #9f9f9f;
+  font-size: 1rem;
+}
+
+.section + .section {
+  margin-top: 2rem;
+}
+
+.sectionTitle {
+  margin-bottom: 0.85rem;
+  color: #ffffff;
+  font-size: 1.55rem;
+}
+
+.paragraph {
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+.paragraph + .paragraph {
+  margin-top: 0.9rem;
+}
+
+.list {
+  margin-top: 0.9rem;
+  padding-left: 1.1rem;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+

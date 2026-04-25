@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import React from "react";
+import CookieConsentManager from './components/CookieConsent/CookieConsentManager'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ru" suppressHydrationWarning>
       <body className={inter.className}>
         {children}
+        <CookieConsentManager />
       </body>
     </html>
   )

@@ -8,7 +8,7 @@ interface EditableDivProps {
 }
 
 const EditableDiv: React.FC<EditableDivProps> = ({ content, styles, onChangeContent, onChangeStyles }) => {
-  const handleContentChange = (event: React.ChangeEvent<HTMLDivElement>) => {
+  const handleContentChange = (event: React.FormEvent<HTMLDivElement>) => {
     onChangeContent(event.currentTarget.textContent || '');
   };
 
