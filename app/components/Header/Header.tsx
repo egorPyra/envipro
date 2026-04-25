@@ -45,9 +45,9 @@ export default function Header() {
   // Слушаем движение мыши: если курсор <50px от верха — показываем + таймер
   useEffect(() => {
     const onMouseMove = (e: MouseEvent) => {
-      if (e.clientY < 50) {
+      if (e.clientY < 200) {
         setShow(true)
-        scheduleHide(3000)
+        scheduleHide(7000)
       }
     }
     window.addEventListener('mousemove', onMouseMove)
@@ -67,7 +67,7 @@ export default function Header() {
       transition={{ duration: 0.33, ease: 'easeInOut' }}
     >
       <Link href="/">
-        <Image src="/envi_rus.png" alt="envipro" height={30} width={30} />
+        <Image src="/Logos/envi_rus.png" alt="envipro" height={30} width={30} />
       </Link>
       <nav className={styles.nav}>
         <ul className={styles.list}>

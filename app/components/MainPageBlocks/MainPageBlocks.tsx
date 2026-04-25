@@ -13,6 +13,7 @@ export default function MainPageBlocks() {
 
   const [isShown, setIsShown] = useState(false);
   const [keepActive, setKeepActive] = useState('');
+  const [showIntro, setShowIntro] = useState(false);
   const [popupVisible, setPopupVisible] = useState<{show: boolean, contentName?: Content}>(
     { show: false, contentName: 'ecoMonitoring' }
   );
@@ -21,22 +22,12 @@ export default function MainPageBlocks() {
   useEffect(() => {
     if(!sessionStorage.getItem('animationEnvipro')) {
       sessionStorage.setItem('animationEnvipro', 'played');
+      setShowIntro(true)
 
-      const temp = document.getElementById('logoBackgroundBlock')
-      if(temp) temp.style.display = 'block'
-      setTimeout(() => {
-        if(temp) temp.style.display = 'none'
-      }, 7000)
+      const introTimeout = window.setTimeout(() => {
+        setShowIntro(false)
+      }, 7600)
 
-      const temp2 = document.getElementById('circleLogoContainer')
-      if(temp2) animate(
-        '#logoAnimate', 
-        { opacity: [1, 0, 0, 1],
-          x: [window.innerWidth/2 - temp2.clientWidth/2, window.innerWidth/2 - temp2.clientWidth/2, 0, 0], 
-          y: [window.innerHeight/2 - temp2.clientHeight/2, window.innerHeight/2 - temp2.clientHeight/2, 0, 0], 
-          scale: [4, 0, 0, 1] 
-        },
-        { duration: 1.4, delay: 6.7, ease: 'easeInOut'})
       animate('#circleLogo', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 1.5, delay: 7.7, ease: 'easeInOut'})
       animate('#ecoMonitoring', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.2, ease: 'easeInOut'})
       animate('#ecology', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.5, delay: 7.2, ease: 'easeInOut'})
@@ -53,23 +44,53 @@ export default function MainPageBlocks() {
       animate('#calc', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 7.85, ease: 'easeInOut'})
       animate('#foresCircle', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 1.5, delay: 8.5, ease: 'easeInOut'})
       animate('#envilab', { opacity: [0, 1], scale: [0.9, 1] }, { duration: 0.8, delay: 8, ease: 'easeInOut'})
+
+      return () => {
+        window.clearTimeout(introTimeout)
+      }
     }
   }, [])
+
+  useEffect(() => {
+    if (!showIntro) return
+
+    const introAnimation = animate(
+      '#introLogoAnimate',
+      {
+        opacity: [1, 1, 0],
+        scale: [1, 0.35, 0],
+      },
+      { duration: 0.9, delay: 6.7, ease: 'easeInOut' }
+    )
+
+    return () => {
+      introAnimation.stop()
+    }
+  }, [showIntro])
 
   return (
 
       <div className={styles.blocksContainer}>
         <div className={`${isShown ? 'greyBlockUnder' : 'greyBlockUnder hide'}`}></div>
-        <div id='logoBackgroundBlock' className={styles.logoBackgroundBlock}></div>
+        {showIntro && (
+          <div className={styles.introOverlay}>
+            <img
+              id='introLogoAnimate'
+              className={styles.introLogo}
+              src="/Logo_ENVI_rus.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </div>
+        )}
         <div className={styles.sectionOne}>
           <div id='circleLogoContainer' className={styles.circleLogoContainer}>
             <Image
-              src="/Logo_ENVI_rus.svg"
-              alt="Landscape picture"
+              src="/Logos/logoBlackRus.png"
+              alt="envipro logo"
               width={150}
               height={150}
               className={styles.mainLogo}
-              id='logoAnimate'
             />
             <div
               id='circleLogo'
@@ -92,8 +113,10 @@ export default function MainPageBlocks() {
             onClick={() => setPopupVisible({show: true, contentName: 'ecology'})}
             id='ecology'
             className={styles.ecology}>
-            <div className={`${isShown && keepActive !== 'ecology' ? 'greyBlock' : 'greyBlock hide'}`}></div>
-            <span>ЭКОЛОГИЧЕСКОЕ<br/> СОПРОВОЖДЕНИЕ<br/> ДЕЯТЕЛЬНОСТИ</span>
+            <div className={styles.ecologyCard}>
+              <div className={`${isShown && keepActive !== 'ecology' ? 'greyBlock' : 'greyBlock hide'}`}></div>
+              <span>ЭКОЛОГИЧЕСКОЕ<br/> СОПРОВОЖДЕНИЕ<br/> ДЕЯТЕЛЬНОСТИ</span>
+            </div>
             {/* <Link href={'/about_us'} className={`${styles.linkAbsolut} ${styles.link}`}></Link> */}
             <div 
               id='ecologyCircle'

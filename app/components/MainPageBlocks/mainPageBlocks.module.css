@@ -1,14 +1,23 @@
-.logoBackgroundBlock {
-    min-width: 100vw;
-    min-height: 100vh;
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
+.introOverlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #fff;
+    pointer-events: auto;
+    z-index: 1000;
+}
+
+.introLogo {
+    width: min(32vw, 420px);
+    height: auto;
+    transform-origin: center;
 }
 
 .blocksContainer {
+    position: relative;
     display: flex;
     align-items: flex-start;
 }
@@ -32,10 +41,12 @@
     top: 0;
     left: 5vw;
     max-width: 500px;
+    z-index: 0;
 }
 
 .ecoMonitoring {
     position: relative;
+    z-index: 2;
     width: 23vw;
     height: 37vh;
     margin-bottom: 20vh;
@@ -101,6 +112,13 @@
     margin-left: 10vw;
     width: 13vw;
     height: 23vh;
+}
+
+.ecologyCard {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
     background-image: url("/ecology.jpg");
     background-position: center;
     background-size: cover;
@@ -115,14 +133,14 @@
     background-color: #000;
     border-radius: 50%;
     pointer-events: none;
-    z-index: -3;
+    z-index: -1;
     animation: move2 50s infinite alternate ease-in-out;
     pointer-events: none;
 }
 .ecology span {
     display: none;
 }
-.ecology:hover {
+.ecology:hover .ecologyCard {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -149,6 +167,8 @@
 }
 
 .sectionTwo {
+    position: relative;
+    z-index: 2;
     margin-top: 5vh;
     max-width: 35vw;
     height: 100%;
@@ -304,6 +324,8 @@
     background-color: #fff;
 }
 .sectionThree {
+    position: relative;
+    z-index: 2;
     display: inline-block;
     margin-top: 5vh;
 }
@@ -477,7 +499,7 @@
     border-radius: 50%;
     margin-left: auto;
     margin-right: 3vh;
-    background-image: url("/envilab.webp");
+    background-image: url("/Logos/envilab.webp");
     background-position: center;
     background-size: cover;
     overflow: hidden;

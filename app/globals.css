@@ -158,7 +158,8 @@ ul {
   background-color: #363535;
   opacity: .6;
   transition: opacity 0.33s ease;
-  z-index: -2;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .hide {
